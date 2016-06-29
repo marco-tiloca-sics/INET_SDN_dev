@@ -1,0 +1,4 @@
+packet SendApplicationPacket {
+	int info;
+};
+

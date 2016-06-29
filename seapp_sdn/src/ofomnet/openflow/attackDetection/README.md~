@@ -1,0 +1,12 @@
+attackDetection
+================
+This directory contains analysis methods and algorithms to detect a specific attack. 
+
+The current version includes the entropy-based algorithm.
+
+
+
+Author
+======
+Alexandra Stagkopoulou <stagk@kth.se>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Physical>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+
+			<action>
+				<name>Destroy</name>
+			</action>
+		</Attack>
+
+	</Physical>
+
+</configuration>

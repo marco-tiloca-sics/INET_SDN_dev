@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<configuration>
+<Conditional>
+
+<Attack>
+	<start_time>20</start_time>
+	<node>4</node>
+	
+	<var>
+		<name>100</name>
+		<value>100</value>
+		<type>NUMBER</type>
+	</var>
+	<var>
+		<name>666</name>
+		<value>666</value>
+		<type>NUMBER</type>
+	</var>
+		
+	<filter>[:TRA.destinationPort:==:100:]</filter>
+	
+	<action>
+		<name>Change</name>
+		<parameters>packetName:original:field_name:TRA.sourcePort:value:666</parameters>
+	</action>
+
+</Attack>
+
+</Conditional>
+
+
+
+
+</configuration>

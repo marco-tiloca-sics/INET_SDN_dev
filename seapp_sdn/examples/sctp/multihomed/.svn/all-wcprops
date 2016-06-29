@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/sctp/multihomed
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/sctp/multihomed/README
+END
+multi.ned
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/sctp/multihomed/multi.ned
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/sctp/multihomed/omnetpp.ini
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/sctp/multihomed/run
+END
+run.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/sctp/multihomed/run.cmd
+END

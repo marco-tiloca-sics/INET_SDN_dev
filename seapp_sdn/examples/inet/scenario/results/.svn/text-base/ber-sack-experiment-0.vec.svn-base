@@ -1,0 +1,35 @@
+version 2
+run ber-sack-experiment-0-20150419-14:51:23-32242
+attr ber 0
+attr configname ber-sack-experiment
+attr datetime 20150419-14:51:23
+attr experiment ber-sack-experiment
+attr inifile omnetpp.ini
+attr iterationvars "$sack=true, $ber=0"
+attr iterationvars2 "$sack=true, $ber=0, $repetition=0"
+attr measurement "$sack=true, $ber=0"
+attr network ber
+attr processid 32242
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr sack true
+attr seedset 0
+
+vector 11  ber.client.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 12  ber.client.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 29  ber.server.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 30  ber.server.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+11	0	0	0
+12	0	0	0
+29	0	0	0
+30	0	0	0

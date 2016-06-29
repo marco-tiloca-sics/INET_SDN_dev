@@ -1,0 +1,58 @@
+[General]
+debug-on-errors = true
+sim-time-limit = 15s
+
+[Config Topo]
+network = Topo
+
+#**.attackConfigurationFile = "attack.xml"
+**.attackConfigurationFile = "simple_attack.xml"
+
+#openflow
+**.controller.ofa_controller.port = 6633
+**.controller.ofa_controller.requestStats = 3s
+**.s*.sendCompletePacket = true
+**.controller.behavior = "Switch"
+**.controller.entropy.threshold = -18
+
+**.ofa_switch.connectPort = 6633
+**.ofa_switch.connectAddress = "controller"
+**.ofa_switch.flow_timeout = 10s
+
+
+**.s*.etherMAC[*].promiscuous = true #open_flow_switch
+
+*.configurator.networkAddress = "192.168.2.0"
+
+
+*.server*.numUdpApps = 1
+*.server1.udpApp[0].typename = "UDPSink"
+*.server1.udpApp[0].localPort = 2000
+
+*.server2.udpApp[0].typename = "UDPSink"
+*.server2.udpApp[0].localPort = 2000
+
+*.client*.numUdpApps = 1
+*.client1.udpApp[0].typename = "UDPBasicApp"
+*.client1.udpApp[0].localPort = 100
+*.client1.udpApp[0].destPort = 2000
+*.client1.udpApp[0].destAddresses = "server1"
+*.client1.udpApp[0].sendInterval = 0.5 s
+*.client1.udpApp[0].messageLength = 1250 bytes
+
+*.client2.udpApp[0].typename = "UDPBasicApp"
+*.client2.udpApp[0].localPort = 100
+*.client2.udpApp[0].destPort = 2000
+*.client2.udpApp[0].destAddresses = "server1"
+*.client2.udpApp[0].sendInterval = 0.5 s
+*.client2.udpApp[0].messageLength = 1250 bytes
+
+#random ping application
+#**.client_n1[0].numPingApps = 1
+#**.client_n1[0].pingApp[0].typename = "PingApp"
+#**.client_n1[0].pingApp[0].destAddr = "192.168.2.4"
+#**.client_n1[0].pingApp[0].startTime = 1s
+#**.client_n1[0].pingApp[0].stopTime = 20s
+
+
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/seapp/seapp_stable/!svn/ver/7/trunk/examples
+END
+rundemo
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/rundemo
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/README
+END
+rundemo.bat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/rundemo.bat
+END
+package.ned
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/package.ned
+END

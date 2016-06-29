@@ -1,0 +1,3 @@
+#!/bin/sh
+../../../src/run_inet -u Cmdenv -f omnetpp.ini
+

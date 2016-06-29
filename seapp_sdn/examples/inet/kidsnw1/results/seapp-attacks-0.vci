@@ -1,0 +1,452 @@
+file 268401 1453654752                                          
+version 2
+run seapp-attacks-0-20160124-17:58:54-9530
+attr configname seapp-attacks
+attr datetime 20160124-17:58:54
+attr experiment seapp-attacks
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network KIDSNw1
+attr processid 9530
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 16  KIDSNw1.host1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 17  KIDSNw1.host1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 40  KIDSNw1.host2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 41  KIDSNw1.host2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 64  KIDSNw1.host3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 65  KIDSNw1.host3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 80  KIDSNw1.fhrouter1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 81  KIDSNw1.fhrouter1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 91  KIDSNw1.fhrouter1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 92  KIDSNw1.fhrouter1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 102  KIDSNw1.fhrouter1.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 103  KIDSNw1.fhrouter1.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 118  KIDSNw1.fhrouter2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 119  KIDSNw1.fhrouter2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 129  KIDSNw1.fhrouter2.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 130  KIDSNw1.fhrouter2.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 145  KIDSNw1.irouter.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 146  KIDSNw1.irouter.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 156  KIDSNw1.irouter.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 157  KIDSNw1.irouter.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 172  KIDSNw1.bgrouter3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 173  KIDSNw1.bgrouter3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 183  KIDSNw1.bgrouter3.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 184  KIDSNw1.bgrouter3.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 199  KIDSNw1.bgrouter4.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 200  KIDSNw1.bgrouter4.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 210  KIDSNw1.bgrouter4.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 211  KIDSNw1.bgrouter4.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 1  KIDSNw1.host1.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 25  KIDSNw1.host2.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 49  KIDSNw1.host3.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 3  KIDSNw1.host1.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 27  KIDSNw1.host2.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 51  KIDSNw1.host3.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 13  KIDSNw1.host1.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 15  KIDSNw1.host1.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 37  KIDSNw1.host2.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 39  KIDSNw1.host2.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 61  KIDSNw1.host3.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 63  KIDSNw1.host3.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 22  KIDSNw1.host1.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 18  KIDSNw1.host1.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 46  KIDSNw1.host2.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 42  KIDSNw1.host2.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 70  KIDSNw1.host3.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 66  KIDSNw1.host3.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 83  KIDSNw1.fhrouter1.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 87  KIDSNw1.fhrouter1.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 88  KIDSNw1.fhrouter1.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 90  KIDSNw1.fhrouter1.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 97  KIDSNw1.fhrouter1.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 93  KIDSNw1.fhrouter1.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 121  KIDSNw1.fhrouter2.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 125  KIDSNw1.fhrouter2.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 126  KIDSNw1.fhrouter2.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 128  KIDSNw1.fhrouter2.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 135  KIDSNw1.fhrouter2.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 131  KIDSNw1.fhrouter2.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 213  KIDSNw1.bgrouter4.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 217  KIDSNw1.bgrouter4.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 196  KIDSNw1.bgrouter4.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 198  KIDSNw1.bgrouter4.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 205  KIDSNw1.bgrouter4.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 201  KIDSNw1.bgrouter4.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 186  KIDSNw1.bgrouter3.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 190  KIDSNw1.bgrouter3.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 169  KIDSNw1.bgrouter3.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 171  KIDSNw1.bgrouter3.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 178  KIDSNw1.bgrouter3.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 174  KIDSNw1.bgrouter3.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 159  KIDSNw1.irouter.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 163  KIDSNw1.irouter.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 142  KIDSNw1.irouter.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 144  KIDSNw1.irouter.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 151  KIDSNw1.irouter.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 147  KIDSNw1.irouter.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 94  KIDSNw1.fhrouter1.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 98  KIDSNw1.fhrouter1.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 77  KIDSNw1.fhrouter1.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 79  KIDSNw1.fhrouter1.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 86  KIDSNw1.fhrouter1.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 82  KIDSNw1.fhrouter1.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 105  KIDSNw1.fhrouter1.ppp[2].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 109  KIDSNw1.fhrouter1.ppp[2].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 43  KIDSNw1.host2.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 47  KIDSNw1.host2.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 28  KIDSNw1.host2.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 29  KIDSNw1.host2.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 24  KIDSNw1.host2.udpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 26  KIDSNw1.host2.udpApp[0]  rcvdPkLifetime:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, vector"
+attr unit  s
+vector 19  KIDSNw1.host1.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 23  KIDSNw1.host1.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 4  KIDSNw1.host1.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 5  KIDSNw1.host1.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 0  KIDSNw1.host1.udpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 2  KIDSNw1.host1.udpApp[0]  rcvdPkLifetime:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, vector"
+attr unit  s
+0	15941 5426 117 9631 0.202442867572 19.803470867572 198 1250 1250 247500 309375000
+1	21367 1599 23 9633 0.2 20 100 1250 1250 125000 156250000
+2	22966 7406 117 9631 0.202442867572 19.803470867572 198 0.002442867572 0.003470867572 0.585459779256 0.0017834378439923
+3	30372 1600 33 9639 0.2 20 100 1258 1258 125800 158256400
+4	31972 5426 115 9629 0.202442867572 19.803470867572 198 1258 1258 249084 313347672
+5	37398 5120 115 9629 0.202442867572 19.803470867572 198 1 198 19701 2607099
+13	42518 1684 47 9553 0.2 19.8 99 1278 1278 126522 161695116
+15	44202 1387 47 9553 0.2 19.8 99 0 0 0 0
+16	45589 9 0 0 0 0 1 0 0 0 0
+17	45598 3316 0 9559 0 19.801028 199 0 1 99 99
+18	48914 1684 50 9556 0.2 19.8 99 1285 1285 127215 163471275
+19	50598 5624 111 9625 0.202442867572 19.803470867572 198 1285 1285 254430 326942550
+22	56222 1684 50 9556 0.2 19.8 99 1278 1278 126522 161695116
+23	57906 5624 111 9625 0.202442867572 19.803470867572 198 1278 1278 253044 323390232
+24	63530 2812 110 9616 0.202339344826 19.802339344826 99 1250 1250 123750 154687500
+25	66342 1700 24 9634 0.2 20 100 1250 1250 125000 156250000
+26	68042 3802 110 9616 0.202339344826 19.802339344826 99 0.002339344826 0.002339344826 0.231595137774 0.00054178088727837
+27	71844 1700 35 9640 0.2 20 100 1258 1258 125800 158256400
+28	73544 2812 108 9614 0.202339344826 19.802339344826 99 1258 1258 124542 156673836
+29	76356 2605 108 9614 0.202339344826 19.802339344826 99 1 99 4950 328350
+37	78961 1684 48 9554 0.2 19.8 99 1278 1278 126522 161695116
+39	80645 1387 48 9554 0.2 19.8 99 0 0 0 0
+40	82032 9 0 0 0 0 1 0 0 0 0
+41	82041 3316 0 9560 0 19.801028 199 0 1 99 99
+42	85357 1684 51 9557 0.2 19.8 99 1285 1285 127215 163471275
+43	87041 2812 104 9610 0.202339344826 19.802339344826 99 1285 1285 127215 163471275
+46	89853 1684 51 9557 0.2 19.8 99 1278 1278 126522 161695116
+47	91537 2812 104 9610 0.202339344826 19.802339344826 99 1278 1278 126522 161695116
+49	94349 1700 25 9635 0.2 20 100 1250 1250 125000 156250000
+51	96049 1700 37 9641 0.2 20 100 1258 1258 125800 158256400
+61	97749 1684 49 9555 0.2 19.8 99 1278 1278 126522 161695116
+63	99433 1387 49 9555 0.2 19.8 99 0 0 0 0
+64	100820 9 0 0 0 0 1 0 0 0 0
+65	100829 3316 0 9561 0 19.801028 199 0 1 99 99
+66	104145 1684 52 9558 0.2 19.8 99 1285 1285 127215 163471275
+70	105829 1684 52 9558 0.2 19.8 99 1278 1278 126522 161695116
+77	107513 5623 93 9606 0.201220628533 19.801224958633 198 1278 1278 253044 323390232
+79	113136 6118 93 9608 0.201220628533 19.802248628533 198 0 0.0010236699 0.1013433201 0.00010374210635244
+80	119254 5039 0 9608 0 19.802248628533 199 0 1 99 99
+81	124293 10068 0 9624 0 19.803276628533 397 0 1 198 198
+82	134361 5623 94 9609 0.201220628533 19.802248628533 198 1285 1285 254430 326942550
+83	139984 2811 56 9562 0.201125350491 19.801125350491 99 1285 1285 127215 163471275
+86	142795 5623 94 9609 0.201220628533 19.802248628533 198 1278 1278 253044 323390232
+87	148418 2811 56 9562 0.201125350491 19.801125350491 99 1278 1278 126522 161695116
+88	151229 2811 60 9566 0.201125350491 19.801125350491 99 1278 1278 126522 161695116
+90	154040 2514 60 9566 0.201125350491 19.801125350491 99 0 0 0 0
+91	156554 9 0 0 0 0 1 0 0 0 0
+92	156563 5038 0 9607 0 19.802153350491 199 0 1 99 99
+93	161601 2811 61 9567 0.201125350491 19.801125350491 99 1285 1285 127215 163471275
+94	164412 2811 89 9595 0.201220628533 19.801220628533 99 1285 1285 127215 163471275
+97	167223 2811 61 9567 0.201125350491 19.801125350491 99 1278 1278 126522 161695116
+98	170034 2811 89 9595 0.201220628533 19.801220628533 99 1278 1278 126522 161695116
+102	172845 10 0 0 0 0 1 0 0 0 0
+103	172855 10 0 0 0 0 1 0 0 0 0
+105	172865 2910 96 9602 0.201224958633 19.801224958633 99 1285 1285 127215 163471275
+109	175775 2910 96 9602 0.201224958633 19.801224958633 99 1278 1278 126522 161695116
+118	178685 10 0 0 0 0 1 0 0 0 0
+119	178695 10 0 0 0 0 1 0 0 0 0
+121	178705 2910 62 9568 0.201140550237 19.801140550237 99 1285 1285 127215 163471275
+125	181615 2910 62 9568 0.201140550237 19.801140550237 99 1278 1278 126522 161695116
+126	184525 2910 66 9572 0.201140550237 19.801140550237 99 1278 1278 126522 161695116
+128	187435 2613 66 9572 0.201140550237 19.801140550237 99 0 0 0 0
+129	190048 10 0 0 0 0 1 0 0 0 0
+130	190058 5236 0 9574 0 19.801160628362 199 0 1 99 99
+131	195294 2910 67 9573 0.201140550237 19.801140550237 99 1285 1285 127215 163471275
+135	198204 2910 67 9573 0.201140550237 19.801140550237 99 1278 1278 126522 161695116
+142	201114 2910 87 9593 0.201203682876 19.801203682876 99 1278 1278 126522 161695116
+144	204024 2613 87 9593 0.201203682876 19.801203682876 99 0 0 0 0
+145	206637 10 0 0 0 0 1 0 0 0 0
+146	206647 5236 0 9601 0 19.801223761001 199 0 1 99 99
+147	211883 2910 88 9594 0.201203682876 19.801203682876 99 1285 1285 127215 163471275
+151	214793 2910 88 9594 0.201203682876 19.801203682876 99 1278 1278 126522 161695116
+156	217703 10 0 0 0 0 1 0 0 0 0
+157	217713 10 0 0 0 0 1 0 0 0 0
+159	217723 2910 83 9589 0.201203682876 19.801203682876 99 1285 1285 127215 163471275
+163	220633 2910 83 9589 0.201203682876 19.801203682876 99 1278 1278 126522 161695116
+169	223543 2910 80 9586 0.201182702131 19.801182702131 99 1278 1278 126522 161695116
+171	226453 2613 80 9586 0.201182702131 19.801182702131 99 0 0 0 0
+172	229066 10 0 0 0 0 1 0 0 0 0
+173	229076 5236 0 9588 0 19.801202780256 199 0 1 99 99
+174	234312 2910 81 9587 0.201182702131 19.801182702131 99 1285 1285 127215 163471275
+178	237222 2910 81 9587 0.201182702131 19.801182702131 99 1278 1278 126522 161695116
+183	240132 10 0 0 0 0 1 0 0 0 0
+184	240142 10 0 0 0 0 1 0 0 0 0
+186	240152 2910 76 9582 0.201182702131 19.801182702131 99 1285 1285 127215 163471275
+190	243062 2910 76 9582 0.201182702131 19.801182702131 99 1278 1278 126522 161695116
+196	245972 2910 73 9579 0.201161745729 19.801161745729 99 1278 1278 126522 161695116
+198	248882 2613 73 9579 0.201161745729 19.801161745729 99 0 0 0 0
+199	251495 10 0 0 0 0 1 0 0 0 0
+200	251505 5236 0 9581 0 19.801181823854 199 0 1 99 99
+201	256741 2910 74 9580 0.201161745729 19.801161745729 99 1285 1285 127215 163471275
+205	259651 2910 74 9580 0.201161745729 19.801161745729 99 1278 1278 126522 161695116
+210	262561 10 0 0 0 0 1 0 0 0 0
+211	262571 10 0 0 0 0 1 0 0 0 0
+213	262581 2910 69 9575 0.201161745729 19.801161745729 99 1285 1285 127215 163471275
+217	265491 2910 69 9575 0.201161745729 19.801161745729 99 1278 1278 126522 161695116

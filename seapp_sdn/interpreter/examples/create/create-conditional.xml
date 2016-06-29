@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+			<var><name>1234</name><value>1234</value><type>NUMBER</type></var>
+			<var><name>1000</name><value>1000</value><type>NUMBER</type></var>
+			<filter>[:APP.source:==:1000:]</filter>
+
+			<action>
+				<name>Drop</name>
+				<parameters>packetName:original:threshold:1</parameters>
+			</action>
+
+			<action>
+				<name>Create</name>
+				<parameters>packetName:fakePacket:APP.type:0000</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:fakePacket:field_name:APP.data:value:1000</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:fakePacket:field_name:APP.source:value:1234</parameters>
+			</action>
+
+			<action>
+				<name>Send</name>
+				<parameters>packetName:fakePacket:delay:0</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

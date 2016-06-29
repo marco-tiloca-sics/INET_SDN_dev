@@ -1,0 +1,50 @@
+# 2015-03-16  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Added
+- added involvedLayer attribute in actionbase
+- added getInvolvedLayer method in actionbase
+
+
+# 2015-03-11  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Added
+- added drop action
+
+
+# 2015-03-04  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Added
+- added utility function toString to convert ActionType to string
+- added utility function toActionType to convert string to ActionType
+
+
+# 2015-03-01  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Fixed
+- fixed a nullptr check_and_cast error in Move::execute
+### Changed
+- changed ActionName type in ActionType
+- changed actionName attribute of ActionBase in actionType
+
+
+# 2015-02-28  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Fixed
+- fixed destroy constructor and execute method for code consistency
+- fixed move action in case of no mobility sub-module in nodes
+
+
+# 2015-02-26  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Changed
+- changed actionbase, partial implementation
+- changed destroy action, implemented
+- changed move action, implemented
+
+
+# 2015-02-25  Francesco Racciatti  <racciatti.francesco@gmail.com>
+## [Unreleased]
+### Added
+- added actionbase
+- added destroy action
+- added move action

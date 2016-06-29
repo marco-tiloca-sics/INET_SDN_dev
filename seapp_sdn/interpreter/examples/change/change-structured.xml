@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+			<var><name>1</name><value>1</value><type>NUMBER</type></var>
+			<var><name>5</name><value>5</value><type>NUMBER</type></var>
+			<var><name>"myapp"</name><value>myapp</value><type>STRING</type></var>
+			<filter>[:NET.sourcePort:==:1000:]</filter>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:original:field_name:APP.appName:value:"myapp"</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:original:field_name:APP.appNetInfoExchange.source:value:1</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:original:field_name:APP.appNetInfoExchange.destination:value:5</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

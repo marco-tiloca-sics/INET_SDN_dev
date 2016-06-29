@@ -1,0 +1,23 @@
+list dstList = {6}
+
+from 30 every 0.25 do {
+
+    # declare a packet
+	packet fakePacket
+    
+	# create a new packet
+	create(fakePacket, "APP.type", "1001")
+
+	# fill the new packet properly
+	change(fakePacket, "APP.info", 1)
+	change(fakePacket, "APP.name", "myPacket")
+
+	change(fakePacket, "controlInfo.destAddr", "192.168.2.6") 
+	change(fakePacket, "controlInfo.sockId", 4)
+	change(fakePacket, "controlInfo.interfaceId", 0)
+	change(fakePacket, "controlInfo.destPort", 123)
+	
+	change(fakePacket, "sending.outputGate", "app_udp_inf$o[0]")
+	
+	put(fakePacket, dstList, TX, FALSE, 0)
+}

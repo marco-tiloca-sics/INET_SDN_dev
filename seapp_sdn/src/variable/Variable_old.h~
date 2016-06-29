@@ -1,0 +1,67 @@
+/**
+ * @file	Variable.h
+ * @author	Francesco Racciatti <racciatti.francesco@gmail.com>
+ * @version	0.0.1
+ * @date	2015 mar 02
+ *
+ * @brief	This class implements Variable objects.
+ *
+ * @details	A Variable object include the following two fields:
+ *			 - value,
+ *			 - type (i.e. either NUMBER, STRING or NOTYPE)
+ *
+ *			The associations between name and content of each variable rely on 'variableTable'.
+ */
+
+
+#ifndef VARIABLE_H
+#define VARIABLE_H
+
+#include <iostream>
+
+
+#include <cstdint>
+#include <string>
+#include <sstream>
+#include <stdlib.h>
+#include <unistd.h>
+#include "seapputils.h"
+
+using namespace std;
+
+enum class VariableType : uint8_t{
+	STRING = 0,
+	NUMBER,
+	NONE
+};
+
+class Variable{
+
+private:
+
+	string value;
+	VariableType type;
+	
+public:
+
+	/**
+	 * @brief	Default constructor.
+	 */
+	Variable();
+	
+	
+	
+};
+
+/**
+ * @brief
+ */
+string toString(const VariableType variableType);
+VariableType toVariableType(const string variableType);
+
+VariableType getFormat(string varValue);
+
+#endif
+
+
+

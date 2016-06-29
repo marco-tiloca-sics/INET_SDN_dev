@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<configuration>
+<Conditional>
+
+<Attack>
+	<start_time>20</start_time>
+	<node>4</node>
+	<var>
+		<name>42</name>
+		<value>42</value>
+		<type>NUMBER</type>
+	</var>
+	<var>
+		<name>1</name>
+		<value>1</value>
+		<type>NUMBER</type>
+	</var>
+	<var>
+		<name>666</name>
+		<value>666</value>
+		<type>NUMBER</type>
+	</var>
+	<var>
+		<name>100</name>
+		<value>100</value>
+		<type>NUMBER</type>
+	</var>
+	<var>
+		<name>1000</name>
+		<value>1000</value>
+		<type>NUMBER</type>
+	</var>
+	<var>
+		<name>"10.0.1.255"</name>
+		<value>10.0.1.255</value>
+		<type>STRING</type>
+	</var>
+		<var>
+		<name>"app_udp_sup$i[0]"</name>
+		<value>app_udp_sup$i[0]</value>
+		<type>STRING</type>
+	</var>
+	
+	
+	<filter>UDP.destinationPort:==:100:UDP.sourcePort:==:100:OR</filter>
+	
+	<action>
+		<name>Change</name>
+		<parameters>packetName:original:field_name:UDP.destinationPort:value:1000</parameters>
+	</action>
+
+	<action>
+		<name>Create</name>
+		<parameters>packetName:fakePacket:APP.type:0000</parameters>
+	</action>
+		
+	<action>
+		<name>Change</name>
+		<parameters>packetName:fakePacket:field_name:controlInfo.sockId:value:1</parameters>
+	</action>
+	<action>
+		<name>Change</name>
+		<parameters>packetName:fakePacket:field_name:controlInfo.destAddr:value:"10.0.1.255"</parameters>
+	</action>	
+	<action>
+		<name>Change</name>
+		<parameters>packetName:fakePacket:field_name:controlInfo.destPort:value:666</parameters>
+	</action>
+	
+	<action>
+		<name>Change</name>
+		<parameters>packetName:fakePacket:field_name:sending.arrivalGate:value:"app_udp_sup$i[0]"</parameters>
+	</action>
+	
+	<action>
+		<name>Send</name>
+		<parameters>packetName:fakePacket:delay:0</parameters>
+	</action>
+	
+
+</Attack>
+
+</Conditional>
+
+<Unconditional>
+
+<Attack>
+	<start_time>100</start_time>
+	<frequency>0.1</frequency>
+	<action>
+		<name>Create</name>
+		<parameters>packetName:otherPacket:APP.type:0000</parameters>
+	</action>
+	<action>
+		<name>Change</name>
+		<parameters>packetName:otherPacket:field_name:sending.arrivalGate:value:"app_udp_sup$i[0]"</parameters>
+	</action>
+	
+	<action>
+		<name>Put</name>
+		<parameters>packetName:otherPacket:nodes:4:direction:TX:throughWC:false:delay:0</parameters>
+	</action>
+</Attack>
+
+</Unconditional>
+
+
+
+</configuration>

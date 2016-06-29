@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/ipv6bulk
+END
+BulkTransfer6.ned
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/ipv6bulk/BulkTransfer6.ned
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/ipv6bulk/README
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/ipv6bulk/omnetpp.ini
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/ipv6bulk/run
+END
+run.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/ipv6bulk/run.cmd
+END

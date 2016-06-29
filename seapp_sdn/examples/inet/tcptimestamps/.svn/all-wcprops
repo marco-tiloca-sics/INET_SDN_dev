@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps
+END
+run.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/run.cmd
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/ChangeLog
+END
+.tkenvrc
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/.tkenvrc
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/README
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/omnetpp.ini
+END
+tcptimestamps.ned
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/tcptimestamps.ned
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcptimestamps/run
+END

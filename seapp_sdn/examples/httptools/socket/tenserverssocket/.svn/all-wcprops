@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/socket/tenserverssocket
+END
+10servers_controller_cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/socket/tenserverssocket/10servers_controller_cfg.xml
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/socket/tenserverssocket/omnetpp.ini
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/socket/tenserverssocket/run
+END
+tenservers.ned
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/socket/tenserverssocket/tenservers.ned
+END

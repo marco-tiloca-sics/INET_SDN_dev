@@ -1,0 +1,87 @@
+[General]
+debug-on-errors = false
+
+[Config Scenario_Small]
+network = Scenario_Small
+
+output-vector-file = ${resultdir}/${inifile}/${inifile}-${runnumber}.vec
+output-scalar-file = ${resultdir}/${inifile}/${inifile}-${runnumber}.sca
+
+#sim-time-limit = 0.55s
+
+# tcp apps
+**.numTcpApps = 1
+**.client*.tcpApp[0].typename = "TCPSessionApp"
+**.client*.tcpApp[0].active = true
+#**.client*.tcpApp[0].address = "10.0.0.1"
+#**.client*.tcpApp[0].address = "192.168.1.1"
+**.client*.tcpApp[0].localPort = -1
+**.client*.tcpApp[0].connectAddress = "server1"
+**.client*.tcpApp[0].connectPort = 1000
+**.client*.tcpApp[0].tOpen = 2s
+**.client*.tcpApp[0].tSend = 2s
+**.client*.tcpApp[0].sendBytes = 3000000B
+**.client*.tcpApp[0].sendScript = ""
+**.client*.tcpApp[0].tClose = 100s
+**.txQueueLimit = 5000
+
+**.server*.tcpApp[0].typename = "TCPSinkApp"
+#**.server*.tcpAppType = "TCPEchoApp"
+#**.server*.tcpApp[0].address = "10.0.0.2"
+#**.server*.tcpApp[0].address = "192.168.1.2"
+**.server*.tcpApp[0].localPort = 1000
+#**.server*.tcpApp[0].echoFactor = 2.0
+#**.server*.tcpApp[0].echoDelay = 0
+
+#openflow
+**.controller.ofa_controller.port = 6633
+**.open_flow_switch*.sendCompletePacket = false
+**.controller.behavior = "Hub"
+
+**.ofa_switch.connectPort = 6633
+**.ofa_switch.connectAddress = "controller"
+**.buffer.capacity = 10
+**.ofa_switch.flow_timeout = 5s
+**.open_flow_switch*.etherMAC[*].promiscuous = true
+#**.controller.ofa_controller.address = 
+
+# NIC configuration
+**.ppp[*].queueType = "DropTailQueue" # in routers
+**.ppp[*].queue.frameCapacity = 10  # in routers
+
+*.configurator.networkAddress = "192.168.1.0"
+
+#**.tcp.sendQueueClass="TCPMsgBasedSendQueue"	//obsolote since version 2.0
+#**.tcp.receiveQueueClass="TCPMsgBasedRcvQueue"	//obsolote since version 2.0
+
+**.open_flow_switch*.tcp.mss = 800
+**.controller.tcp.mss = 800
+#**.open_flow_switch*.tcp.nagleEnabled = false
+
+[Config My_Scenario]
+network = My_Scenario
+
+#openflow
+**.controller.ofa_controller.port = 6633
+**.open_flow_switch.sendCompletePacket = true
+**.controller.behavior = "Switch"
+
+**.ofa_switch.connectPort = 6633
+**.ofa_switch.connectAddress = "controller"
+**.ofa_switch.flow_timeout = 5s
+**.open_flow_switch.etherMAC[*].promiscuous = true
+*.configurator.networkAddress = "192.168.2.0"
+
+#random ping application
+#**.client*.numPingApps = 1
+#**.client*.pingApp[0].typename = "PingAppRandom"
+#**.client*.pingApp[0].startTime = 1s
+#**.client*.pingApp[0].stopTime = 20s
+
+**.client1.numPingApps = 1
+**.client1.pingApp[0].typename = "PingAppRandom"
+**.client1.pingApp[0].startTime = 1s
+**.client1.pingApp[0].stopTime = 10s
+
+
+

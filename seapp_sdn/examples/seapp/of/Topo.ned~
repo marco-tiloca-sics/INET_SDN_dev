@@ -1,0 +1,120 @@
+package inet.examples.seapp.of;
+
+import inet.nodes.ethernet.EtherSwitch;
+import inet.nodes.inet.Router;
+import inet.nodes.inet.StandardHost;
+import inet.networklayer.autorouting.ipv4.FlatNetworkConfigurator;
+import inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator;
+import inet.util.ThruputMeteringChannel;
+import inet.globalfilter.GlobalFilter;
+import inet.ofomnet.openflow.nodes.*;
+
+
+network Topo
+{
+	parameters:
+		//int n1 = default(1);
+		//int n2 = default(1);
+		//int s1 = default(1);
+		//int s2 = default(1);
+		
+		string attackConfigurationFile = default("none");
+		
+	@display("bgb=2000,1500");
+	types:
+        channel ethernetline extends ThruputMeteringChannel
+        {
+            delay = 1us;
+            datarate = 100Mbps;
+            thruputDisplayFormat = "u";
+        }
+	submodules:
+		globalFilter: GlobalFilter;
+		configurator: FlatNetworkConfigurator {
+            parameters:
+                @display("p=50,550");
+        }
+        client1: StandardHost {
+           @display("p=150,500;i=device/laptop");
+        }
+        client2: StandardHost {
+            @display("p=150,900;i=device/laptop");
+        }
+        server1: StandardHost {
+            @display("p=1350,250;i=device/server");
+        }
+        server2:StandardHost {
+            @display("p=1350,500;i=device/server");
+        }
+        
+        s1: Open_Flow_Switch_SEA {
+            @display("p=300,600");
+        }
+		s2: Open_Flow_Switch_SEA {
+            @display("p=300,1000");
+        }
+		s3: Open_Flow_Switch_SEA {
+            @display("p=700,1000");
+        }
+		s4: Open_Flow_Switch_SEA {
+            @display("p=1200,600");
+        }
+		s5: Open_Flow_Switch_SEA {
+            @display("p=1500,1400");
+        }
+        controller: Open_Flow_Controller {
+            @display("p=750,41");
+        }
+
+        
+	connections allowunconnected:
+		//for i=0..n1-1 {
+          //  client_n1[i].ethg++ <--> ethernetline <--> s1.ethg++;
+            //globalFilter.nodes++ <--> client_n1[i].global_filter; 
+
+        //}
+        
+       	//for i=0..n2-1 {
+          //  client_n2[i].ethg++ <--> ethernetline <--> s2.ethg++;
+           // globalFilter.nodes++ <--> client_n2[i].global_filter;
+        //}
+        
+		//for i=0..s1-1 {
+          //  server_1[i].ethg++ <--> ethernetline <--> s4.ethg++;
+           // globalFilter.nodes++ <--> server_1[i].global_filter;
+        //}
+        
+		//for i=0..s1-1 {
+          //  server_2[i].ethg++ <--> ethernetline <--> s5.ethg++;
+           // globalFilter.nodes++ <--> server_2[i].global_filter;
+        //}
+        
+        client1.ethg++ <--> ethernetline <--> s1.ethg++;
+        client2.ethg++ <--> ethernetline <--> s2.ethg++;
+        server1.ethg++ <--> ethernetline <--> s4.ethg++;
+        server2.ethg++ <--> ethernetline <--> s5.ethg++;
+        
+        s1.ethg++ <--> ethernetline <--> s3.ethg++;
+        s2.ethg++ <--> ethernetline <--> s3.ethg++;
+		
+		s3.ethg++ <--> ethernetline <--> s4.ethg++;
+        s3.ethg++ <--> ethernetline <--> s5.ethg++;
+        
+
+		controller.ethg++ <--> ethernetline <--> s1.gate_controller++;
+		controller.ethg++ <--> ethernetline <--> s2.gate_controller++;
+		controller.ethg++ <--> ethernetline <--> s3.gate_controller++;
+		controller.ethg++ <--> ethernetline <--> s4.gate_controller++;
+		controller.ethg++ <--> ethernetline <--> s5.gate_controller++;
+		
+		globalFilter.nodes++ <--> client1.global_filter;
+		globalFilter.nodes++ <--> client2.global_filter;
+		globalFilter.nodes++ <--> server1.global_filter;
+		globalFilter.nodes++ <--> server2.global_filter;
+		
+		globalFilter.nodes++ <--> s1.global_filter;
+		globalFilter.nodes++ <--> s2.global_filter;
+		globalFilter.nodes++ <--> s3.global_filter;
+		globalFilter.nodes++ <--> s4.global_filter;
+		globalFilter.nodes++ <--> s5.global_filter;
+}

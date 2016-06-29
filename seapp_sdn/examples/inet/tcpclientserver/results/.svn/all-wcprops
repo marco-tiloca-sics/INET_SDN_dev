@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcpclientserver/results
+END
+server.pcap
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcpclientserver/results/server.pcap
+END
+default_tcp-0.elog
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcpclientserver/results/default_tcp-0.elog
+END
+client1.pcap
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/tcpclientserver/results/client1.pcap
+END

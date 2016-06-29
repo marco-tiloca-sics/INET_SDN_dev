@@ -1,0 +1,432 @@
+version 2
+run General-0-20150516-11:25:23-5047
+attr ber 0
+attr configname General
+attr datetime 20150516-11:25:23
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars $ber=0
+attr iterationvars2 "$ber=0, $repetition=0"
+attr measurement $ber=0
+attr network scenario
+attr processid 5047
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar . 	ber 	0
+scalar scenario.client.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar scenario.client.networkLayer.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar scenario.client.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar scenario.client.networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar scenario.client.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar scenario.client.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenario.client.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenario.client.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenario.client.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenario.client.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenario.client.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenario.client.ppp[0].queue 	queueLength:max 	44
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar scenario.client.ppp[0].queue 	queueLength:timeavg 	43.928870277656
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic scenario.client.ppp[0].queue 	queueingTime:histogram
+field count 25680
+field mean 0.052629507916742
+field stddev 0.0018697965777434
+field sum 1351.5257633019
+field sqrsum 71.219913218979
+field min 0
+field max 0.052726070002
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.026363035001	0
+bin	-0.022847963667533	0
+bin	-0.019332892334067	0
+bin	-0.0158178210006	0
+bin	-0.012302749667133	0
+bin	-0.0087876783336667	0
+bin	-0.0052726070002	0
+bin	-0.0017575356667333	6
+bin	0.0017575356667333	6
+bin	0.0052726070002	6
+bin	0.0087876783336667	6
+bin	0.012302749667133	6
+bin	0.0158178210006	6
+bin	0.019332892334067	6
+bin	0.022847963667533	6
+bin	0.026363035001	4
+bin	0.029878106334467	6
+bin	0.033393177667933	6
+bin	0.0369082490014	6
+bin	0.040423320334867	6
+bin	0.043938391668333	6
+bin	0.0474534630018	6
+bin	0.050968534335267	25592
+bin	0.054483605668733	0
+bin	0.0579986770022	0
+bin	0.061513748335667	0
+bin	0.065028819669133	0
+bin	0.0685438910026	0
+bin	0.072058962336067	0
+bin	0.075574033669533	0
+bin	0.079089105003	0
+scalar scenario.client.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar scenario.client.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar scenario.client.ppp[0].queue 	rcvdPk:count 	25723
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar scenario.client.ppp[0].queue 	rcvdPk:sum(packetBytes) 	38375816
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar scenario.client.ppp[0].ppp 	txState:timeavg 	0.99999738048959
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar scenario.client.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar scenario.client.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar scenario.client.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenario.client.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenario.client.ppp[0].ppp 	rxPkOk:count 	25677
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar scenario.client.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1206823
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar scenario.client.ppp[0].ppp 	rcvdPkFromHL:count 	25680
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenario.client.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	38311660
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenario.client.ppp[0].ppp 	passedUpPk:count 	25677
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenario.client.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	1027084
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenario.client.ppp[0].ppp 	txPk:count 	25680
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar scenario.client.ppp[0].ppp 	txPk:sum(packetBytes) 	38491420
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar scenario.client.tcpApp[0] 	bytesRcvd 	0
+scalar scenario.client.tcpApp[0] 	bytesSent 	104857600
+scalar scenario.client.tcpApp[0] 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenario.client.tcpApp[0] 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenario.client.tcpApp[0] 	endToEndDelay:histogram
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar scenario.client.tcpApp[0] 	sentPk:count 	1
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenario.client.tcpApp[0] 	sentPk:sum(packetBytes) 	104857600
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenario.server.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar scenario.server.networkLayer.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar scenario.server.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar scenario.server.networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar scenario.server.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar scenario.server.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenario.server.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenario.server.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenario.server.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenario.server.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenario.server.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenario.server.ppp[0].outputHook[0] 	duration 	30.792018024995
+scalar scenario.server.ppp[0].outputHook[0] 	"total packets" 	25678
+scalar scenario.server.ppp[0].outputHook[0] 	"total bits" 	8216992
+scalar scenario.server.ppp[0].outputHook[0] 	"avg throughput (bit/s)" 	266854.61126094
+scalar scenario.server.ppp[0].outputHook[0] 	"avg packets/s" 	833.91741259557
+scalar scenario.server.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar scenario.server.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic scenario.server.ppp[0].queue 	queueingTime:histogram
+field count 25677
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	25677
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar scenario.server.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar scenario.server.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar scenario.server.ppp[0].queue 	rcvdPk:count 	25677
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar scenario.server.ppp[0].queue 	rcvdPk:sum(packetBytes) 	1027084
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar scenario.server.ppp[0].ppp 	txState:timeavg 	0.031354177540949
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar scenario.server.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar scenario.server.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar scenario.server.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenario.server.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenario.server.ppp[0].ppp 	rxPkOk:count 	25679
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar scenario.server.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	38489921
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar scenario.server.ppp[0].ppp 	rcvdPkFromHL:count 	25677
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenario.server.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	1027084
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenario.server.ppp[0].ppp 	passedUpPk:count 	25679
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenario.server.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	38310168
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenario.server.ppp[0].ppp 	txPk:count 	25677
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar scenario.server.ppp[0].ppp 	txPk:sum(packetBytes) 	1206823
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar scenario.server.tcpApp[0] 	rcvdPk:count 	25677
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenario.server.tcpApp[0] 	rcvdPk:sum(packetBytes) 	37283004
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenario.server.tcpApp[0] 	endToEndDelay:histogram
+field count 25677
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	25677
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0

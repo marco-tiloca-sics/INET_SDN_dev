@@ -1,0 +1,13 @@
+package inet.ofomnet.openflow.attackDetection;
+
+import inet.ofomnet.openflow.attackDetection.methods.*;
+
+moduleinterface AttackDetection 
+{
+    parameters:
+       @node();
+    gates:
+    submodules:
+    	attackDetection: AttackDetection;
+    	entropy: Entropy;
+}

@@ -1,0 +1,4 @@
+packet ApplicationPacketTR {
+	int info;
+};
+

@@ -1,0 +1,30 @@
+/*
+ * FwdSwitch.h
+ *     
+ */
+
+#ifndef FWDSWITCH_H_
+#define FWDSWITCH_H_
+
+#include "OFA_controller.h"
+#include "MACAddress.h"
+
+
+class FwdSwitch: public Switch, public cSimpleModule, public cListener
+{
+public:
+    FwdSwitch();
+    ~FwdSwitch();
+    void receiveSignal(cComponent *src, simsignal_t id, cObject *obj);
+
+protected:
+    virtual void initialize();
+
+
+private:
+    OFA_controller *controller;
+    std::multimap<MAC_connID, uint32_t, ltmatch> mac_to_port;
+};
+
+
+#endif /* FWDSWITCH_H_ */

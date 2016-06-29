@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1:2:3</node>
+			<var><name>2500</name><value>2500</value><type>NUMBER</type></var>
+			<filter>[:NET.sourcePort:==:1000:]</filter>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:original:field_name:APP.data:value:2500</parameters>
+			</action>
+
+			<action>
+				<name>Put</name>
+				<parameters>packetName:original:nodes:4|5|6:direction:RX:throughWC:false:delay:0.5</parameters>
+			</action>
+		</Attack>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1:2:3</node>
+			<filter>[:APP.snNumber:>:1000:]</filter>
+
+			<action>
+				<name>Drop</name>
+				<parameters>packetName:original:threshold:1</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

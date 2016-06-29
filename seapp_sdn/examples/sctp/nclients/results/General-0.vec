@@ -1,0 +1,554 @@
+version 2
+run General-0-20150314-12:41:25-3020
+attr configname General
+attr datetime 20150314-12:41:25
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network NClients
+attr processid 3020
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 8  NClients.r1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 9  NClients.r1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 19  NClients.r1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 20  NClients.r1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 30  NClients.r1.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 31  NClients.r1.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 41  NClients.r1.ppp[3].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 42  NClients.r1.ppp[3].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 52  NClients.r1.ppp[4].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 53  NClients.r1.ppp[4].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 68  NClients.r2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 69  NClients.r2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 79  NClients.r2.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 80  NClients.r2.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 95  NClients.r3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 96  NClients.r3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 106  NClients.r3.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 107  NClients.r3.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 125  NClients.cli[0].ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 126  NClients.cli[0].ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 144  NClients.cli[1].ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 145  NClients.cli[1].ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 163  NClients.cli[2].ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 164  NClients.cli[2].ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 182  NClients.cli[3].ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 183  NClients.cli[3].ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 198  NClients.srv.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 199  NClients.srv.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 227  NClients.srv.sctp  "Throughput of Association 5"  ETV
+vector 249  NClients.cli[3].sctp  "Throughput of Association 4"  ETV
+vector 269  NClients.cli[3].sctp  "Fast Recovery State 4:10.0.0.26"  ETV
+vector 179  NClients.cli[3].ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 181  NClients.cli[3].ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 188  NClients.cli[3].ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 184  NClients.cli[3].ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 44  NClients.r1.ppp[3].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 48  NClients.r1.ppp[3].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 49  NClients.r1.ppp[4].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 51  NClients.r1.ppp[4].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 58  NClients.r1.ppp[4].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 54  NClients.r1.ppp[4].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 71  NClients.r2.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 75  NClients.r2.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 76  NClients.r2.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 78  NClients.r2.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 85  NClients.r2.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 81  NClients.r2.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 98  NClients.r3.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 102  NClients.r3.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 103  NClients.r3.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 105  NClients.r3.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 112  NClients.r3.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 108  NClients.r3.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 201  NClients.srv.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 205  NClients.srv.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 298  NClients.srv.sctp  "Throughput of Association 5"  ETV
+vector 224  NClients.srv.sctp  "Peer Rwnd 5"  ETV
+vector 318  NClients.srv.sctp  "Fast Recovery State 6:10.0.0.14"  ETV
+vector 195  NClients.srv.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 197  NClients.srv.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 204  NClients.srv.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 200  NClients.srv.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 109  NClients.r3.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 113  NClients.r3.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 92  NClients.r3.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 94  NClients.r3.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 101  NClients.r3.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 97  NClients.r3.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 82  NClients.r2.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 86  NClients.r2.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 65  NClients.r2.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 67  NClients.r2.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 74  NClients.r2.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 70  NClients.r2.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 55  NClients.r1.ppp[4].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 59  NClients.r1.ppp[4].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 38  NClients.r1.ppp[3].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 40  NClients.r1.ppp[3].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 47  NClients.r1.ppp[3].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 43  NClients.r1.ppp[3].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 185  NClients.cli[3].ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 189  NClients.cli[3].ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 246  NClients.cli[3].sctp  "Peer Rwnd 4"  ETV
+vector 301  NClients.srv.sctp  "Slow Start Threshold 6:10.0.0.14"  ETV
+vector 302  NClients.srv.sctp  "Congestion Window 6:10.0.0.14"  ETV
+vector 303  NClients.srv.sctp  "Bandwidth 6:10.0.0.14"  ETV
+vector 306  NClients.srv.sctp  "HB Sent 6:10.0.0.14"  ETV
+vector 299  NClients.srv.sctp  "RTO 6:10.0.0.14"  ETV
+vector 258  NClients.cli[3].sctp  "HB ACK Sent 4:10.0.0.26"  ETV
+vector 259  NClients.cli[3].sctp  "HB Received 4:10.0.0.26"  ETV
+vector 252  NClients.cli[3].sctp  "Slow Start Threshold 4:10.0.0.26"  ETV
+vector 253  NClients.cli[3].sctp  "Congestion Window 4:10.0.0.26"  ETV
+vector 254  NClients.cli[3].sctp  "Bandwidth 4:10.0.0.26"  ETV
+vector 257  NClients.cli[3].sctp  "HB Sent 4:10.0.0.26"  ETV
+vector 250  NClients.cli[3].sctp  "RTO 4:10.0.0.26"  ETV
+vector 172  NClients.cli[3].sctpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 335  NClients.cli[3].sctp  "SendQueue of Association 4"  ETV
+vector 255  NClients.cli[3].sctp  "TSN Sent 4:10.0.0.26"  ETV
+vector 262  NClients.cli[3].sctp  "Outstanding Bytes 4:10.0.0.26"  ETV
+vector 234  NClients.cli[3].sctp  "Outstanding Bytes 4:Total"  ETV
+vector 261  NClients.cli[3].sctp  "Queued Sent Bytes 4:10.0.0.26"  ETV
+vector 233  NClients.cli[3].sctp  "Queued Sent Bytes 4:Total"  ETV
+8	0	0	0
+9	0	0	0
+19	0	0	0
+20	0	0	0
+30	0	0	0
+31	0	0	0
+38	65	0.787759439981	136
+38	124	0.788387439981	48
+38	129	0.788421839981	36
+40	65	0.787759439981	0
+40	124	0.788387439981	0
+40	130	0.788431439981	9.6e-06
+41	0	0	0
+41	129	0.788421839981	1
+41	130	0.788431439981	0
+42	0	0	0
+42	66	0.787759439981	1
+42	67	0.787873839981	0
+42	125	0.788387439981	1
+42	130	0.788431439981	0
+42	131	0.788431439981	1
+42	138	0.788465839981	0
+43	66	0.787759439981	143
+43	125	0.788387439981	55
+43	131	0.788431439981	43
+44	31	0.787254839981	67
+44	75	0.787969239981	119
+44	152	0.788475639981	55
+47	66	0.787759439981	136
+47	125	0.788387439981	48
+47	131	0.788431439981	36
+48	31	0.787254839981	60
+48	75	0.787969239981	112
+48	152	0.788475639981	48
+49	33	0.787254839981	60
+49	77	0.787969239981	112
+49	154	0.788475639981	48
+51	33	0.787254839981	0
+51	77	0.787969239981	0
+51	154	0.788475639981	0
+52	0	0	0
+53	0	0	0
+53	34	0.787254839981	1
+53	35	0.787308439981	0
+53	78	0.787969239981	1
+53	79	0.788064439981	0
+53	155	0.788475639981	1
+54	34	0.787254839981	67
+54	78	0.787969239981	119
+54	155	0.788475639981	55
+55	63	0.787759439981	143
+55	122	0.788387439981	55
+55	127	0.788421839981	43
+58	34	0.787254839981	60
+58	78	0.787969239981	112
+58	155	0.788475639981	48
+59	63	0.787759439981	136
+59	122	0.788387439981	48
+59	127	0.788421839981	36
+65	60	0.787644939981	136
+65	114	0.788343339981	48
+65	119	0.788377739981	36
+67	60	0.787644939981	0
+67	114	0.788343339981	0
+67	120	0.788387339981	9.6e-06
+68	0	0	0
+68	119	0.788377739981	1
+68	120	0.788387339981	0
+69	0	0	0
+69	61	0.787644939981	1
+69	62	0.787759339981	0
+69	115	0.788343339981	1
+69	120	0.788387339981	0
+69	121	0.788387339981	1
+69	126	0.788421739981	0
+70	61	0.787644939981	143
+70	115	0.788343339981	55
+70	121	0.788387339981	43
+71	36	0.787308539981	67
+71	80	0.788064539981	119
+74	61	0.787644939981	136
+74	115	0.788343339981	48
+74	121	0.788387339981	36
+75	36	0.787308539981	60
+75	80	0.788064539981	112
+76	38	0.787308539981	60
+76	82	0.788064539981	112
+78	38	0.787308539981	0
+78	82	0.788064539981	0
+79	0	0	0
+80	0	0	0
+80	39	0.787308539981	1
+80	40	0.787362139981	0
+80	83	0.788064539981	1
+80	84	0.788159739981	0
+81	39	0.787308539981	67
+81	83	0.788064539981	119
+82	58	0.787644939981	143
+82	112	0.788343339981	55
+82	117	0.788377739981	43
+85	39	0.787308539981	60
+85	83	0.788064539981	112
+86	58	0.787644939981	136
+86	112	0.788343339981	48
+86	117	0.788377739981	36
+92	55	0.787530439981	136
+92	104	0.788299239981	48
+92	109	0.788333639981	36
+94	55	0.787530439981	0
+94	104	0.788299239981	0
+94	110	0.788343239981	9.6e-06
+95	0	0	0
+95	109	0.788333639981	1
+95	110	0.788343239981	0
+96	0	0	0
+96	56	0.787530439981	1
+96	57	0.787644839981	0
+96	105	0.788299239981	1
+96	110	0.788343239981	0
+96	111	0.788343239981	1
+96	116	0.788377639981	0
+97	56	0.787530439981	143
+97	105	0.788299239981	55
+97	111	0.788343239981	43
+98	41	0.787362239981	67
+98	85	0.788159839981	119
+101	56	0.787530439981	136
+101	105	0.788299239981	48
+101	111	0.788343239981	36
+102	41	0.787362239981	60
+102	85	0.788159839981	112
+103	43	0.787362239981	60
+103	87	0.788159839981	112
+105	43	0.787362239981	0
+105	87	0.788159839981	0
+106	0	0	0
+107	0	0	0
+107	44	0.787362239981	1
+107	45	0.787415839981	0
+107	88	0.788159839981	1
+107	89	0.788255039981	0
+108	44	0.787362239981	67
+108	88	0.788159839981	119
+109	53	0.787530439981	143
+109	102	0.788299239981	55
+109	107	0.788333639981	43
+112	44	0.787362239981	60
+112	88	0.788159839981	112
+113	53	0.787530439981	136
+113	102	0.788299239981	48
+113	107	0.788333639981	36
+125	0	0	0
+126	0	0	0
+144	0	0	0
+145	0	0	0
+163	0	0	0
+164	0	0	0
+172	145	0.788465939981	1000
+179	28	0.787201139981	60
+179	72	0.787873939981	112
+179	136	0.788431539981	48
+179	144	0.788465939981	48
+179	149	0.788465939981	1048
+181	28	0.787201139981	0
+181	72	0.787873939981	0
+181	136	0.788431539981	0
+181	150	0.788475539981	9.6e-06
+181	156	0.788519539981	5.36e-05
+182	0	0	0
+182	144	0.788465939981	1
+182	149	0.788465939981	2
+182	150	0.788475539981	1
+182	156	0.788519539981	0
+183	0	0	0
+183	29	0.787201139981	1
+183	30	0.787254739981	0
+183	73	0.787873939981	1
+183	74	0.787969139981	0
+183	137	0.788431539981	1
+183	150	0.788475539981	0
+183	151	0.788475539981	1
+183	156	0.788519539981	0
+184	29	0.787201139981	67
+184	73	0.787873939981	119
+184	137	0.788431539981	55
+184	151	0.788475539981	55
+185	68	0.787873939981	143
+185	132	0.788431539981	55
+185	139	0.788465939981	43
+188	29	0.787201139981	60
+188	73	0.787873939981	112
+188	137	0.788431539981	48
+188	151	0.788475539981	48
+189	68	0.787873939981	136
+189	132	0.788431539981	48
+189	139	0.788465939981	36
+195	50	0.787415939981	136
+195	96	0.788255139981	48
+195	98	0.788255139981	36
+197	50	0.787415939981	0
+197	96	0.788255139981	0
+197	100	0.788299139981	4.4e-05
+198	0	0	0
+198	98	0.788255139981	1
+198	100	0.788299139981	0
+199	0	0	0
+199	51	0.787415939981	1
+199	52	0.787530339981	0
+199	99	0.788255139981	1
+199	100	0.788299139981	0
+199	101	0.788299139981	1
+199	106	0.788333539981	0
+200	51	0.787415939981	143
+200	99	0.788255139981	55
+200	101	0.788299139981	43
+201	46	0.787415939981	67
+201	90	0.788255139981	119
+204	51	0.787415939981	136
+204	99	0.788255139981	48
+204	101	0.788299139981	36
+205	46	0.787415939981	60
+205	90	0.788255139981	112
+224	48	0.787415939981	65535
+227	23	0	0
+233	147	0.788465939981	1000
+234	147	0.788465939981	1000
+246	70	0.787873939981	65535
+249	26	0.787201139981	0
+250	141	0.788465939981	3
+252	141	0.788465939981	65535
+253	141	0.788465939981	8940
+254	141	0.788465939981	0.3725
+255	147	0.788465939981	1000
+257	141	0.788465939981	1
+258	134	0.788431539981	1
+259	134	0.788431539981	1
+261	147	0.788465939981	1000
+262	147	0.788465939981	1000
+269	26	0.787201139981	0
+298	48	0.787415939981	0
+299	92	0.788255139981	3
+301	92	0.788255139981	65535
+302	92	0.788255139981	8940
+303	92	0.788255139981	0.3725
+306	92	0.788255139981	1
+318	48	0.787415939981	0
+335	147	0.788465939981	1
+335	147	0.788465939981	0

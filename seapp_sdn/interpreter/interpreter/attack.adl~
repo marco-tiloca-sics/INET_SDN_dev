@@ -1,0 +1,43 @@
+list dstList = {5}
+
+from 5 every 2 do {
+
+    # declare a packet
+	packet fakePacket
+
+    var sequenceNumber = 10000
+    var step = 1
+    
+	# create a new packet
+	create(fakePacket, "APP.type", "1001")
+
+	# fill the new packet properly
+	change(fakePacket, "APP.info", sequenceNumber)
+	change(fakePacket, "APP.name", "myPacket")
+
+	change(fakePacket, "controlInfo.destAddr", "192.168.2.3") 
+	change(fakePacket, "controlInfo.sockId", 4)
+	change(fakePacket, "controlInfo.interfaceId", 0)
+	change(fakePacket, "controlInfo.destPort", 2000)
+	
+	change(fakePacket, "sending.outputGate", "app_udp_inf$o[0]")
+	
+	put(fakePacket, dstList, TX, FALSE, 0)
+	sequenceNumber += step
+}
+
+
+
+
+
+from 5 nodes in dstList do {
+	filter("TRA.sourcePort" == 1025)
+		var gamidia = -1
+		retrieve(original, "APP.info", gamidia)
+		#i = i + 1
+		#change(original, "APP.info", gamidia) 
+
+}
+
+
+

@@ -1,0 +1,28 @@
+// @author: Francesco Racciatti
+
+
+
+#include "ApplicationPacket.h"
+
+
+//Register_Class(ApplicationPacket);
+
+
+ApplicationPacket :: ApplicationPacket(double value) : ::cPacket("ApplicationPacket"){
+	this->value=value;
+}
+
+
+ApplicationPacket :: ~ApplicationPacket(){
+
+}
+
+
+double ApplicationPacket :: getValue() const{
+	return value;
+}
+
+
+void ApplicationPacket :: setValue(double value){
+	this->value = value;
+}

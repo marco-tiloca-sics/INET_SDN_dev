@@ -1,0 +1,22 @@
+list lierList = {6}
+from 30 nodes in lierList do {
+	filter("APP.sequenceNumber" == "13" or 
+	"APP.sequenceNumber" == "15" or
+	"APP.sequenceNumber" == "17" or
+	"APP.sequenceNumber" == "19" or
+	"APP.sequenceNumber" == "21" or
+	"APP.sequenceNumber" == "23" or
+	"APP.sequenceNumber" == "25" or
+	"APP.sequenceNumber" == "27" or
+	"APP.sequenceNumber" == "29" or
+	"APP.sequenceNumber" == "31" or
+	"APP.sequenceNumber" == "33" or
+	"APP.sequenceNumber" == "35" or
+	"APP.sequenceNumber" == "37" or
+	"APP.sequenceNumber" == "39")
+		change(original, "APP.periodGreen", 2)
+		change(original, "APP.periodYellow", 2)
+		change(original, "APP.periodRed", 2)
+}
+
+

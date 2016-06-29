@@ -1,0 +1,1901 @@
+version 2
+run inet_inet_2a-0-20150514-20:33:24-3010
+attr configname inet_inet_2a
+attr datetime 20150514-20:33:24
+attr experiment inet_inet_2a
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network BulkTransfer
+attr processid 3010
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 11  BulkTransfer.client1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 12  BulkTransfer.client1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 22  BulkTransfer.client1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 23  BulkTransfer.client1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 41  BulkTransfer.client2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 42  BulkTransfer.client2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 60  BulkTransfer.client3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 61  BulkTransfer.client3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 79  BulkTransfer.server.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 80  BulkTransfer.server.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 90  BulkTransfer.server.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 91  BulkTransfer.server.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 106  BulkTransfer.router.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 107  BulkTransfer.router.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 117  BulkTransfer.router.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 118  BulkTransfer.router.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 128  BulkTransfer.router.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 129  BulkTransfer.router.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 139  BulkTransfer.router.ppp[3].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 140  BulkTransfer.router.ppp[3].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 186  BulkTransfer.client1.tcp  tcpRcvQueueBytes  ETV
+vector 173  BulkTransfer.client1.tcp  "advertised window"  ETV
+vector 172  BulkTransfer.client1.tcp  "receive window"  ETV
+vector 175  BulkTransfer.client1.tcp  "sent ack"  ETV
+vector 210  BulkTransfer.client2.tcp  tcpRcvQueueBytes  ETV
+vector 197  BulkTransfer.client2.tcp  "advertised window"  ETV
+vector 196  BulkTransfer.client2.tcp  "receive window"  ETV
+vector 199  BulkTransfer.client2.tcp  "sent ack"  ETV
+vector 234  BulkTransfer.client3.tcp  tcpRcvQueueBytes  ETV
+vector 221  BulkTransfer.client3.tcp  "advertised window"  ETV
+vector 220  BulkTransfer.client3.tcp  "receive window"  ETV
+vector 223  BulkTransfer.client3.tcp  "sent ack"  ETV
+vector 19  BulkTransfer.client1.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 21  BulkTransfer.client1.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 38  BulkTransfer.client2.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 40  BulkTransfer.client2.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 57  BulkTransfer.client3.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 59  BulkTransfer.client3.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 28  BulkTransfer.client1.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 24  BulkTransfer.client1.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 47  BulkTransfer.client2.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 43  BulkTransfer.client2.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 66  BulkTransfer.client3.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 62  BulkTransfer.client3.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 82  BulkTransfer.server.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 86  BulkTransfer.server.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 120  BulkTransfer.router.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 124  BulkTransfer.router.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 131  BulkTransfer.router.ppp[2].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 135  BulkTransfer.router.ppp[2].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 152  BulkTransfer.server.tcp  "rcvd seq"  ETV
+vector 153  BulkTransfer.server.tcp  "rcvd ack"  ETV
+vector 149  BulkTransfer.server.tcp  "advertised window"  ETV
+vector 147  BulkTransfer.server.tcp  "send window"  ETV
+vector 162  BulkTransfer.server.tcp  tcpRcvQueueBytes  ETV
+vector 148  BulkTransfer.server.tcp  "receive window"  ETV
+vector 151  BulkTransfer.server.tcp  "sent ack"  ETV
+vector 136  BulkTransfer.router.ppp[3].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 138  BulkTransfer.router.ppp[3].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 145  BulkTransfer.router.ppp[3].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 141  BulkTransfer.router.ppp[3].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 76  BulkTransfer.server.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 78  BulkTransfer.server.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 85  BulkTransfer.server.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 81  BulkTransfer.server.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 93  BulkTransfer.server.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 97  BulkTransfer.server.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 25  BulkTransfer.client1.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 29  BulkTransfer.client1.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 248  BulkTransfer.server.tcp  "rcvd seq"  ETV
+vector 249  BulkTransfer.server.tcp  "rcvd ack"  ETV
+vector 245  BulkTransfer.server.tcp  "advertised window"  ETV
+vector 243  BulkTransfer.server.tcp  "send window"  ETV
+vector 258  BulkTransfer.server.tcp  tcpRcvQueueBytes  ETV
+vector 244  BulkTransfer.server.tcp  "receive window"  ETV
+vector 247  BulkTransfer.server.tcp  "sent ack"  ETV
+vector 176  BulkTransfer.client1.tcp  "rcvd seq"  ETV
+vector 177  BulkTransfer.client1.tcp  "rcvd ack"  ETV
+vector 171  BulkTransfer.client1.tcp  "send window"  ETV
+vector 87  BulkTransfer.server.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 89  BulkTransfer.server.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 96  BulkTransfer.server.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 92  BulkTransfer.server.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 154  BulkTransfer.server.tcp  "unacked bytes"  ETV
+vector 272  BulkTransfer.server.tcp  "rcvd seq"  ETV
+vector 273  BulkTransfer.server.tcp  "rcvd ack"  ETV
+vector 269  BulkTransfer.server.tcp  "advertised window"  ETV
+vector 267  BulkTransfer.server.tcp  "send window"  ETV
+vector 282  BulkTransfer.server.tcp  tcpRcvQueueBytes  ETV
+vector 268  BulkTransfer.server.tcp  "receive window"  ETV
+vector 271  BulkTransfer.server.tcp  "sent ack"  ETV
+vector 142  BulkTransfer.router.ppp[3].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 146  BulkTransfer.router.ppp[3].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 114  BulkTransfer.router.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 116  BulkTransfer.router.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 123  BulkTransfer.router.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 119  BulkTransfer.router.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 125  BulkTransfer.router.ppp[2].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 127  BulkTransfer.router.ppp[2].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 134  BulkTransfer.router.ppp[2].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 130  BulkTransfer.router.ppp[2].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 44  BulkTransfer.client2.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 48  BulkTransfer.client2.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 200  BulkTransfer.client2.tcp  "rcvd seq"  ETV
+vector 201  BulkTransfer.client2.tcp  "rcvd ack"  ETV
+vector 195  BulkTransfer.client2.tcp  "send window"  ETV
+vector 63  BulkTransfer.client3.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 67  BulkTransfer.client3.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 224  BulkTransfer.client3.tcp  "rcvd seq"  ETV
+vector 225  BulkTransfer.client3.tcp  "rcvd ack"  ETV
+vector 219  BulkTransfer.client3.tcp  "send window"  ETV
+vector 250  BulkTransfer.server.tcp  "unacked bytes"  ETV
+vector 274  BulkTransfer.server.tcp  "unacked bytes"  ETV
+vector 1  BulkTransfer.client1.tcpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 31  BulkTransfer.client2.tcpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 50  BulkTransfer.client3.tcpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 174  BulkTransfer.client1.tcp  "sent seq"  ETV
+vector 178  BulkTransfer.client1.tcp  "unacked bytes"  ETV
+vector 198  BulkTransfer.client2.tcp  "sent seq"  ETV
+vector 202  BulkTransfer.client2.tcp  "unacked bytes"  ETV
+vector 222  BulkTransfer.client3.tcp  "sent seq"  ETV
+vector 226  BulkTransfer.client3.tcp  "unacked bytes"  ETV
+vector 155  BulkTransfer.server.tcp  "rcvd dupAcks"  ETV
+vector 68  BulkTransfer.server.tcpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 70  BulkTransfer.server.tcpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 69  BulkTransfer.server.tcpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 150  BulkTransfer.server.tcp  "sent seq"  ETV
+vector 190  BulkTransfer.client1.tcp  "measured RTT"  ETV
+vector 191  BulkTransfer.client1.tcp  "smoothed RTT"  ETV
+vector 192  BulkTransfer.client1.tcp  RTTVAR  ETV
+vector 193  BulkTransfer.client1.tcp  RTO  ETV
+vector 188  BulkTransfer.client1.tcp  cwnd  ETV
+vector 179  BulkTransfer.client1.tcp  "rcvd dupAcks"  ETV
+vector 251  BulkTransfer.server.tcp  "rcvd dupAcks"  ETV
+vector 246  BulkTransfer.server.tcp  "sent seq"  ETV
+vector 0  BulkTransfer.client1.tcpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 2  BulkTransfer.client1.tcpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 214  BulkTransfer.client2.tcp  "measured RTT"  ETV
+vector 215  BulkTransfer.client2.tcp  "smoothed RTT"  ETV
+vector 216  BulkTransfer.client2.tcp  RTTVAR  ETV
+vector 217  BulkTransfer.client2.tcp  RTO  ETV
+vector 212  BulkTransfer.client2.tcp  cwnd  ETV
+vector 203  BulkTransfer.client2.tcp  "rcvd dupAcks"  ETV
+vector 275  BulkTransfer.server.tcp  "rcvd dupAcks"  ETV
+vector 270  BulkTransfer.server.tcp  "sent seq"  ETV
+vector 166  BulkTransfer.server.tcp  "measured RTT"  ETV
+vector 167  BulkTransfer.server.tcp  "smoothed RTT"  ETV
+vector 168  BulkTransfer.server.tcp  RTTVAR  ETV
+vector 169  BulkTransfer.server.tcp  RTO  ETV
+vector 164  BulkTransfer.server.tcp  cwnd  ETV
+vector 238  BulkTransfer.client3.tcp  "measured RTT"  ETV
+vector 239  BulkTransfer.client3.tcp  "smoothed RTT"  ETV
+vector 240  BulkTransfer.client3.tcp  RTTVAR  ETV
+vector 241  BulkTransfer.client3.tcp  RTO  ETV
+vector 236  BulkTransfer.client3.tcp  cwnd  ETV
+vector 227  BulkTransfer.client3.tcp  "rcvd dupAcks"  ETV
+vector 30  BulkTransfer.client2.tcpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 32  BulkTransfer.client2.tcpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 49  BulkTransfer.client3.tcpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 51  BulkTransfer.client3.tcpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 262  BulkTransfer.server.tcp  "measured RTT"  ETV
+vector 263  BulkTransfer.server.tcp  "smoothed RTT"  ETV
+vector 264  BulkTransfer.server.tcp  RTTVAR  ETV
+vector 265  BulkTransfer.server.tcp  RTO  ETV
+vector 260  BulkTransfer.server.tcp  cwnd  ETV
+vector 286  BulkTransfer.server.tcp  "measured RTT"  ETV
+vector 287  BulkTransfer.server.tcp  "smoothed RTT"  ETV
+vector 288  BulkTransfer.server.tcp  RTTVAR  ETV
+vector 289  BulkTransfer.server.tcp  RTO  ETV
+vector 284  BulkTransfer.server.tcp  cwnd  ETV
+0	296	1.1243602	1452
+0	497	1.1487204	1452
+0	589	1.1607124	1452
+0	896	1.1970644	1452
+1	183	1.1	10000000
+2	296	1.1243602	0
+2	497	1.1487204	0
+2	589	1.1607124	0
+2	896	1.1970644	0
+11	0	0	0
+12	0	0	0
+19	39	1	44
+19	91	1.0008162	40
+19	210	1.1	1492
+19	261	1.1123682	1492
+19	262	1.1123682	1492
+19	299	1.1243602	40
+19	346	1.1247364	1492
+19	347	1.1247364	1492
+19	429	1.1367284	1492
+19	430	1.1367284	1492
+19	500	1.1487204	40
+19	595	1.1607124	40
+19	628	1.1610884	1492
+19	629	1.1610884	1492
+19	655	1.1614644	1492
+19	656	1.1614644	1492
+19	727	1.1730804	1492
+19	728	1.1730804	1492
+19	818	1.1850724	1492
+19	819	1.1850724	1492
+19	899	1.1970644	40
+21	39	1	0
+21	91	1.0008162	0
+21	210	1.1	0
+21	261	1.1123682	0
+21	286	1.1243602	0.011992
+21	367	1.1363522	0.011992
+21	391	1.1367282	0.0119918
+21	464	1.1487202	0.0239838
+21	557	1.1607122	0.0239838
+21	683	1.1727042	0.0359758
+21	774	1.1846962	0.0359758
+21	790	1.1850722	0.0243598
+21	843	1.1854482	0.0243598
+21	920	1.1974402	0.0363518
+22	0	0	0
+22	262	1.1123682	1
+22	286	1.1243602	0
+22	299	1.1243602	1
+22	346	1.1247364	2
+22	347	1.1247364	3
+22	367	1.1363522	2
+22	391	1.1367282	1
+22	429	1.1367284	2
+22	430	1.1367284	3
+22	464	1.1487202	2
+22	500	1.1487204	3
+22	557	1.1607122	2
+22	595	1.1607124	3
+22	628	1.1610884	4
+22	629	1.1610884	5
+22	655	1.1614644	6
+22	656	1.1614644	7
+22	683	1.1727042	6
+22	727	1.1730804	7
+22	728	1.1730804	8
+22	774	1.1846962	7
+22	790	1.1850722	6
+22	818	1.1850724	7
+22	819	1.1850724	8
+22	843	1.1854482	7
+22	899	1.1970644	8
+22	920	1.1974402	7
+23	0	0	0
+23	42	1	1
+23	45	1.000408	0
+23	93	1.0008162	1
+23	94	1.0011922	0
+23	213	1.1	1
+23	216	1.111992	0
+23	263	1.1123682	1
+23	286	1.1243602	0
+23	289	1.1243602	1
+23	367	1.1363522	0
+23	369	1.1363522	1
+23	391	1.1367282	0
+23	393	1.1367282	1
+23	464	1.1487202	0
+23	466	1.1487202	1
+23	557	1.1607122	0
+23	558	1.1607122	1
+23	683	1.1727042	0
+23	684	1.1727042	1
+23	774	1.1846962	0
+23	775	1.1846962	1
+23	790	1.1850722	0
+23	791	1.1850722	1
+23	843	1.1854482	0
+23	844	1.1854482	1
+23	920	1.1974402	0
+23	921	1.1974402	1
+24	42	1	51
+24	93	1.0008162	47
+24	213	1.1	1499
+24	263	1.1123682	1499
+24	289	1.1243602	1499
+24	369	1.1363522	47
+24	393	1.1367282	1499
+24	466	1.1487202	1499
+24	558	1.1607122	1499
+24	684	1.1727042	1499
+24	775	1.1846962	47
+24	791	1.1850722	47
+24	844	1.1854482	1499
+24	921	1.1974402	1499
+25	73	1.0008162	51
+25	250	1.1123682	47
+25	285	1.1243602	1499
+25	323	1.1247364	47
+25	417	1.1367284	47
+25	488	1.1487204	1499
+25	575	1.1607124	1499
+25	616	1.1610884	47
+25	643	1.1614644	47
+25	716	1.1730804	47
+25	807	1.1850724	47
+25	889	1.1970644	1499
+25	994	1.2090564	1499
+28	42	1	44
+28	93	1.0008162	40
+28	213	1.1	1492
+28	263	1.1123682	1492
+28	289	1.1243602	1492
+28	369	1.1363522	40
+28	393	1.1367282	1492
+28	466	1.1487202	1492
+28	558	1.1607122	1492
+28	684	1.1727042	1492
+28	775	1.1846962	40
+28	791	1.1850722	40
+28	844	1.1854482	1492
+28	921	1.1974402	1492
+29	73	1.0008162	44
+29	250	1.1123682	40
+29	285	1.1243602	1492
+29	323	1.1247364	40
+29	417	1.1367284	40
+29	488	1.1487204	1492
+29	575	1.1607124	1492
+29	616	1.1610884	40
+29	643	1.1614644	40
+29	716	1.1730804	40
+29	807	1.1850724	40
+29	889	1.1970644	1492
+29	994	1.2090564	1492
+30	460	1.1483444	1452
+30	916	1.1970648	1452
+31	184	1.1	10000000
+32	460	1.1483444	0
+32	916	1.1970648	0
+38	40	1	44
+38	138	1.0016324	40
+38	211	1.1	1492
+38	344	1.1247364	1492
+38	345	1.1247364	1492
+38	463	1.1483444	40
+38	554	1.1494728	1492
+38	555	1.1494728	1492
+38	676	1.1614648	1492
+38	677	1.1614648	1492
+38	919	1.1970648	40
+40	40	1	0
+40	138	1.0016324	0
+40	211	1.1	0
+40	344	1.1247364	0
+40	416	1.1367284	0.011992
+40	489	1.1487204	0.000376
+40	554	1.1494728	0
+40	663	1.1614648	0.011992
+40	753	1.1734568	0.011992
+40	873	1.1854488	0.023984
+40	958	1.1974408	0.000376
+41	0	0	0
+41	345	1.1247364	1
+41	416	1.1367284	0
+41	463	1.1483444	1
+41	489	1.1487204	0
+41	555	1.1494728	1
+41	663	1.1614648	0
+41	676	1.1614648	1
+41	677	1.1614648	2
+41	753	1.1734568	1
+41	873	1.1854488	0
+41	919	1.1970648	1
+41	958	1.1974408	0
+42	0	0	0
+42	43	1	1
+42	46	1.000408	0
+42	139	1.0016324	1
+42	140	1.0020084	0
+42	214	1.1	1
+42	217	1.111992	0
+42	348	1.1247364	1
+42	416	1.1367284	0
+42	418	1.1367284	1
+42	489	1.1487204	0
+42	491	1.1487204	1
+42	523	1.1490964	0
+42	556	1.1494728	1
+42	663	1.1614648	0
+42	665	1.1614648	1
+42	753	1.1734568	0
+42	755	1.1734568	1
+42	873	1.1854488	0
+42	875	1.1854488	1
+42	958	1.1974408	0
+42	960	1.1974408	1
+42	973	1.1978168	0
+43	43	1	51
+43	139	1.0016324	47
+43	214	1.1	1499
+43	348	1.1247364	1499
+43	418	1.1367284	1499
+43	491	1.1487204	47
+43	556	1.1494728	1499
+43	665	1.1614648	1499
+43	755	1.1734568	1499
+43	875	1.1854488	1499
+43	960	1.1974408	47
+44	128	1.0016324	51
+44	322	1.1247364	47
+44	453	1.1483444	1499
+44	543	1.1494728	47
+44	664	1.1614648	47
+44	909	1.1970648	1499
+47	43	1	44
+47	139	1.0016324	40
+47	214	1.1	1492
+47	348	1.1247364	1492
+47	418	1.1367284	1492
+47	491	1.1487204	40
+47	556	1.1494728	1492
+47	665	1.1614648	1492
+47	755	1.1734568	1492
+47	875	1.1854488	1492
+47	960	1.1974408	40
+48	128	1.0016324	44
+48	322	1.1247364	40
+48	453	1.1483444	1492
+48	543	1.1494728	40
+48	664	1.1614648	40
+48	909	1.1970648	1492
+49	591	1.1607124	1452
+50	185	1.1	10000000
+51	591	1.1607124	0
+57	41	1	44
+57	158	1.0020404	40
+57	212	1.1	1492
+57	449	1.1371044	1492
+57	450	1.1371044	1492
+57	596	1.1607124	40
+57	766	1.1734568	1492
+57	767	1.1734568	1492
+57	984	1.1978168	1492
+57	985	1.1978168	1492
+59	41	1	0
+59	158	1.0020404	0
+59	212	1.1	0
+59	449	1.1371044	0
+59	522	1.1490964	0.011992
+59	615	1.1610884	0.000376
+59	766	1.1734568	0
+59	874	1.1854488	0.011992
+59	984	1.1978168	0
+60	0	0	0
+60	450	1.1371044	1
+60	522	1.1490964	0
+60	596	1.1607124	1
+60	615	1.1610884	0
+60	767	1.1734568	1
+60	874	1.1854488	0
+60	985	1.1978168	1
+61	0	0	0
+61	44	1	1
+61	47	1.000408	0
+61	159	1.0020404	1
+61	168	1.0024164	0
+61	215	1.1	1
+61	218	1.111992	0
+61	451	1.1371044	1
+61	522	1.1490964	0
+61	524	1.1490964	1
+61	615	1.1610884	0
+61	617	1.1610884	1
+61	644	1.1614644	0
+61	768	1.1734568	1
+61	874	1.1854488	0
+61	876	1.1854488	1
+61	959	1.1974408	0
+61	986	1.1978168	1
+62	44	1	51
+62	159	1.0020404	47
+62	215	1.1	1499
+62	451	1.1371044	1499
+62	524	1.1490964	1499
+62	617	1.1610884	47
+62	768	1.1734568	1499
+62	876	1.1854488	1499
+62	986	1.1978168	1499
+63	148	1.0020404	51
+63	438	1.1371044	47
+63	576	1.1607124	1499
+63	754	1.1734568	47
+63	972	1.1978168	47
+66	44	1	44
+66	159	1.0020404	40
+66	215	1.1	1492
+66	451	1.1371044	1492
+66	524	1.1490964	1492
+66	617	1.1610884	40
+66	768	1.1734568	1492
+66	876	1.1854488	1492
+66	986	1.1978168	1492
+67	148	1.0020404	44
+67	438	1.1371044	40
+67	576	1.1607124	1492
+67	754	1.1734568	40
+67	972	1.1978168	40
+68	237	1.1119921	1452
+68	273	1.1239842	1452
+68	313	1.1243603	1452
+68	357	1.1359762	1452
+68	384	1.1363523	1452
+68	482	1.1487203	1452
+68	515	1.1487206	1452
+68	569	1.1607123	1452
+68	606	1.1607126	1452
+68	692	1.1727043	1452
+68	708	1.1727046	1452
+68	783	1.1846963	1452
+68	831	1.1850726	1452
+68	929	1.1974403	1452
+68	946	1.1974406	1452
+69	237	1.1119921	2904
+69	273	1.1239842	2904
+69	313	1.1243603	2904
+69	357	1.1359762	2904
+69	384	1.1363523	2904
+69	482	1.1487203	2904
+69	515	1.1487206	2904
+69	569	1.1607123	2904
+69	606	1.1607126	2904
+69	692	1.1727043	2904
+69	708	1.1727046	2904
+69	783	1.1846963	2904
+69	831	1.1850726	2904
+69	929	1.1974403	2904
+69	946	1.1974406	2904
+70	237	1.1119921	0
+70	273	1.1239842	0
+70	313	1.1243603	0
+70	357	1.1359762	0
+70	384	1.1363523	0
+70	482	1.1487203	0
+70	515	1.1487206	0
+70	569	1.1607123	0
+70	606	1.1607126	0
+70	692	1.1727043	0
+70	708	1.1727046	0
+70	783	1.1846963	0
+70	831	1.1850726	0
+70	929	1.1974403	0
+70	946	1.1974406	0
+76	67	1.0004081	44
+76	242	1.1119921	40
+76	247	1.1119921	1492
+76	318	1.1243603	40
+76	389	1.1363523	40
+76	413	1.1367283	1492
+76	414	1.1367283	1492
+76	487	1.1487203	40
+76	574	1.1607123	40
+76	697	1.1727043	40
+76	788	1.1846963	40
+76	804	1.1850723	1492
+76	805	1.1850723	1492
+76	856	1.1854483	1492
+76	857	1.1854483	1492
+76	934	1.1974403	40
+78	67	1.0004081	0
+78	242	1.1119921	0
+78	248	1.1123681	0.000376
+78	318	1.1243603	0
+78	389	1.1363523	0
+78	413	1.1367283	0
+78	469	1.1487203	0.011992
+78	560	1.1607123	0.011992
+78	613	1.1610883	0.000376
+78	697	1.1727043	0
+78	788	1.1846963	0
+78	804	1.1850723	0
+78	887	1.1970643	0.011992
+78	992	1.2090563	0.023608
+79	0	0	0
+79	247	1.1119921	1
+79	248	1.1123681	0
+79	414	1.1367283	1
+79	469	1.1487203	0
+79	487	1.1487203	1
+79	560	1.1607123	0
+79	574	1.1607123	1
+79	613	1.1610883	0
+79	805	1.1850723	1
+79	856	1.1854483	2
+79	857	1.1854483	3
+79	887	1.1970643	2
+79	934	1.1974403	3
+79	992	1.2090563	2
+80	0	0	0
+80	68	1.0004081	1
+80	70	1.0008161	0
+80	244	1.1119921	1
+80	248	1.1123681	0
+80	249	1.1123681	1
+80	284	1.1243601	0
+80	319	1.1243603	1
+80	321	1.1247363	0
+80	390	1.1363523	1
+80	397	1.1367283	0
+80	415	1.1367283	1
+80	469	1.1487203	0
+80	472	1.1487203	1
+80	560	1.1607123	0
+80	563	1.1607123	1
+80	613	1.1610883	0
+80	614	1.1610883	1
+80	642	1.1614643	0
+80	698	1.1727043	1
+80	715	1.1730803	0
+80	789	1.1846963	1
+80	793	1.1850723	0
+80	806	1.1850723	1
+80	887	1.1970643	0
+80	888	1.1970643	1
+80	992	1.2090563	0
+80	993	1.2090563	1
+81	68	1.0004081	51
+81	244	1.1119921	47
+81	249	1.1123681	1499
+81	319	1.1243603	47
+81	390	1.1363523	47
+81	415	1.1367283	1499
+81	472	1.1487203	1499
+81	563	1.1607123	47
+81	614	1.1610883	47
+81	698	1.1727043	47
+81	789	1.1846963	47
+81	806	1.1850723	1499
+81	888	1.1970643	1499
+81	993	1.2090563	1499
+82	48	1.0004081	51
+82	95	1.0011923	47
+82	219	1.1119921	1499
+82	300	1.1243603	1499
+82	371	1.1363523	1499
+82	395	1.1367283	47
+82	467	1.1487203	1499
+82	559	1.1607123	1499
+82	685	1.1727043	1499
+82	776	1.1846963	1499
+82	792	1.1850723	47
+82	845	1.1854483	47
+82	922	1.1974403	1499
+85	68	1.0004081	44
+85	244	1.1119921	40
+85	249	1.1123681	1492
+85	319	1.1243603	40
+85	390	1.1363523	40
+85	415	1.1367283	1492
+85	472	1.1487203	1492
+85	563	1.1607123	40
+85	614	1.1610883	40
+85	698	1.1727043	40
+85	789	1.1846963	40
+85	806	1.1850723	1492
+85	888	1.1970643	1492
+85	993	1.2090563	1492
+86	48	1.0004081	44
+86	95	1.0011923	40
+86	219	1.1119921	1492
+86	300	1.1243603	1492
+86	371	1.1363523	1492
+86	395	1.1367283	40
+86	467	1.1487203	1492
+86	559	1.1607123	1492
+86	685	1.1727043	1492
+86	776	1.1846963	1492
+86	792	1.1850723	40
+86	845	1.1854483	40
+86	922	1.1974403	1492
+87	90	1.0008162	44
+87	112	1.0012242	44
+87	278	1.1239842	40
+87	283	1.1239842	1492
+87	362	1.1359762	40
+87	366	1.1359762	1492
+87	520	1.1487206	40
+87	611	1.1607126	40
+87	713	1.1727046	40
+87	743	1.1730806	1492
+87	744	1.1730806	1492
+87	836	1.1850726	40
+87	871	1.1854486	1492
+87	872	1.1854486	1492
+87	951	1.1974406	40
+89	90	1.0008162	0
+89	112	1.0012242	0
+89	278	1.1239842	0
+89	287	1.1243602	0.000376
+89	368	1.1363522	0.000376
+89	392	1.1367282	0.000752
+89	520	1.1487206	0
+89	611	1.1607126	0
+89	713	1.1727046	0
+89	743	1.1730806	0
+89	823	1.1850726	0.011992
+89	900	1.1970646	0.011992
+89	938	1.1974406	0.011992
+90	0	0	0
+90	283	1.1239842	1
+90	287	1.1243602	0
+90	362	1.1359762	1
+90	366	1.1359762	2
+90	368	1.1363522	1
+90	392	1.1367282	0
+90	744	1.1730806	1
+90	823	1.1850726	0
+90	836	1.1850726	1
+90	871	1.1854486	2
+90	872	1.1854486	3
+90	900	1.1970646	2
+90	938	1.1974406	1
+90	951	1.1974406	2
+91	0	0	0
+91	92	1.0008162	1
+91	104	1.0012242	0
+91	113	1.0012242	1
+91	120	1.0016322	0
+91	280	1.1239842	1
+91	287	1.1243602	0
+91	290	1.1243602	1
+91	368	1.1363522	0
+91	370	1.1363522	1
+91	392	1.1367282	0
+91	394	1.1367282	1
+91	465	1.1487202	0
+91	521	1.1487206	1
+91	535	1.1490966	0
+91	612	1.1607126	1
+91	635	1.1610886	0
+91	714	1.1727046	1
+91	732	1.1730806	0
+91	745	1.1730806	1
+91	823	1.1850726	0
+91	825	1.1850726	1
+91	900	1.1970646	0
+91	901	1.1970646	1
+91	938	1.1974406	0
+91	940	1.1974406	1
+92	92	1.0008162	51
+92	113	1.0012242	51
+92	280	1.1239842	47
+92	290	1.1243602	1499
+92	370	1.1363522	47
+92	394	1.1367282	1499
+92	521	1.1487206	47
+92	612	1.1607126	47
+92	714	1.1727046	47
+92	745	1.1730806	1499
+92	825	1.1850726	1499
+92	901	1.1970646	47
+92	940	1.1974406	1499
+93	72	1.0008162	51
+93	103	1.0012242	51
+93	161	1.0023846	47
+93	176	1.0027926	47
+93	266	1.1239842	1499
+93	350	1.1359762	1499
+93	508	1.1487206	1499
+93	599	1.1607126	1499
+93	701	1.1727046	1499
+93	731	1.1730806	47
+93	822	1.1850726	1499
+93	860	1.1854486	47
+93	937	1.1974406	1499
+96	92	1.0008162	44
+96	113	1.0012242	44
+96	280	1.1239842	40
+96	290	1.1243602	1492
+96	370	1.1363522	40
+96	394	1.1367282	1492
+96	521	1.1487206	40
+96	612	1.1607126	40
+96	714	1.1727046	40
+96	745	1.1730806	1492
+96	825	1.1850726	1492
+96	901	1.1970646	40
+96	940	1.1974406	1492
+97	72	1.0008162	44
+97	103	1.0012242	44
+97	161	1.0023846	40
+97	176	1.0027926	40
+97	266	1.1239842	1492
+97	350	1.1359762	1492
+97	508	1.1487206	1492
+97	599	1.1607126	1492
+97	701	1.1727046	1492
+97	731	1.1730806	40
+97	822	1.1850726	1492
+97	860	1.1854486	40
+97	937	1.1974406	1492
+106	0	0	0
+107	0	0	0
+114	118	1.0012243	44
+114	309	1.1243603	40
+114	380	1.1363523	1492
+114	540	1.1490967	40
+114	640	1.1610887	40
+114	841	1.1850727	1492
+114	907	1.1970647	1492
+116	118	1.0012243	0
+116	309	1.1243603	0
+116	380	1.1363523	0
+116	540	1.1490967	0
+116	640	1.1610887	0
+116	841	1.1850727	0
+116	907	1.1970647	0
+117	0	0	0
+118	0	0	0
+118	119	1.0012243	1
+118	122	1.0016323	0
+118	312	1.1243603	1
+118	320	1.1247363	0
+118	383	1.1363523	1
+118	452	1.1483443	0
+118	541	1.1490967	1
+118	542	1.1494727	0
+118	641	1.1610887	1
+118	662	1.1614647	0
+118	842	1.1850727	1
+118	903	1.1970647	0
+118	908	1.1970647	1
+119	119	1.0012243	51
+119	312	1.1243603	47
+119	383	1.1363523	1499
+119	541	1.1490967	47
+119	641	1.1610887	47
+119	842	1.1850727	1499
+119	908	1.1970647	1499
+120	49	1.0004081	51
+120	141	1.0020085	47
+120	220	1.1119921	1499
+120	431	1.1367285	1499
+120	501	1.1487205	1499
+120	526	1.1490965	47
+120	678	1.1614649	1499
+120	769	1.1734569	1499
+120	877	1.1854489	1499
+120	961	1.1974409	1499
+120	987	1.1978169	47
+123	119	1.0012243	44
+123	312	1.1243603	40
+123	383	1.1363523	1492
+123	541	1.1490967	40
+123	641	1.1610887	40
+123	842	1.1850727	1492
+123	908	1.1970647	1492
+124	49	1.0004081	44
+124	141	1.0020085	40
+124	220	1.1119921	1492
+124	431	1.1367285	1492
+124	501	1.1487205	1492
+124	526	1.1490965	40
+124	678	1.1614649	1492
+124	769	1.1734569	1492
+124	877	1.1854489	1492
+124	961	1.1974409	1492
+124	987	1.1978169	40
+125	126	1.0016323	44
+125	405	1.1367283	40
+125	478	1.1487203	1492
+125	750	1.1730807	40
+125	956	1.1974407	40
+127	126	1.0016323	0
+127	405	1.1367283	0
+127	478	1.1487203	0
+127	750	1.1730807	0
+127	956	1.1974407	0
+128	0	0	0
+129	0	0	0
+129	127	1.0016323	1
+129	147	1.0020403	0
+129	408	1.1367283	1
+129	437	1.1371043	0
+129	481	1.1487203	1
+129	561	1.1607123	0
+129	751	1.1730807	1
+129	752	1.1734567	0
+129	957	1.1974407	1
+129	971	1.1978167	0
+130	127	1.0016323	51
+130	408	1.1367283	47
+130	481	1.1487203	1499
+130	751	1.1730807	47
+130	957	1.1974407	47
+131	50	1.0004081	51
+131	169	1.0024165	47
+131	221	1.1119921	1499
+131	525	1.1490965	1499
+131	630	1.1610885	1499
+131	657	1.1614645	47
+131	878	1.1854489	1499
+131	962	1.1974409	1499
+134	127	1.0016323	44
+134	408	1.1367283	40
+134	481	1.1487203	1492
+134	751	1.1730807	40
+134	957	1.1974407	40
+135	50	1.0004081	44
+135	169	1.0024165	40
+135	221	1.1119921	1492
+135	525	1.1490965	1492
+135	630	1.1610885	1492
+135	657	1.1614645	40
+135	878	1.1854489	1492
+135	962	1.1974409	1492
+136	61	1.0004081	44
+136	62	1.0004081	44
+136	145	1.0020085	40
+136	173	1.0024165	40
+136	232	1.1119921	1492
+136	233	1.1119921	1492
+136	435	1.1367285	1492
+136	506	1.1487205	1492
+136	533	1.1490965	1492
+136	534	1.1490965	40
+136	634	1.1610885	1492
+136	661	1.1614645	40
+136	682	1.1614649	1492
+136	773	1.1734569	1492
+136	885	1.1854489	1492
+136	886	1.1854489	1492
+136	969	1.1974409	1492
+136	970	1.1974409	1492
+136	991	1.1978169	40
+138	61	1.0004081	0
+138	69	1.0008161	0.000408
+138	145	1.0020085	0
+138	173	1.0024165	0
+138	232	1.1119921	0
+138	264	1.1239841	0.011992
+138	435	1.1367285	0
+138	506	1.1487205	0
+138	597	1.1607125	0.011616
+138	699	1.1727045	0.023608
+138	729	1.1730805	0.011992
+138	820	1.1850725	0.023608
+138	858	1.1854485	0.0239836
+138	935	1.1974405	0.0239836
+139	0	0	0
+139	62	1.0004081	1
+139	69	1.0008161	0
+139	233	1.1119921	1
+139	264	1.1239841	0
+139	533	1.1490965	1
+139	534	1.1490965	2
+139	597	1.1607125	1
+139	634	1.1610885	2
+139	661	1.1614645	3
+139	682	1.1614649	4
+139	699	1.1727045	3
+139	729	1.1730805	2
+139	773	1.1734569	3
+139	820	1.1850725	2
+139	858	1.1854485	1
+139	885	1.1854489	2
+139	886	1.1854489	3
+139	935	1.1974405	2
+139	969	1.1974409	3
+139	970	1.1974409	4
+139	991	1.1978169	5
+140	0	0	0
+140	64	1.0004081	1
+140	69	1.0008161	0
+140	71	1.0008161	1
+140	102	1.0012241	0
+140	146	1.0020085	1
+140	160	1.0023845	0
+140	174	1.0024165	1
+140	175	1.0027925	0
+140	236	1.1119921	1
+140	264	1.1239841	0
+140	265	1.1239841	1
+140	349	1.1359761	0
+140	436	1.1367285	1
+140	502	1.1487205	0
+140	507	1.1487205	1
+140	597	1.1607125	0
+140	598	1.1607125	1
+140	699	1.1727045	0
+140	700	1.1727045	1
+140	729	1.1730805	0
+140	730	1.1730805	1
+140	820	1.1850725	0
+140	821	1.1850725	1
+140	858	1.1854485	0
+140	859	1.1854485	1
+140	935	1.1974405	0
+140	936	1.1974405	1
+141	64	1.0004081	51
+141	71	1.0008161	51
+141	146	1.0020085	47
+141	174	1.0024165	47
+141	236	1.1119921	1499
+141	265	1.1239841	1499
+141	436	1.1367285	1499
+141	507	1.1487205	1499
+141	598	1.1607125	1499
+141	700	1.1727045	47
+141	730	1.1730805	1499
+141	821	1.1850725	47
+141	859	1.1854485	1499
+141	936	1.1974405	1499
+142	114	1.0012243	51
+142	121	1.0016323	51
+142	301	1.1243603	47
+142	372	1.1363523	1499
+142	396	1.1367283	47
+142	468	1.1487203	1499
+142	536	1.1490967	47
+142	636	1.1610887	47
+142	746	1.1730807	47
+142	837	1.1850727	1499
+142	902	1.1970647	1499
+142	952	1.1974407	47
+145	64	1.0004081	44
+145	71	1.0008161	44
+145	146	1.0020085	40
+145	174	1.0024165	40
+145	236	1.1119921	1492
+145	265	1.1239841	1492
+145	436	1.1367285	1492
+145	507	1.1487205	1492
+145	598	1.1607125	1492
+145	700	1.1727045	40
+145	730	1.1730805	1492
+145	821	1.1850725	40
+145	859	1.1854485	1492
+145	936	1.1974405	1492
+146	114	1.0012243	44
+146	121	1.0016323	44
+146	301	1.1243603	40
+146	372	1.1363523	1492
+146	396	1.1367283	40
+146	468	1.1487203	1492
+146	536	1.1490967	40
+146	636	1.1610887	40
+146	746	1.1730807	40
+146	837	1.1850727	1492
+146	902	1.1970647	1492
+146	952	1.1974407	40
+147	60	1.0004081	65535
+147	99	1.0011923	65535
+147	404	1.1367283	65535
+147	797	1.1850723	65535
+147	849	1.1854483	65535
+148	60	1.0004081	65535
+148	231	1.1119921	65535
+148	241	1.1119921	65535
+148	308	1.1243603	65535
+148	379	1.1363523	65535
+148	404	1.1367283	65535
+148	404	1.1367283	65535
+148	477	1.1487203	65535
+148	566	1.1607123	65535
+148	689	1.1727043	65535
+148	780	1.1846963	65535
+148	797	1.1850723	65535
+148	797	1.1850723	65535
+148	849	1.1854483	65535
+148	849	1.1854483	65535
+148	926	1.1974403	65535
+149	60	1.0004081	315536
+149	60	1.0004081	315536
+149	231	1.1119921	316988
+149	241	1.1119921	316988
+149	308	1.1243603	318440
+149	379	1.1363523	319892
+149	404	1.1367283	319892
+149	404	1.1367283	319892
+149	477	1.1487203	321344
+149	566	1.1607123	322796
+149	689	1.1727043	324248
+149	780	1.1846963	325700
+149	797	1.1850723	325700
+149	797	1.1850723	325700
+149	849	1.1854483	325700
+149	849	1.1854483	325700
+149	926	1.1974403	327152
+150	241	1.1119921	250103
+150	404	1.1367283	251555
+150	404	1.1367283	253007
+150	797	1.1850723	254459
+150	797	1.1850723	255911
+150	849	1.1854483	257363
+150	849	1.1854483	258815
+151	60	1.0004081	250001
+151	231	1.1119921	251453
+151	241	1.1119921	251453
+151	308	1.1243603	252905
+151	379	1.1363523	254357
+151	404	1.1367283	254357
+151	404	1.1367283	254357
+151	477	1.1487203	255809
+151	566	1.1607123	257261
+151	689	1.1727043	258713
+151	780	1.1846963	260165
+151	797	1.1850723	260165
+151	797	1.1850723	260165
+151	849	1.1854483	260165
+151	849	1.1854483	260165
+151	926	1.1974403	261617
+152	60	1.0004081	250000
+152	99	1.0011923	250001
+152	231	1.1119921	250001
+152	308	1.1243603	251453
+152	379	1.1363523	252905
+152	404	1.1367283	254357
+152	477	1.1487203	254357
+152	566	1.1607123	255809
+152	689	1.1727043	257261
+152	780	1.1846963	258713
+152	797	1.1850723	260165
+152	849	1.1854483	260165
+152	926	1.1974403	260165
+153	60	1.0004081	0
+153	99	1.0011923	250103
+153	231	1.1119921	250103
+153	308	1.1243603	250103
+153	379	1.1363523	250103
+153	404	1.1367283	251555
+153	477	1.1487203	251555
+153	566	1.1607123	251555
+153	689	1.1727043	251555
+153	780	1.1846963	251555
+153	797	1.1850723	253007
+153	849	1.1854483	254459
+153	926	1.1974403	254459
+154	99	1.0011923	0
+154	241	1.1119921	1452
+154	404	1.1367283	0
+154	404	1.1367283	2904
+154	797	1.1850723	1452
+154	797	1.1850723	4356
+154	849	1.1854483	2904
+154	849	1.1854483	5808
+155	231	1.1119921	0
+155	308	1.1243603	0
+155	379	1.1363523	0
+155	404	1.1367283	0
+155	477	1.1487203	0
+155	566	1.1607123	0
+155	689	1.1727043	0
+155	780	1.1846963	0
+155	797	1.1850723	0
+155	849	1.1854483	0
+155	926	1.1974403	0
+162	60	1.0004081	0
+162	231	1.1119921	0
+162	231	1.1119921	0
+162	241	1.1119921	0
+162	308	1.1243603	0
+162	308	1.1243603	0
+162	379	1.1363523	0
+162	379	1.1363523	0
+162	404	1.1367283	0
+162	404	1.1367283	0
+162	477	1.1487203	0
+162	477	1.1487203	0
+162	566	1.1607123	0
+162	566	1.1607123	0
+162	689	1.1727043	0
+162	689	1.1727043	0
+162	780	1.1846963	0
+162	780	1.1846963	0
+162	797	1.1850723	0
+162	797	1.1850723	0
+162	849	1.1854483	0
+162	849	1.1854483	0
+162	926	1.1974403	0
+162	926	1.1974403	0
+164	404	1.1367283	2904
+164	797	1.1850723	4356
+164	849	1.1854483	5808
+166	404	1.1367283	0.0247362
+166	797	1.1850723	0.048344
+167	404	1.1367283	0.003092025
+167	797	1.1850723	0.008748521875
+168	404	1.1367283	0.659342025
+168	797	1.1850723	0.58258076875
+169	404	1.1367283	2.640460125
+169	797	1.1850723	2.339071596875
+171	81	1.0008162	65535
+171	254	1.1123682	65535
+171	331	1.1247364	65535
+171	422	1.1367284	65535
+171	621	1.1610884	65535
+171	648	1.1614644	65535
+171	720	1.1730804	65535
+171	811	1.1850724	65535
+172	27	1	65535
+172	81	1.0008162	65535
+172	192	1.1	65535
+172	254	1.1123682	65535
+172	254	1.1123682	65535
+172	293	1.1243602	65535
+172	331	1.1247364	65535
+172	331	1.1247364	65535
+172	422	1.1367284	65535
+172	422	1.1367284	65535
+172	494	1.1487204	65535
+172	583	1.1607124	65535
+172	621	1.1610884	65535
+172	621	1.1610884	65535
+172	648	1.1614644	65535
+172	648	1.1614644	65535
+172	720	1.1730804	65535
+172	720	1.1730804	65535
+172	811	1.1850724	65535
+172	811	1.1850724	65535
+172	893	1.1970644	65535
+173	27	1	65535
+173	81	1.0008162	315638
+173	81	1.0008162	315638
+173	192	1.1	315638
+173	254	1.1123682	315638
+173	254	1.1123682	315638
+173	293	1.1243602	317090
+173	331	1.1247364	317090
+173	331	1.1247364	317090
+173	422	1.1367284	317090
+173	422	1.1367284	317090
+173	494	1.1487204	318542
+173	583	1.1607124	319994
+173	621	1.1610884	319994
+173	621	1.1610884	319994
+173	648	1.1614644	319994
+173	648	1.1614644	319994
+173	720	1.1730804	319994
+173	720	1.1730804	319994
+173	811	1.1850724	319994
+173	811	1.1850724	319994
+173	893	1.1970644	321446
+174	192	1.1	250001
+174	254	1.1123682	251453
+174	254	1.1123682	252905
+174	331	1.1247364	254357
+174	331	1.1247364	255809
+174	422	1.1367284	257261
+174	422	1.1367284	258713
+174	621	1.1610884	260165
+174	621	1.1610884	261617
+174	648	1.1614644	263069
+174	648	1.1614644	264521
+174	720	1.1730804	265973
+174	720	1.1730804	267425
+174	811	1.1850724	268877
+174	811	1.1850724	270329
+175	27	1	0
+175	81	1.0008162	250103
+175	192	1.1	250103
+175	254	1.1123682	250103
+175	254	1.1123682	250103
+175	293	1.1243602	251555
+175	331	1.1247364	251555
+175	331	1.1247364	251555
+175	422	1.1367284	251555
+175	422	1.1367284	251555
+175	494	1.1487204	253007
+175	583	1.1607124	254459
+175	621	1.1610884	254459
+175	621	1.1610884	254459
+175	648	1.1614644	254459
+175	648	1.1614644	254459
+175	720	1.1730804	254459
+175	720	1.1730804	254459
+175	811	1.1850724	254459
+175	811	1.1850724	254459
+175	893	1.1970644	255911
+176	81	1.0008162	250102
+176	254	1.1123682	250103
+176	293	1.1243602	250103
+176	331	1.1247364	251555
+176	422	1.1367284	251555
+176	494	1.1487204	251555
+176	583	1.1607124	253007
+176	621	1.1610884	254459
+176	648	1.1614644	254459
+176	720	1.1730804	254459
+176	811	1.1850724	254459
+176	893	1.1970644	254459
+177	81	1.0008162	250001
+177	254	1.1123682	251453
+177	293	1.1243602	251453
+177	331	1.1247364	252905
+177	422	1.1367284	254357
+177	494	1.1487204	254357
+177	583	1.1607124	254357
+177	621	1.1610884	255809
+177	648	1.1614644	257261
+177	720	1.1730804	258713
+177	811	1.1850724	260165
+177	893	1.1970644	260165
+178	192	1.1	1452
+178	254	1.1123682	0
+178	254	1.1123682	2904
+178	331	1.1247364	1452
+178	331	1.1247364	4356
+178	422	1.1367284	2904
+178	422	1.1367284	5808
+178	621	1.1610884	4356
+178	621	1.1610884	7260
+178	648	1.1614644	5808
+178	648	1.1614644	8712
+178	720	1.1730804	7260
+178	720	1.1730804	10164
+178	811	1.1850724	8712
+178	811	1.1850724	11616
+179	254	1.1123682	0
+179	293	1.1243602	0
+179	331	1.1247364	0
+179	422	1.1367284	0
+179	494	1.1487204	0
+179	583	1.1607124	0
+179	621	1.1610884	0
+179	648	1.1614644	0
+179	720	1.1730804	0
+179	811	1.1850724	0
+179	893	1.1970644	0
+186	27	1	0
+186	81	1.0008162	0
+186	192	1.1	0
+186	254	1.1123682	0
+186	254	1.1123682	0
+186	293	1.1243602	0
+186	293	1.1243602	0
+186	331	1.1247364	0
+186	331	1.1247364	0
+186	422	1.1367284	0
+186	422	1.1367284	0
+186	494	1.1487204	0
+186	494	1.1487204	0
+186	583	1.1607124	0
+186	583	1.1607124	0
+186	621	1.1610884	0
+186	621	1.1610884	0
+186	648	1.1614644	0
+186	648	1.1614644	0
+186	720	1.1730804	0
+186	720	1.1730804	0
+186	811	1.1850724	0
+186	811	1.1850724	0
+186	893	1.1970644	0
+186	893	1.1970644	0
+188	254	1.1123682	2904
+188	331	1.1247364	4356
+188	422	1.1367284	5808
+188	621	1.1610884	7260
+188	648	1.1614644	8712
+188	720	1.1730804	10164
+188	811	1.1850724	11616
+190	254	1.1123682	0.0123682
+190	331	1.1247364	0.0123682
+190	621	1.1610884	0.036352
+191	254	1.1123682	0.001546025
+191	331	1.1247364	0.002898796875
+191	621	1.1610884	0.007080447265
+192	254	1.1123682	0.657796025
+192	331	1.1247364	0.57692429375
+192	621	1.1610884	0.508990407422
+193	254	1.1123682	2.632730125
+193	331	1.1247364	2.310595971875
+193	621	1.1610884	2.043042076953
+195	132	1.0016324	65535
+195	330	1.1247364	65535
+195	547	1.1494728	65535
+195	669	1.1614648	65535
+196	28	1	65535
+196	132	1.0016324	65535
+196	194	1.1	65535
+196	330	1.1247364	65535
+196	330	1.1247364	65535
+196	457	1.1483444	65535
+196	547	1.1494728	65535
+196	547	1.1494728	65535
+196	669	1.1614648	65535
+196	669	1.1614648	65535
+196	913	1.1970648	65535
+197	28	1	65535
+197	132	1.0016324	315740
+197	132	1.0016324	315740
+197	194	1.1	315740
+197	330	1.1247364	315740
+197	330	1.1247364	315740
+197	457	1.1483444	317192
+197	547	1.1494728	317192
+197	547	1.1494728	317192
+197	669	1.1614648	317192
+197	669	1.1614648	317192
+197	913	1.1970648	318644
+198	194	1.1	250001
+198	330	1.1247364	251453
+198	330	1.1247364	252905
+198	547	1.1494728	254357
+198	547	1.1494728	255809
+198	669	1.1614648	257261
+198	669	1.1614648	258713
+199	28	1	0
+199	132	1.0016324	250205
+199	194	1.1	250205
+199	330	1.1247364	250205
+199	330	1.1247364	250205
+199	457	1.1483444	251657
+199	547	1.1494728	251657
+199	547	1.1494728	251657
+199	669	1.1614648	251657
+199	669	1.1614648	251657
+199	913	1.1970648	253109
+200	132	1.0016324	250204
+200	330	1.1247364	250205
+200	457	1.1483444	250205
+200	547	1.1494728	251657
+200	669	1.1614648	251657
+200	913	1.1970648	251657
+201	132	1.0016324	250001
+201	330	1.1247364	251453
+201	457	1.1483444	251453
+201	547	1.1494728	252905
+201	669	1.1614648	254357
+201	913	1.1970648	254357
+202	194	1.1	1452
+202	330	1.1247364	0
+202	330	1.1247364	2904
+202	547	1.1494728	1452
+202	547	1.1494728	4356
+202	669	1.1614648	2904
+202	669	1.1614648	5808
+203	330	1.1247364	0
+203	457	1.1483444	0
+203	547	1.1494728	0
+203	669	1.1614648	0
+203	913	1.1970648	0
+210	28	1	0
+210	132	1.0016324	0
+210	194	1.1	0
+210	330	1.1247364	0
+210	330	1.1247364	0
+210	457	1.1483444	0
+210	457	1.1483444	0
+210	547	1.1494728	0
+210	547	1.1494728	0
+210	669	1.1614648	0
+210	669	1.1614648	0
+210	913	1.1970648	0
+210	913	1.1970648	0
+212	330	1.1247364	2904
+212	547	1.1494728	4356
+212	669	1.1614648	5808
+214	330	1.1247364	0.0247364
+214	547	1.1494728	0.0247364
+215	330	1.1247364	0.00309205
+215	547	1.1494728	0.00579759375
+216	330	1.1247364	0.65934205
+216	547	1.1494728	0.5796298375
+217	330	1.1247364	2.64046025
+217	547	1.1494728	2.32431694375
+219	152	1.0020404	65535
+219	442	1.1371044	65535
+219	759	1.1734568	65535
+219	977	1.1978168	65535
+220	29	1	65535
+220	152	1.0020404	65535
+220	196	1.1	65535
+220	442	1.1371044	65535
+220	442	1.1371044	65535
+220	584	1.1607124	65535
+220	759	1.1734568	65535
+220	759	1.1734568	65535
+220	977	1.1978168	65535
+220	977	1.1978168	65535
+221	29	1	65535
+221	152	1.0020404	315842
+221	152	1.0020404	315842
+221	196	1.1	315842
+221	442	1.1371044	315842
+221	442	1.1371044	315842
+221	584	1.1607124	317294
+221	759	1.1734568	317294
+221	759	1.1734568	317294
+221	977	1.1978168	317294
+221	977	1.1978168	317294
+222	196	1.1	250001
+222	442	1.1371044	251453
+222	442	1.1371044	252905
+222	759	1.1734568	254357
+222	759	1.1734568	255809
+222	977	1.1978168	257261
+222	977	1.1978168	258713
+223	29	1	0
+223	152	1.0020404	250307
+223	196	1.1	250307
+223	442	1.1371044	250307
+223	442	1.1371044	250307
+223	584	1.1607124	251759
+223	759	1.1734568	251759
+223	759	1.1734568	251759
+223	977	1.1978168	251759
+223	977	1.1978168	251759
+224	152	1.0020404	250306
+224	442	1.1371044	250307
+224	584	1.1607124	250307
+224	759	1.1734568	251759
+224	977	1.1978168	251759
+225	152	1.0020404	250001
+225	442	1.1371044	251453
+225	584	1.1607124	251453
+225	759	1.1734568	252905
+225	977	1.1978168	254357
+226	196	1.1	1452
+226	442	1.1371044	0
+226	442	1.1371044	2904
+226	759	1.1734568	1452
+226	759	1.1734568	4356
+226	977	1.1978168	2904
+226	977	1.1978168	5808
+227	442	1.1371044	0
+227	584	1.1607124	0
+227	759	1.1734568	0
+227	977	1.1978168	0
+234	29	1	0
+234	152	1.0020404	0
+234	196	1.1	0
+234	442	1.1371044	0
+234	442	1.1371044	0
+234	584	1.1607124	0
+234	584	1.1607124	0
+234	759	1.1734568	0
+234	759	1.1734568	0
+234	977	1.1978168	0
+234	977	1.1978168	0
+236	442	1.1371044	2904
+236	759	1.1734568	4356
+236	977	1.1978168	5808
+238	442	1.1371044	0.0371044
+238	759	1.1734568	0.0363524
+239	442	1.1371044	0.00463805
+239	759	1.1734568	0.00860234375
+240	442	1.1371044	0.66088805
+240	759	1.1734568	0.5822413375
+241	442	1.1371044	2.64819025
+241	759	1.1734568	2.33756769375
+243	80	1.0008162	65535
+243	165	1.0023846	65535
+243	736	1.1730806	65535
+244	80	1.0008162	65535
+244	270	1.1239842	65535
+244	277	1.1239842	65535
+244	512	1.1487206	65535
+244	603	1.1607126	65535
+244	736	1.1730806	65535
+244	736	1.1730806	65535
+244	943	1.1974406	65535
+245	80	1.0008162	315536
+245	80	1.0008162	315536
+245	270	1.1239842	316988
+245	277	1.1239842	316988
+245	512	1.1487206	318440
+245	603	1.1607126	319892
+245	736	1.1730806	319892
+245	736	1.1730806	319892
+245	943	1.1974406	321344
+246	277	1.1239842	250205
+246	736	1.1730806	251657
+246	736	1.1730806	253109
+247	80	1.0008162	250001
+247	270	1.1239842	251453
+247	277	1.1239842	251453
+247	512	1.1487206	252905
+247	603	1.1607126	254357
+247	736	1.1730806	254357
+247	736	1.1730806	254357
+247	943	1.1974406	255809
+248	80	1.0008162	250000
+248	165	1.0023846	250001
+248	270	1.1239842	250001
+248	512	1.1487206	251453
+248	603	1.1607126	252905
+248	736	1.1730806	254357
+248	943	1.1974406	254357
+249	80	1.0008162	0
+249	165	1.0023846	250205
+249	270	1.1239842	250205
+249	512	1.1487206	250205
+249	603	1.1607126	250205
+249	736	1.1730806	251657
+249	943	1.1974406	251657
+250	165	1.0023846	0
+250	277	1.1239842	1452
+250	736	1.1730806	0
+250	736	1.1730806	2904
+251	270	1.1239842	0
+251	512	1.1487206	0
+251	603	1.1607126	0
+251	736	1.1730806	0
+251	943	1.1974406	0
+258	80	1.0008162	0
+258	270	1.1239842	0
+258	270	1.1239842	0
+258	277	1.1239842	0
+258	512	1.1487206	0
+258	512	1.1487206	0
+258	603	1.1607126	0
+258	603	1.1607126	0
+258	736	1.1730806	0
+258	736	1.1730806	0
+258	943	1.1974406	0
+258	943	1.1974406	0
+260	736	1.1730806	2904
+262	736	1.1730806	0.0490964
+263	736	1.1730806	0.00613705
+264	736	1.1730806	0.66238705
+265	736	1.1730806	2.65568525
+267	108	1.0012242	65535
+267	180	1.0027926	65535
+267	864	1.1854486	65535
+268	108	1.0012242	65535
+268	354	1.1359762	65535
+268	361	1.1359762	65535
+268	705	1.1727046	65535
+268	828	1.1850726	65535
+268	864	1.1854486	65535
+268	864	1.1854486	65535
+269	108	1.0012242	315536
+269	108	1.0012242	315536
+269	354	1.1359762	316988
+269	361	1.1359762	316988
+269	705	1.1727046	318440
+269	828	1.1850726	319892
+269	864	1.1854486	319892
+269	864	1.1854486	319892
+270	361	1.1359762	250307
+270	864	1.1854486	251759
+270	864	1.1854486	253211
+271	108	1.0012242	250001
+271	354	1.1359762	251453
+271	361	1.1359762	251453
+271	705	1.1727046	252905
+271	828	1.1850726	254357
+271	864	1.1854486	254357
+271	864	1.1854486	254357
+272	108	1.0012242	250000
+272	180	1.0027926	250001
+272	354	1.1359762	250001
+272	705	1.1727046	251453
+272	828	1.1850726	252905
+272	864	1.1854486	254357
+273	108	1.0012242	0
+273	180	1.0027926	250307
+273	354	1.1359762	250307
+273	705	1.1727046	250307
+273	828	1.1850726	250307
+273	864	1.1854486	251759
+274	180	1.0027926	0
+274	361	1.1359762	1452
+274	864	1.1854486	0
+274	864	1.1854486	2904
+275	354	1.1359762	0
+275	705	1.1727046	0
+275	828	1.1850726	0
+275	864	1.1854486	0
+282	108	1.0012242	0
+282	354	1.1359762	0
+282	354	1.1359762	0
+282	361	1.1359762	0
+282	705	1.1727046	0
+282	705	1.1727046	0
+282	828	1.1850726	0
+282	828	1.1850726	0
+282	864	1.1854486	0
+282	864	1.1854486	0
+284	864	1.1854486	2904
+286	864	1.1854486	0.0494724
+287	864	1.1854486	0.00618405
+288	864	1.1854486	0.66243405
+289	864	1.1854486	2.65592025
