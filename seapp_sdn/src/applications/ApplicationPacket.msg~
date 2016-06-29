@@ -1,5 +1,0 @@
-packet ApplicationPacket{
-	double value;
-	int iso_osi_layer = 7;
-	int tcp_ip_layer = 5;
-};

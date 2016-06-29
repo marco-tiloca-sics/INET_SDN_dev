@@ -1,4 +1,0 @@
-packet SendApplicationPacket {
-	int info;
-};
-

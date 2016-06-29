@@ -1,3 +1,0 @@
-class ApplicationPacket : public cPacket{
-	double value;
-};
