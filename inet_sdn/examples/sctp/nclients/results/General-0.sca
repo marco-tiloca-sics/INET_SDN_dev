@@ -1,0 +1,21 @@
+version 2
+run General-0-20150314-12:41:25-3020
+attr configname General
+attr datetime 20150314-12:41:25
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network NClients
+attr processid 3020
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar NClients.cli[0].sctpApp[0] 	ums 	1000
+scalar NClients.cli[1].sctpApp[0] 	ums 	1000
+scalar NClients.cli[2].sctpApp[0] 	ums 	1000
+scalar NClients.cli[3].sctpApp[0] 	ums 	1000

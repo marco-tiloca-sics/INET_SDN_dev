@@ -1,0 +1,458 @@
+file 2866680 1432850794                                         
+version 2
+run traffic-jam-2000-0-20150529-00:06:25-3398
+attr configname traffic-jam-2000
+attr datetime 20150529-00:06:25
+attr experiment traffic-jam-2000
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network intersection
+attr processid 3398
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 18  intersection.tl1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 19  intersection.tl1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 44  intersection.tl2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 45  intersection.tl2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 70  intersection.tl3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 71  intersection.tl3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 86  intersection.r1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 87  intersection.r1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 97  intersection.r1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 98  intersection.r1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 108  intersection.r1.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 109  intersection.r1.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 119  intersection.r1.ppp[3].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 120  intersection.r1.ppp[3].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 155  intersection.cn.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 156  intersection.cn.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 3  intersection.tl1.senderApp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 29  intersection.tl2.senderApp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 55  intersection.tl3.senderApp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 134  intersection.cn.sender1  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 137  intersection.cn.sender2  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 140  intersection.cn.sender3  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 5  intersection.tl1.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 31  intersection.tl2.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 57  intersection.tl3.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 142  intersection.cn.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 15  intersection.tl1.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 17  intersection.tl1.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 41  intersection.tl2.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 43  intersection.tl2.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 67  intersection.tl3.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 69  intersection.tl3.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 152  intersection.cn.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 154  intersection.cn.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 24  intersection.tl1.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 20  intersection.tl1.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 50  intersection.tl2.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 46  intersection.tl2.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 76  intersection.tl3.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 72  intersection.tl3.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 161  intersection.cn.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 157  intersection.cn.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 89  intersection.r1.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 93  intersection.r1.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 116  intersection.r1.ppp[3].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 118  intersection.r1.ppp[3].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 125  intersection.r1.ppp[3].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 121  intersection.r1.ppp[3].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 111  intersection.r1.ppp[2].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 115  intersection.r1.ppp[2].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 122  intersection.r1.ppp[3].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 126  intersection.r1.ppp[3].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 83  intersection.r1.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 85  intersection.r1.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 92  intersection.r1.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 88  intersection.r1.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 94  intersection.r1.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 96  intersection.r1.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 103  intersection.r1.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 99  intersection.r1.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 105  intersection.r1.ppp[2].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 107  intersection.r1.ppp[2].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 114  intersection.r1.ppp[2].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 110  intersection.r1.ppp[2].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 100  intersection.r1.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 104  intersection.r1.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 73  intersection.tl3.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 77  intersection.tl3.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 58  intersection.tl3.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 59  intersection.tl3.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 52  intersection.tl3.sinkApp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 53  intersection.tl3.sinkApp  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 21  intersection.tl1.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 25  intersection.tl1.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 6  intersection.tl1.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 7  intersection.tl1.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 0  intersection.tl1.sinkApp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 1  intersection.tl1.sinkApp  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 158  intersection.cn.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 162  intersection.cn.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 143  intersection.cn.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 144  intersection.cn.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 127  intersection.cn.controlNodeSink1  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 128  intersection.cn.controlNodeSink1  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 47  intersection.tl2.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 51  intersection.tl2.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 32  intersection.tl2.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 33  intersection.tl2.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 26  intersection.tl2.sinkApp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 27  intersection.tl2.sinkApp  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 131  intersection.cn.controlNodeSink3  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 132  intersection.cn.controlNodeSink3  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 129  intersection.cn.controlNodeSink2  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 130  intersection.cn.controlNodeSink2  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+0	16000 3201 167 115763 0.000384454618 297.500384454618 120 0 0 0 0
+1	19201 4761 167 115763 0.000384454618 297.500384454618 120 0.000384454618 0.000384454618 0.04613455416 1.7736642396183e-05
+3	23962 22921 20 116569 0 299.8 1500 0 0 0 0
+5	46883 22922 65 116575 0 299.8 1500 8 8 12000 96000
+6	69805 3201 165 115761 0.000384454618 297.500384454618 120 8 8 960 7680
+7	73006 3333 165 115761 0.000384454618 297.500384454618 120 1 120 7260 583220
+15	76339 25923 94 116587 0 299.8 1500 28 28 42000 1176000
+17	102262 24423 94 116587 0 299.8 1500 0 0 0 0
+18	126685 9 0 0 0 0 1 0 0 0 0
+19	126694 56957 0 116593 0 299.800028 3001 0 1 1500 1500
+20	183651 25924 100 116590 0 299.8 1500 35 35 52500 1837500
+21	209575 3441 161 115757 0.000384454618 297.500384454618 120 35 35 4200 147000
+24	213016 25924 100 116590 0 299.8 1500 28 28 42000 1176000
+25	238940 3441 161 115757 0.000384454618 297.500384454618 120 28 28 3360 94080
+26	242381 3321 181 115770 0.000404209914 297.500404209914 120 0 0 0 0
+27	245702 4881 181 115770 0.000404209914 297.500404209914 120 0.000404209914 0.000404209914 0.04850518968 1.9606278549106e-05
+29	250583 24421 23 116570 0 299.8 1500 0 0 0 0
+31	275004 24422 67 116576 0 299.8 1500 8 8 12000 96000
+32	299426 3321 179 115768 0.000404209914 297.500404209914 120 8 8 960 7680
+33	302747 3453 179 115768 0.000404209914 297.500404209914 120 1 120 7260 583220
+41	306200 25923 95 116588 0 299.8 1500 28 28 42000 1176000
+43	332123 24423 95 116588 0 299.8 1500 0 0 0 0
+44	356546 9 0 0 0 0 1 0 0 0 0
+45	356555 56957 0 116594 0 299.800028 3001 0 1 1500 1500
+46	413512 25924 101 116591 0 299.8 1500 35 35 52500 1837500
+47	439436 3441 175 115764 0.000404209914 297.500404209914 120 35 35 4200 147000
+50	442877 25924 101 116591 0 299.8 1500 28 28 42000 1176000
+51	468801 3441 175 115764 0.000404209914 297.500404209914 120 28 28 3360 94080
+52	472242 4842 160 115926 0.000342357693 298 220 0 0 0 0
+53	477084 6402 160 115926 0.000342357693 298 220 0 0.000342357693 0.04108292316 1.4065054794754e-05
+55	483486 24421 26 116571 0 299.8 1500 0 0 0 0
+57	507907 24422 69 116577 0 299.8 1500 8 8 12000 96000
+58	532329 3321 158 115754 0.000342357693 297.500342357693 120 8 8 960 7680
+59	535650 3453 158 115754 0.000342357693 297.500342357693 120 1 120 7260 583220
+67	539103 25923 96 116589 0 299.8 1500 28 28 42000 1176000
+69	565026 24423 96 116589 0 299.8 1500 0 0 0 0
+70	589449 9 0 0 0 0 1 0 0 0 0
+71	589458 56957 0 116595 0 299.800028 3001 0 1 1500 1500
+72	646415 25924 102 116592 0 299.8 1500 35 35 52500 1837500
+73	672339 3441 154 115750 0.000342357693 297.500342357693 120 35 35 4200 147000
+76	675780 25924 102 116592 0 299.8 1500 28 28 42000 1176000
+77	701704 3441 154 115750 0.000342357693 297.500342357693 120 28 28 3360 94080
+83	705145 3441 129 115733 0.000162215579 297.500162215579 120 28 28 3360 94080
+85	708586 3321 129 115733 0.000162215579 297.500162215579 120 0 0 0 0
+86	711907 9 0 0 0 0 1 0 0 0 0
+87	711916 6651 0 115736 0 297.500190215579 241 0 1 120 120
+88	718567 3441 130 115734 0.000162215579 297.500162215579 120 35 35 4200 147000
+89	722008 43024 112 116596 0.000125350491 299.800125350491 1500 35 35 52500 1837500
+92	765032 3441 130 115734 0.000162215579 297.500162215579 120 28 28 3360 94080
+93	768473 43024 112 116596 0.000125350491 299.800125350491 1500 28 28 42000 1176000
+94	811497 3441 137 115740 0.000190215579 297.500190215579 120 28 28 3360 94080
+96	814938 3321 137 115740 0.000190215579 297.500190215579 120 0 0 0 0
+97	818259 9 0 0 0 0 1 0 0 0 0
+98	818268 6651 0 115743 0 297.500218215579 241 0 1 120 120
+99	824919 3441 138 115741 0.000190215579 297.500190215579 120 35 35 4200 147000
+100	828360 44525 146 116610 0.000220628533 299.800220628533 1500 35 35 52500 1837500
+103	872885 3561 138 115741 0.000190215579 297.500190215579 120 28 28 3360 94080
+104	876446 44525 146 116610 0.000220628533 299.800220628533 1500 28 28 42000 1176000
+105	920971 3561 144 115747 0.000218215579 297.500218215579 120 28 28 3360 94080
+107	924532 3441 144 115747 0.000218215579 297.500218215579 120 0 0 0 0
+108	927973 10 0 0 0 0 1 0 0 0 0
+109	927983 6892 0 115749 0 297.500246215579 241 0 1 120 120
+110	934875 3561 145 115748 0.000218215579 297.500218215579 120 35 35 4200 147000
+111	938436 44524 118 116602 0.000140550237 299.800140550237 1500 35 35 52500 1837500
+114	982960 3561 145 115748 0.000218215579 297.500218215579 120 28 28 3360 94080
+115	986521 44524 118 116602 0.000140550237 299.800140550237 1500 28 28 42000 1176000
+116	1031045 133573 116 116614 0.000125350491 299.800220628533 4500 28 28 126000 3528000
+118	1164618 147073 116 116614 0.000125350491 299.800220628533 4500 0 1.2800254e-05 0.019200381 2.4576975369678e-07
+119	1311691 86058 0 116607 0 299.800153350491 3001 0 1 1500 1500
+120	1397749 258158 0 116616 0 299.800248628533 9001 0 1 4500 4500
+121	1655907 133574 117 116615 0.000125350491 299.800220628533 4500 35 35 157500 5512500
+122	1789481 10683 125 115742 0.000162215579 297.500218215579 360 35 35 12600 441000
+125	1800164 133574 117 116615 0.000125350491 299.800220628533 4500 28 28 126000 3528000
+126	1933738 10683 125 115742 0.000162215579 297.500218215579 360 28 28 10080 282240
+127	1944421 43025 174 116623 0.000402166932 299.800402166932 1500 0 0 0 0
+128	1987446 62525 174 116623 0.000402166932 299.800402166932 1500 0.000402166932 0.000402166932 0.60325039800001 0.00024260736179144
+129	2049971 43025 195 116637 0.000497444974 299.800497444974 1500 0 0 0 0
+130	2092996 62525 195 116637 0.000497444974 299.800497444974 1500 0.000497444974 0.000497444974 0.74616746099998 0.00037117725323679
+131	2155521 43025 188 116630 0.000430166932 299.800430166932 1500 0 0 0 0
+132	2198546 62525 188 116630 0.000430166932 299.800430166932 1500 0.000430166932 0.000430166932 0.645250398 0.00027756538407944
+134	2261071 2000 33 115702 0 297.5 120 0 0 0 0
+137	2263071 2000 34 115703 0 297.5 120 0 0 0 0
+140	2265071 2000 35 115704 0 297.5 120 0 0 0 0
+142	2267071 6000 71 115710 0 297.5 360 8 8 2880 23040
+143	2273071 129075 172 116635 0.000402166932 299.800497444974 4500 8 8 36000 288000
+144	2402146 141468 172 116635 0.000402166932 299.800497444974 4500 1 4500 10127250 30385125750
+152	2543614 6360 97 115722 0 297.5 360 28 28 10080 282240
+154	2549974 8882 97 115726 0 297.500056 360 0 5.6e-05 0.01008 4.704e-07
+155	2558856 9452 0 115726 0 297.500056 481 0 2 480 720
+156	2568308 15616 0 115728 0 297.500084 721 0 1 360 360
+157	2583924 7803 103 115727 0 297.500056 360 35 35 12600 441000
+158	2591727 133575 168 116631 0.000402166932 299.800497444974 4500 35 35 157500 5512500
+161	2725302 7803 103 115727 0 297.500056 360 28 28 10080 282240
+162	2733105 133575 168 116631 0.000402166932 299.800497444974 4500 28 28 126000 3528000

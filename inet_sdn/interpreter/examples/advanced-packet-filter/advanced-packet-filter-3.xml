@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+			<filter>[:(:APP.sequenceNumber:%:3:):==:0:]</filter>
+
+			<action>
+				<name>Drop</name>
+				<parameters>packetName:original:threshold:1</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

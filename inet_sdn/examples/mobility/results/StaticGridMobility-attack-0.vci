@@ -1,0 +1,218 @@
+file 8063 1431698611                                            
+version 2
+run StaticGridMobility-attack-0-20150515-16:03:22-3454
+attr configname StaticGridMobility-attack
+attr datetime 20150515-16:03:22
+attr experiment StaticGridMobility-attack
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MobileNetwork
+attr processid 3454
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0  MobileNetwork.host[0]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 1  MobileNetwork.host[0]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 2  MobileNetwork.host[1]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 3  MobileNetwork.host[1]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 4  MobileNetwork.host[2]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 5  MobileNetwork.host[2]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 6  MobileNetwork.host[3]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 7  MobileNetwork.host[3]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 8  MobileNetwork.host[4]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 9  MobileNetwork.host[4]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 10  MobileNetwork.host[5]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 11  MobileNetwork.host[5]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 12  MobileNetwork.host[6]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 13  MobileNetwork.host[6]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 14  MobileNetwork.host[7]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 15  MobileNetwork.host[7]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 16  MobileNetwork.host[8]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 17  MobileNetwork.host[8]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 18  MobileNetwork.host[9]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 19  MobileNetwork.host[9]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 20  MobileNetwork.host[10]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 21  MobileNetwork.host[10]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 22  MobileNetwork.host[11]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 23  MobileNetwork.host[11]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 24  MobileNetwork.host[12]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 25  MobileNetwork.host[12]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 26  MobileNetwork.host[13]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 27  MobileNetwork.host[13]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 28  MobileNetwork.host[14]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 29  MobileNetwork.host[14]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 30  MobileNetwork.host[15]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 31  MobileNetwork.host[15]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 32  MobileNetwork.host[16]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 33  MobileNetwork.host[16]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 34  MobileNetwork.host[17]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 35  MobileNetwork.host[17]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 36  MobileNetwork.host[18]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 37  MobileNetwork.host[18]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+vector 38  MobileNetwork.host[19]  coordX:vector  ETV
+attr interpolationmode  linear
+attr source  xCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord X, vector"
+vector 39  MobileNetwork.host[19]  coordY:vector  ETV
+attr interpolationmode  linear
+attr source  yCoord(mobilityPos(mobilityStateChanged))
+attr title  "coord Y, vector"
+0	7193 32 0 1 0 10 2 10 128.57142857143 138.57142857143 16630.612244898
+1	7225 32 0 1 0 10 2 10 133.33333333333 143.33333333333 17877.777777778
+2	7257 32 0 2 0 10 2 10 185.71428571429 195.71428571429 34589.795918367
+3	7289 32 0 2 0 10 2 10 133.33333333333 143.33333333333 17877.777777778
+4	7321 32 0 3 0 10 2 10 242.85714285714 252.85714285714 59079.591836735
+5	7353 32 0 3 0 10 2 10 133.33333333333 143.33333333333 17877.777777778
+6	7385 20 0 4 0 10 2 10 300 310 90100
+7	7405 32 0 4 0 10 2 10 133.33333333333 143.33333333333 17877.777777778
+8	7437 22 0 0 0 0 1 357.14285714286 357.14285714286 357.14285714286 127551.02040816
+9	7459 22 0 0 0 0 1 133.33333333333 133.33333333333 133.33333333333 17777.777777778
+10	7481 23 0 0 0 0 1 414.28571428571 414.28571428571 414.28571428571 171632.65306122
+11	7504 23 0 0 0 0 1 133.33333333333 133.33333333333 133.33333333333 17777.777777778
+12	7527 23 0 0 0 0 1 471.42857142857 471.42857142857 471.42857142857 222244.89795918
+13	7550 23 0 0 0 0 1 133.33333333333 133.33333333333 133.33333333333 17777.777777778
+14	7573 23 0 0 0 0 1 128.57142857143 128.57142857143 128.57142857143 16530.612244898
+15	7596 11 0 0 0 0 1 200 200 200 40000
+16	7607 23 0 0 0 0 1 185.71428571429 185.71428571429 185.71428571429 34489.795918367
+17	7630 11 0 0 0 0 1 200 200 200 40000
+18	7641 23 0 0 0 0 1 242.85714285714 242.85714285714 242.85714285714 58979.591836735
+19	7664 11 0 0 0 0 1 200 200 200 40000
+20	7675 11 0 0 0 0 1 300 300 300 90000
+21	7686 11 0 0 0 0 1 200 200 200 40000
+22	7697 23 0 0 0 0 1 357.14285714286 357.14285714286 357.14285714286 127551.02040816
+23	7720 11 0 0 0 0 1 200 200 200 40000
+24	7731 23 0 0 0 0 1 414.28571428571 414.28571428571 414.28571428571 171632.65306122
+25	7754 11 0 0 0 0 1 200 200 200 40000
+26	7765 23 0 0 0 0 1 471.42857142857 471.42857142857 471.42857142857 222244.89795918
+27	7788 11 0 0 0 0 1 200 200 200 40000
+28	7799 23 0 0 0 0 1 128.57142857143 128.57142857143 128.57142857143 16530.612244898
+29	7822 23 0 0 0 0 1 266.66666666667 266.66666666667 266.66666666667 71111.111111111
+30	7845 23 0 0 0 0 1 185.71428571429 185.71428571429 185.71428571429 34489.795918367
+31	7868 23 0 0 0 0 1 266.66666666667 266.66666666667 266.66666666667 71111.111111111
+32	7891 23 0 0 0 0 1 242.85714285714 242.85714285714 242.85714285714 58979.591836735
+33	7914 23 0 0 0 0 1 266.66666666667 266.66666666667 266.66666666667 71111.111111111
+34	7937 11 0 0 0 0 1 300 300 300 90000
+35	7948 23 0 0 0 0 1 266.66666666667 266.66666666667 266.66666666667 71111.111111111
+36	7971 23 0 0 0 0 1 357.14285714286 357.14285714286 357.14285714286 127551.02040816
+37	7994 23 0 0 0 0 1 266.66666666667 266.66666666667 266.66666666667 71111.111111111
+38	8017 23 0 0 0 0 1 414.28571428571 414.28571428571 414.28571428571 171632.65306122
+39	8040 23 0 0 0 0 1 266.66666666667 266.66666666667 266.66666666667 71111.111111111

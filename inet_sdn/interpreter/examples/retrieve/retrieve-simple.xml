@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+			<var><name>value</name><value></value><type>NONE</type></var>
+			<filter>[:NET.sourcePort:==:1000:]</filter>
+
+			<action>
+				<name>Retrieve</name>
+				<parameters>packetName:original:field_name:NET.destPort:varName:value</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

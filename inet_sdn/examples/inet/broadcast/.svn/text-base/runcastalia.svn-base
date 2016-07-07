@@ -1,0 +1,2 @@
+#!/bin/sh
+gnome-terminal -x sh -c 'cd ~/x-frameworks/asfpp/Simulations/Ciminiera; ../../bin/Castalia -c General; exec bash'

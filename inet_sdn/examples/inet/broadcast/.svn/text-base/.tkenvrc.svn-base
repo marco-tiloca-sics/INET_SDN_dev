@@ -1,0 +1,13 @@
+# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
+config default-configname	{General}
+config default-runnumber	{0}
+inspector simulation.scheduled-events.FRANCESCO-16 UDPPacket 314 1 289x209+1040+85:normal
+inspector simulation.scheduled-events.FRANCESCO-42 UDPPacket 1161 1 464x313+1145+484:normal
+inspector simulation.scheduled-events.ApplicationPacket.ApplicationPacket.ApplicationPacket.ApplicationPacket cPacket 144 1 464x313+789+345:normal
+inspector simulation.scheduled-events.FRANCESCO-41 UDPPacket 1141 1 464x313+1159+486:normal
+inspector simulation.scheduled-events.FRANCESCO-41 UDPPacket 1037 1 464x313+966+540:normal
+inspector simulation.scheduled-events.FRANCESCO-16 UDPPacket 312 1 301x206+1129+268:normal
+inspector simulation.scheduled-events.UDPBasicAppData-0.UDPBasicAppData-0.UDPBasicAppData-0 UDPPacket 184 1 464x313+966+351:normal
+inspector simulation.scheduled-events.FRANCESCO-41 UDPPacket 1074 1 464x313+1194+547:normal
+inspector simulation.scheduled-events.ApplicationPacket cPacket 270 1 464x313+923+279:normal
+

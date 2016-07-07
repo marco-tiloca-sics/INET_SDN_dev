@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results
+END
+General-0.vci
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/General-0.vci
+END
+seapp-attacks-0.vci
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/seapp-attacks-0.vci
+END
+ber-sack-experiment-0.vec
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/ber-sack-experiment-0.vec
+END
+General-0.sca
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/General-0.sca
+END
+ber-sack-experiment-0.vci
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/ber-sack-experiment-0.vci
+END
+General-0.vec
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/General-0.vec
+END
+seapp-attacks-0.vec
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/inet/scenario/results/seapp-attacks-0.vec
+END

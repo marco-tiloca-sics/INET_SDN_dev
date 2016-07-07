@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+			<filter>[:NET.sourcePort:==:1000:]</filter>
+
+			<action>
+				<name>Clone</name>
+				<parameters>packetName:original:newPacketName:dolly</parameters>
+			</action>
+
+			<action>
+				<name>Drop</name>
+				<parameters>packetName:dolly:threshold:1</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

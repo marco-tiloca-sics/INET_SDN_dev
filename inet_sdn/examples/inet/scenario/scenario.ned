@@ -1,0 +1,30 @@
+//
+// author: Thomas Reschka
+//		   Francesco Racciatti
+//
+
+package inet.examples.inet.scenario;
+
+import inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator;
+import inet.nodes.inet.StandardHost;
+import inet.globalfilter.GlobalFilter;
+
+network scenario
+{
+    parameters:
+        string attackConfigurationFile = default("none");
+        double n;
+        @display("bgb=400,200");
+
+    submodules:
+		globalFilter: GlobalFilter;
+        client: StandardHost;
+        server: StandardHost;
+        configurator: IPv4NetworkConfigurator;
+        
+    connections allowunconnected:
+    	client.pppg++ <--> { datarate = 10Mbps; delay = 0.565us; per = 0; ber = n; } <--> server.pppg++;
+    	globalFilter.nodes++ <--> client.global_filter;
+    	globalFilter.nodes++ <--> server.global_filter;
+            
+}

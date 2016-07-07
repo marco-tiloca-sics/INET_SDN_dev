@@ -1,0 +1,120 @@
+file 4169 1447411956                                            
+version 2
+run traffic-jam-1000-0-20151113-11:52:26-3593
+attr configname traffic-jam-1000
+attr datetime 20151113-11:52:26
+attr experiment traffic-jam-1000
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network intersection
+attr processid 3593
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 18  intersection.tl1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 19  intersection.tl1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 44  intersection.tl2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 45  intersection.tl2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 70  intersection.tl3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 71  intersection.tl3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 86  intersection.r1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 87  intersection.r1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 97  intersection.r1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 98  intersection.r1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 108  intersection.r1.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 109  intersection.r1.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 119  intersection.r1.ppp[3].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 120  intersection.r1.ppp[3].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 155  intersection.cn.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 156  intersection.cn.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 134  intersection.cn.sender1  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 137  intersection.cn.sender2  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 140  intersection.cn.sender3  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 142  intersection.cn.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 152  intersection.cn.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 154  intersection.cn.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 161  intersection.cn.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 157  intersection.cn.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+18	3849 9 0 0 0 0 1 0 0 0 0
+19	3858 9 0 0 0 0 1 0 0 0 0
+44	3867 9 0 0 0 0 1 0 0 0 0
+45	3876 9 0 0 0 0 1 0 0 0 0
+70	3885 9 0 0 0 0 1 0 0 0 0
+71	3894 9 0 0 0 0 1 0 0 0 0
+86	3903 9 0 0 0 0 1 0 0 0 0
+87	3912 9 0 0 0 0 1 0 0 0 0
+97	3921 9 0 0 0 0 1 0 0 0 0
+98	3930 9 0 0 0 0 1 0 0 0 0
+108	3939 10 0 0 0 0 1 0 0 0 0
+109	3949 10 0 0 0 0 1 0 0 0 0
+119	3959 10 0 0 0 0 1 0 0 0 0
+120	3969 10 0 0 0 0 1 0 0 0 0
+134	3979 11 30 30 0 0 1 0 0 0 0
+137	3990 11 31 31 0 0 1 0 0 0 0
+140	4001 11 32 32 0 0 1 0 0 0 0
+142	4012 33 56 60 0 0 3 8 8 24 192
+152	4045 36 70 72 0 0 3 28 28 84 2352
+154	4081 11 70 70 0 0 1 0 0 0 0
+155	4092 32 0 72 0 0 3 0 2 3 5
+156	4124 21 0 73 0 0 2 0 1 1 1
+157	4145 12 73 73 0 0 1 35 35 35 1225
+161	4157 12 73 73 0 0 1 28 28 28 784
