@@ -1,9 +1,0 @@
-list lierList = {6}
-from 30 nodes in lierList do {
-	filter("APP.sequenceNumber" > "12")
-		change(original, "APP.periodGreen", 2)
-		change(original, "APP.periodYellow", 2)
-		change(original, "APP.periodRed", 2)
-}
-
-

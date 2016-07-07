@@ -1,6 +1,0 @@
-# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{seapp-attacks}
-config default-runnumber	{0}
-inspector simulation.scheduled-events.FRANCESCO-50 cPacket 1516 1 464x313+836+495:normal
-inspector simulation.scheduled-events.FRANCESCO-150 cPacket 3632 1 464x313+991+598:normal
-

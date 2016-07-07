@@ -1,5 +1,0 @@
-# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{inet__inet}
-config default-runnumber	{0}
-inspector simulation.scheduled-events.SYN TCPSegment 133 1 464x313+741+238:normal
-
