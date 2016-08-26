@@ -10,7 +10,7 @@ network Scenario
 {
 	parameters:
 		string attackConfigurationFile = default("none");
-	@display("bgb=600,500");
+	@display("bgb=600,450");
 	types:
         channel ethernetline extends ThruputMeteringChannel
         {
@@ -21,16 +21,16 @@ network Scenario
 	submodules:
 		configurator: FlatNetworkConfigurator {
             parameters:
-                @display("p=50,450");
+                @display("p=50,400");
         }
         globalFilter: GlobalFilter {
 			@display("p=500,41;");
 		};
         client: StandardHost {
-            @display("p=30,300");
+            @display("p=30,300;i=device/laptop");
         }
         server: StandardHost {
-            @display("p=570,300");
+            @display("p=570,300;i=device/server");
         }
         open_flow_switch: Open_Flow_Switch_SEA {
             @display("p=300,300");

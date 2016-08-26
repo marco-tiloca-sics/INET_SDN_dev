@@ -86,21 +86,25 @@ module Open_Flow_Controller extends inet.nodes.inet.StandardHost
         
 		tcp: <tcpType> like ITCP {
             parameters:
-                @display("p=169,154");
+                @display("p=200,154");
         }
         ofa_controller: OFA_controller {
-            @display("p=169,54");
+            @display("p=200,54");
             serviceTime = serviceTime;
             statsInterval = statsInterval;
         }
         ctrlApp: <behavior> like CtrlBehavior {
-            @display("p=450,57");
+            @display("p=300,54");
         }
         attackDetection: AttackDetection {
-        	@display("p=300,54");
+        	@display("p=400,54");
         }
-        entropy: Entropy {}
-        mitigation: Mitigation{}
+        entropy: Entropy {
+            @display("p=500,54");
+        }
+        mitigation: Mitigation{
+            @display("p=600,54");
+        }
         
     connections allowunconnected:    
     	

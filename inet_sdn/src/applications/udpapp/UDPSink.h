@@ -31,22 +31,26 @@
  */
 class INET_API UDPSink : public ApplicationBase
 {
-  protected:
-    UDPSocket socket;
-    int numReceived;
-    static simsignal_t rcvdPkSignal;
-  protected:
-    virtual void processPacket(cPacket *msg);
+    private:
+        int timestamp;
+        int pktReceivedPerSec;
+    protected:
+        UDPSocket socket;
+        int numReceived;
+        static simsignal_t rcvdPkSignal;
+        static simsignal_t rcvdAppPktSignal;
+    protected:
+        virtual void processPacket(cPacket *msg);
 
-  protected:
-    virtual int numInitStages() const { return 4; }
-    virtual void initialize(int stage);
-    virtual void handleMessageWhenUp(cMessage *msg);
-    virtual void finish();
+    protected:
+        virtual int numInitStages() const { return 4; }
+        virtual void initialize(int stage);
+        virtual void handleMessageWhenUp(cMessage *msg);
+        virtual void finish();
 
-    virtual bool handleNodeStart(IDoneCallback *doneCallback);
-    virtual bool handleNodeShutdown(IDoneCallback *doneCallback);
-    virtual void handleNodeCrash();
+        virtual bool handleNodeStart(IDoneCallback *doneCallback);
+        virtual bool handleNodeShutdown(IDoneCallback *doneCallback);
+        virtual void handleNodeCrash();
 };
 
 #endif

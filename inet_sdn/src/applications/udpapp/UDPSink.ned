@@ -32,7 +32,9 @@ simple UDPSink like IUDPApp
         @display("i=block/sink");
         @signal[rcvdPk](type=cPacket);
         @statistic[rcvdPk](title="packets received"; source=rcvdPk; record=count,"sum(packetBytes)","vector(packetBytes)", "vector(count)"; interpolationmode=none);
-        @signal[rcvdPkCnt](type=int);
+        @signal[rcvdAppPkt](type=int);
+        @statistic[rcvdAppPkt](title="packets received during sec"; source=rcvdAppPkt; record=vector; interpolationmode=none);
+
      
     gates:
         input udpIn @labels(UDPControlInfo/up);

@@ -5,7 +5,7 @@
 	<Unconditional>
 
 		<Attack>
-			<start_time>25</start_time>
+			<start_time>90</start_time>
 			<frequency>0.01</frequency>
 			<var><name>1</name><value>1</value><type>NUMBER</type></var>
 			<var><name>0</name><value>0</value><type>NUMBER</type></var>

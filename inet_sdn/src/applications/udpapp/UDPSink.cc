@@ -23,6 +23,7 @@
 Define_Module(UDPSink);
 
 simsignal_t UDPSink::rcvdPkSignal = registerSignal("rcvdPk");
+simsignal_t UDPSink::rcvdAppPktSignal = registerSignal("rcvdAppPkt");
 
 void UDPSink::initialize(int stage)
 {
@@ -31,7 +32,11 @@ void UDPSink::initialize(int stage)
     if (stage == 0)
     {
         numReceived = 0;
+        timestamp = 0;
+        pktReceivedPerSec = 0;
+
         WATCH(numReceived);
+        WATCH(pktReceivedPerSec);
     }
     
 }
@@ -71,9 +76,19 @@ void UDPSink::processPacket(cPacket *pk)
 {
     EV << "Received packet: " << UDPSocket::getReceivedPacketInfo(pk) << endl;
     emit(rcvdPkSignal, pk);
-    delete pk;
 
     numReceived++;
+
+    //report number of app packets received per second
+    pktReceivedPerSec++;
+    if(((int)(simTime().dbl()) - timestamp) == 1) {
+        timestamp++;
+        emit(rcvdAppPktSignal, pktReceivedPerSec);
+        pktReceivedPerSec =0;
+    }
+
+    delete pk;
+    
 }
 
 bool UDPSink::handleNodeStart(IDoneCallback *doneCallback)

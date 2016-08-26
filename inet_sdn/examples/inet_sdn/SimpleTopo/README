@@ -1,11 +1,15 @@
-Simple topology with one client and one UDP server connected in one OpenFlow-enabled switch.
+Simple topology with 1 client and 1 UDP server connected in one OpenFlow-enabled switch.
+The controller requests flow-statistics every 30sec.
 
-Uncommenting the line 
-	#**.attackConfigurationFile = "simple_attack.xml"
-in the configuration file, the attack will start.
- 
-The compromised client starts the attack at simulation time 25s. 
-Based on the configuration, the attack will be detected at t=30s and all traffic between the client and the server will be dropped.
+The simulation run for 250 seconds.
+In the [Attack_Free] scenario no attack is performed within the network.
+
+In the [Simple_Attack],the compromised client starts the attack at simulation time 90s based 
+on the instructions written in the 'simple_attack.xml'. 
+
+Attack Description:
+===================
+The attack is described in the .adl file. Compile it to .xml by running the './run_simple_attack.sh' bash script.
 
 
 

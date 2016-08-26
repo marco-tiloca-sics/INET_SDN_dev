@@ -1,6 +1,6 @@
 list dstList = {4}
 
-from 25 every 0.01 do {
+from 90 every 0.01 do {
 
     # declare a packet
 	packet fakePacket
