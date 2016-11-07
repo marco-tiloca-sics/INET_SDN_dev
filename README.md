@@ -11,13 +11,13 @@ Pre-requirements:
 - gcc  v.4.7 or greater as the implementation is based on C++11 (the current implementationsion has been tested under v.5.4.0)
 	
 In order to build the project the steps are the following:
-1) get & install libxml library
-    sudo apt-get install libxml++2.6-dev libxml++2.6-doc
-2) get & install OMNeT ++ 4.6
-3) get & build INET_SDN
-	download the source code, extract the files and build:
-	make makefiles
-	make
+1. get & install libxml library:
+    * sudo apt-get install libxml++2.6-dev libxml++2.6-doc
+2. get & install OMNeT ++ 4.6
+3. get & build INET_SDN
+	* download the source code, extract the files and build:
+	* make makefiles
+	* make
 
 Link libraries- Check Makefile:
 -------------------------------
