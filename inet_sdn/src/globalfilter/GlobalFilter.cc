@@ -75,7 +75,6 @@ void GlobalFilter::handleMessage(cMessage* msg)
 		
 			// deliver all the created put messages
 			for (size_t i = 0; i < generatedMessages.size(); i++){
-				putMessages.push_back(generatedMessages[i]); //store the messages to avoid undisposed objects
 				handlePutMessage(generatedMessages[i]);
 			}	
 		
@@ -88,7 +87,6 @@ void GlobalFilter::handleMessage(cMessage* msg)
 			else {
 				scheduleTime = frequency + (simTime().dbl());
 				cMessage* selfMessage = new cMessage( msgName.c_str(), (short) attack_t::UNCONDITIONAL);
-				attackSelfMsgs.push_back(selfMessage);
 				scheduleAt( scheduleTime, selfMessage );				
 			}
 			
@@ -150,7 +148,8 @@ void GlobalFilter::handlePutMessage(const cMessage* msg)
 		}
 
 	}
-
+	// <A.S>
+    delete msg;
 }
 
 
@@ -167,11 +166,6 @@ GlobalFilter::GlobalFilter()
 
 GlobalFilter::~GlobalFilter()
 {
-	for (vector<cMessage*>::iterator i=putMessages.begin(); i!=putMessages.end(); i++) {
-		delete(*i);
-	}
-
-	//FIXME:cancelAndDelete new self messages: attackSelfMsgs ["undisposed objects" msg] 
 }
 
 

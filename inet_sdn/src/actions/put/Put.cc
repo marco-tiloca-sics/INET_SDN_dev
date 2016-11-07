@@ -42,6 +42,9 @@ cMessage* Put::execute(cMessage* packetToPut) const
 		putmsg->addRecipientNode(recipientNodes[i]);
 	}
 	
+	// <A.S>
+    delete packetToPut;
+
     // return putmsg
 	return (cMessage*) putmsg;	
 }

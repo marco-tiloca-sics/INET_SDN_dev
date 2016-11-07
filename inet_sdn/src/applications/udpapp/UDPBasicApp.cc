@@ -116,7 +116,7 @@ IPvXAddress UDPBasicApp::chooseDestAddr()
 void UDPBasicApp::sendPacket()
 {
     char msgName[32];
-    sprintf(msgName, "FRANCESCO-%d", numSent);
+    //sprintf(msgName, "FRANCESCO-%d", numSent);
 	
 	 
     cPacket *payload = new cPacket(msgName);
