@@ -31,6 +31,17 @@ enum class attack_t {
 	UNCONDITIONAL
 };
 
+// <A.S>
+class NetworkParameters {
+    private:		    
+        string networkAddress;
+        string netmask;
+    public:
+        void setNetworkAddress(string netAddress) {networkAddress = netAddress;}
+        void setNetmask(string mask) {netmask = mask; }
+        string getNetworkAddress() { return networkAddress; }
+        string getNetmask() { return netmask; }
+};
 
 class AttackBase {
 
@@ -80,16 +91,6 @@ class AttackBase {
 string to_string(const attack_t type);
 attack_t to_attack_type(const string type); 
 
-// <A.S>
-class NetworkParameters {
-    private:		    
-        string networkAddress;
-        string netmask;
-    public:
-        void setNetworkAddress(string netAddress) {networkAddress = netAddress;}
-        void setNetmask(string mask) {netmask = mask; }
-        string getNetworkAddress() { return networkAddress; }
-        string getNetmask() { return netmask; }
-};
+
 
 #endif
