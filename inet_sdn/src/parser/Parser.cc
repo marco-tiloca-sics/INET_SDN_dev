@@ -14,6 +14,7 @@
 #include "UnconditionalAttack.h"
 
 #include "Destroy.h"
+#include "Disable.h"
 #include "Move.h"
 #include "Drop.h"
 #include "Clone.h"
@@ -358,6 +359,18 @@ bool Parser::initializeAttack (const xmlpp::Node* nodeLevel2, AttackBase* attack
 						
 						break;
 					}
+
+					// Disable
+					case action_t::DISABLE: {	
+						Disable* disable = new Disable(node);
+						attack->addAction(disable);
+							
+						msg.clear();
+						msg.append("Parser::initializeAttack has added a disable action to the vector PhysicalAttack::action");
+						EV_INFO << msg << endl;
+						
+						break;
+					}
 						
 					// Move
 					case action_t::MOVE: {
@@ -431,7 +444,7 @@ bool Parser::initializeAttack (const xmlpp::Node* nodeLevel2, AttackBase* attack
 								packetName.assign(tokens[i+1]);
 							}
 						}
-
+						                        
 						Change *change = new Change(fieldName, value);
 						change->setPacketName(packetName);
 						attack->addAction(change);
@@ -511,7 +524,6 @@ bool Parser::initializeAttack (const xmlpp::Node* nodeLevel2, AttackBase* attack
 						
 						Put* put = new Put(direction, forwardingDelay, isStatUpdated);
 						put->setPacketName(packetName);
-						
 						// populate the list of recipient nodes
 						for (size_t i = 0; i < tokenizedRecipientNodes.size(); i++) {
 							put->addRecipientNode(atoi(tokenizedRecipientNodes[i].c_str()));
@@ -524,7 +536,7 @@ bool Parser::initializeAttack (const xmlpp::Node* nodeLevel2, AttackBase* attack
 					
 					// Retrieve
 					case action_t::RETRIEVE: {
-					
+									
 						string packetName;
 						string fields;
 						string variableName;

@@ -49,6 +49,8 @@ class Change : public ActionBase {
 		 * @brief execute the change action
 		 */
 		void execute(cMessage** packetToChange, string value);
+		// <A.S>
+		void execute(cMessage **packetToChange, cMessage **payload);
 };
 
 #endif

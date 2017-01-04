@@ -1,0 +1,34 @@
+file 1189 1479222446                                            
+version 2
+run with_EtherMACFullDuplex_externalQueue-0-20161115-16:07:19-8067
+attr configname with_EtherMACFullDuplex_externalQueue
+attr datetime 20161115-16:07:19
+attr experiment with_EtherMACFullDuplex_externalQueue
+attr inifile omnetpp.ini
+attr iterationvars "$0=\"scenario.xml\""
+attr iterationvars2 "$0=\"scenario.xml\", $repetition=0"
+attr measurement "$0=\"scenario.xml\""
+attr network ClientServerWithSM
+attr processid 8067
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 23  ClientServerWithSM.client1.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 27  ClientServerWithSM.client1.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 51  ClientServerWithSM.server.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 55  ClientServerWithSM.server.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+23	1153 9 0 0 0 0 1 0 0 0 0
+27	1162 9 0 0 0 0 1 0 0 0 0
+51	1171 9 0 0 0 0 1 0 0 0 0
+55	1180 9 0 0 0 0 1 0 0 0 0

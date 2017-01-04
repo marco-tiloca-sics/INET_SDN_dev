@@ -53,7 +53,7 @@ network ClientServerWithSM
         scenarioManager: ScenarioManager {
             @display("p=184,180");
         }
-    connections:
+    connections allowunconnected:
         client1.ethg++ <--> C <--> server.ethg++;
 }
 

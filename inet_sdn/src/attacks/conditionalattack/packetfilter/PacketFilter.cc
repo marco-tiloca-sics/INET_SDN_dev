@@ -125,6 +125,12 @@ bool PacketFilter::passPreMatchChecks(cMessage* msg) const
 {
     cPacket* packet = (cPacket*)msg;
     
+	// <A.S>
+	// check if the condition is based on controlInfo (independent of the layer)
+	if(packetFilterMinimumLayer == 0) {
+        return true;
+	}
+	
     // check if the packet was already filtered before
 	if (packet->par("isFiltered").boolValue()) {		
 		return false;	
@@ -141,12 +147,11 @@ bool PacketFilter::passPreMatchChecks(cMessage* msg) const
 
 bool PacketFilter::matchPacketFilter(cMessage* msg) const
 {    
-
     // check if the packet can be filtered
     if (passPreMatchChecks(msg) == false) {
         return false;
     }
-    
+
     // solve all blocks for the current message
     vector<bool> solved;
     for (size_t i = 0; i < filterBlocks.size(); i++) {
@@ -166,7 +171,7 @@ bool PacketFilter::matchPacketFilter(cMessage* msg) const
             }
         }
     }
-    
+
     // solve the packet-filter
     bool result = solved[0];
     for (size_t i = 0; i < filterOperators.size(); i++) {

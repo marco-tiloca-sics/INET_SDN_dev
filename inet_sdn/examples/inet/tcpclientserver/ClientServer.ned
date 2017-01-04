@@ -53,7 +53,7 @@ network ClientServer
         netAnimTrace: NetAnimTrace {
             @display("p=184,142");
         }
-    connections:
+    connections allowunconnected:
         client1.pppg++ <--> C <--> server.pppg++;
 }
 

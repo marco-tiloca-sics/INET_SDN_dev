@@ -154,6 +154,12 @@ class INET_API IInterfaceTable
      * If there is no such interface, then returns NULL.
      */
     virtual InterfaceEntry *getFirstMulticastInterface() = 0;
+	
+	//AS
+	//virtual int getNumSecondaryInterfaces() = 0;
+	//virtual InterfaceEntry *getSecondaryInterface(int pos) =0;
+   // virtual void deleteSecondaryInterface(int pos) = 0;
+    virtual bool findSecondaryInterface(int interfaceId, const IPv4Address &addr) = 0;
 };
 
 #endif

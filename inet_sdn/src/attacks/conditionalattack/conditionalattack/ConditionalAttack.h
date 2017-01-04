@@ -16,6 +16,7 @@
 using namespace std;
 
 
+
 class ConditionalAttack : public AttackBase {
 
 	private:
@@ -23,7 +24,9 @@ class ConditionalAttack : public AttackBase {
         PacketFilter* packetFilter;
 		//minimumInvolvedLayer is the minimum TCP/IP layer involved in the conditional attack 
 		int minimumInvolvedLayer;
-
+		
+		
+			
 	public:
 		/** 
 		 * @brief Constructor.
@@ -65,6 +68,7 @@ class ConditionalAttack : public AttackBase {
          * @param ...
          */
 		void execute(cMessage** packet, vector<cMessage*> &generatedPackets, vector<double> &delays, double &delay);
+
 };
 
 #endif

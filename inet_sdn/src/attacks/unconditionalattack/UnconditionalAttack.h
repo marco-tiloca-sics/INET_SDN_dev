@@ -20,6 +20,7 @@ class UnconditionalAttack : public AttackBase {
         // TODO change in period
         // frequency of the unconditional attack
 		double frequency;
+		
 
 	public:
 		/** 
@@ -52,6 +53,7 @@ class UnconditionalAttack : public AttackBase {
 		 * @brief 	executes the unconditional attacks
 		 */
 		void execute(vector<cMessage*> &putMessages);
+
 
 };
 

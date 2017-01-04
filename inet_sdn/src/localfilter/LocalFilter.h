@@ -40,6 +40,10 @@ class LocalFilter : public cSimpleModule {
 		vector<ConditionalAttack*> enabledConditionalAttacks;
         // injected bytes counter
 		int injectedBytes;
+		
+		// <A.S>
+		string networkAddr;
+		string netmask;
 
 	private:
 		void forgeInterfaceTable();
@@ -47,6 +51,8 @@ class LocalFilter : public cSimpleModule {
 		void initializeAttacks();
 		void forgeSendingData(cMessage* msg);
 		command_t planOperation(cMessage* msg) const;
+        // <A.S>
+        void getNetworkParameters();
 
 	protected:
 		virtual void initialize(int stage);

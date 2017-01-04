@@ -17,6 +17,13 @@ class Retrieve : public ActionBase {
 	private:
 		string fieldName;
 		string variableName;
+		// <A.S>
+		string externalInfo;
+
+	private:
+	    // <A.S>
+		Variable* executeOnField(cMessage* msg);
+		Variable* executeOnExternalInfo(cMessage* msg);
 			
 	public:
 		/**
@@ -42,7 +49,7 @@ class Retrieve : public ActionBase {
 		/**
 		 * @brief execute the retrieve action
 		 */
-		Variable* execute(cMessage* msg) const;
+		Variable* execute(cMessage* msg);
 		
 };
 

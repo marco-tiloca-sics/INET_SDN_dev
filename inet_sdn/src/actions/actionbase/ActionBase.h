@@ -1,17 +1,24 @@
 /**
  * @file	ActionBase.h
  * @author	Francesco Racciatti <racciatti.francesco@gmail.com>
+ * @version	1.0
+ * @date	2015 jul 14
+ *
  * @brief	ActionBase class provides the representation of a generic action that can be performed during an attack.
+ *
+ * @details	ActionBase class provides the type action_t, a scoped enum used to represent actions.
+ 
  */
  
 
 #ifndef ACTIONBASE_H
 #define ACTIONBASE_H
 
-#include "omnetpp.h"
-#include "INETDefs.h"
 
+#include <omnetpp.h>
+#include "INETDefs.h"
 #include <string>
+#include <cstdint>
 
 
 #define NONE_LAYER 1000
@@ -20,73 +27,61 @@
 using namespace std;
 
 
-// type of the action
-enum class action_t {
+// action type
+enum class action_t : uint8_t{
 	DESTROY = 0,
-	MOVE,
+	DISABLE,
+    MOVE,
 	DROP,
-	CLONE,
 	CHANGE,
+	RETRIEVE,
+	CLONE,
+	CREATE,
 	SEND,
 	PUT,
-	RETRIEVE,
-	EXPRESSION,
-	CREATE,	
-	FAKEREAD
+	EXPRESSION
 };
+
+
+// utility functions
+string to_string(const action_t actionType);
+action_t to_action_t(const string actionType);
 
 
 class ActionBase {
 
 	private:
-        // type of the action
+		// action type
 		action_t actionType;
-        // name of the target packet
+		// name of the packet related to the action
 		string packetName;
 		
 	protected:
-        // TODO change in minimumInvolvedLayer
-        // minimum layer involved in the action
+		// layer involved in the action 
 		int involvedLayer;
 	
 	protected:
 		/**
 		 * @brief	Constructor
-		 * @param	action_t type of the action
+		 * @param	actionType it is the type of the action
 		 */
 		ActionBase(const action_t actionType);
 		
 	public:
 		/** 
-         * @brief Destructor
-         */
+		 * @brief	Destructor
+		 */
 		~ActionBase();
-		
-		/** 
-         * @brief Get the type of the action
-         */
+
+		/**
+		 * @brief	Setter and getter methods
+		 */
 		action_t getActionType() const;
-	
-        /**
-         * @brief Get the minimum involved layer
-         */
-		virtual int getInvolvedLayer() const;
-		
-        /**
-         * @brief Set the name of the target packet
-         */
 		virtual void setPacketName(const string packetName);
-        
-        /**
-         * @brief Get the name of the target packet
-         */
 		virtual string getPacketName() const;
+		virtual int getInvolvedLayer() const;
+
 };
 
-/**
- * @brief utilities functions
- */
-string to_string(const action_t type);
-action_t to_action_t(const string type);
 
 #endif

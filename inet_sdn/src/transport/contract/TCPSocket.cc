@@ -174,6 +174,7 @@ void TCPSocket::send(cMessage *msg)
     msg->setKind(TCP_C_SEND);
     TCPSendCommand *cmd = new TCPSendCommand();
     cmd->setConnId(connId);
+
     msg->setControlInfo(cmd);
     sendToTCP(msg);
 }
@@ -284,7 +285,6 @@ void TCPSocket::processMessage(cMessage *msg)
 
              if (cb)
                  cb->socketEstablished(connId, yourPtr);
-
              break;
 
         case TCP_I_PEER_CLOSED:

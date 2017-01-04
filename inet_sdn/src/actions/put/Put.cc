@@ -37,14 +37,11 @@ cMessage* Put::execute(cMessage* packetToPut) const
 {
 	PutMsg* putmsg = new PutMsg(packetToPut, direction, isStatUpdated);
 	putmsg->setForwardingDelay(forwardingDelay);
-
-	for (size_t i = 0; i < recipientNodes.size(); i++) {
+	for (size_t i = 0; i < recipientNodes.size(); i++) 
 		putmsg->addRecipientNode(recipientNodes[i]);
-	}
-	
-	// <A.S>
-    delete packetToPut;
 
+    // <A.S>
+    delete packetToPut;
     // return putmsg
 	return (cMessage*) putmsg;	
 }

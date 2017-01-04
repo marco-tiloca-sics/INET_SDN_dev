@@ -119,7 +119,7 @@ network MulticastNetwork
         configurator: IPv4NetworkConfigurator {
             @display("p=275,26");
         }
-    connections:
+    connections allowunconnected:
         // * Domain 1 * (172.0.0.x)
         host1.pppg[0] <--> ethernet <--> router1.pppg[0];
         host2.pppg[0] <--> ethernet <--> router1.pppg[1];

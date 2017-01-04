@@ -14,6 +14,8 @@
 #include <string>
 #include <omnetpp.h>
 
+#include "IPv4Address.h"
+
 
 using namespace std;
 
@@ -139,5 +141,21 @@ float evaluateArithmetic(T f1, T f2, const string comp_operator) {
     
 }
 
+// <A.S>
+bool hasPayload(cMessage* msg);
+// <A.S>
+bool getParamFromEncapsulatedPacket(cMessage* msg, const string parameterName);
+// <A.S>
+string generateRandomValue(const char * fieldType);
+// <A.S>
+string generateRandomValue(string networkAddress, string netmask);
+// <A.S>
+bool isRandomValue(string value);
+// <A.S>
+string getValueType(string value);
+// <A.S>
+bool isControlInfo(const string layer);
+// <A.S>
+int generateRandomIntValue(int a, int b);
 
 #endif

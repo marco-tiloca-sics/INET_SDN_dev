@@ -151,6 +151,7 @@ module NodeBase
 		for i=0..sizeof(ethg)-1 {
 			// XXX plain INET
 			ethg[i] <--> { @display("m=s"); } <--> eth[i].phys;
+			
           	//eth[i].upperLayerOut --> networkLayer.ifIn++;
 			//eth[i].upperLayerIn <-- networkLayer.ifOut++;
 			

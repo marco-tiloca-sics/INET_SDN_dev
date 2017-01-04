@@ -366,7 +366,21 @@ InterfaceEntry *RoutingTable::getInterfaceByAddress(const IPv4Address& addr) con
         InterfaceEntry *ie = ift->getInterface(i);
         if (ie->ipv4Data()->getIPAddress()==addr)
             return ie;
+        // <A.S>
+        else {
+            //parse the multimap
+            if (ift->findSecondaryInterface(ie->getInterfaceId(),addr))
+                return ie;
+       }
     }
+    // <A.S>
+    /* for(int i=0; i<ift->getNumSecondaryInterfaces();i++) {
+        InterfaceEntry *ie = ift->getSecondaryInterface(i);
+        if (ie->ipv4Data()->getIPAddress()==addr)
+        	// delete the fake interface entry
+            ift->deleteSecondaryInterface(i);
+            return ie;
+    } */
     return NULL;
 }
 

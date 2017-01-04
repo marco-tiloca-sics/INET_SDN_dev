@@ -7,6 +7,7 @@
 #include "PhysicalAttack.h"
 
 #include "Destroy.h"
+#include "Disable.h"
 #include "Move.h"
 
 
@@ -34,6 +35,12 @@ void PhysicalAttack::execute()
 				break;
 			}
 					
+			case action_t::DISABLE: {	
+				Disable* disable = (Disable*) actions[i];
+				disable -> execute();
+				break;
+			}
+			
 			case action_t::MOVE: {	
 				Move* move = (Move*) actions[i];
 				move -> execute();

@@ -33,8 +33,7 @@ ThruputMeteringChannel::ThruputMeteringChannel(const char *name) : cDatarateChan
 }
 
 ThruputMeteringChannel::~ThruputMeteringChannel()
-{
-}
+{}
 
 //ThruputMeteringChannel& ThruputMeteringChannel::operator=(const ThruputMeteringChannel& ch)
 //{

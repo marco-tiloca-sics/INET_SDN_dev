@@ -65,7 +65,11 @@ simple UDP like IUDP
         @statistic[passedUpPk](title="packets passed up"; record=count,"vector(count)"; interpolationmode=none);
         @statistic[droppedPkWrongPort](title="packets dropped (wrong port)"; record=count,"vector(count)"; interpolationmode=none);
         @statistic[droppedPkBadChecksum](title="packets dropped (checksum error)"; record=count,"vector(count)"; interpolationmode=none);
-
+        
+        // <A.S>
+        @signal[delay](type=simtime_t);
+        @statistic[delay](title="delay"; source=delay; record=vector;  interpolationmode=none);
+        @statistic[rcvdPkLifetime](title="received packet lifetime"; source="messageAge(rcvdPk)"; unit=s; record=stats,vector; interpolationmode=none);
     gates:
         input appIn[] @labels(UDPControlInfo/down);
         input ipIn @labels(UDPPacket,IPv4ControlInfo/up);

@@ -23,7 +23,7 @@
 #include "IPvXAddressResolver.h"
 #include "NodeOperations.h"
 #include "UDPControlInfo_m.h"
-
+#include "SendApplicationPacket_m.h"
 
 Define_Module(UDPBasicApp);
 
@@ -115,12 +115,13 @@ IPvXAddress UDPBasicApp::chooseDestAddr()
 
 void UDPBasicApp::sendPacket()
 {
-    char msgName[32];
+    char msgName[32] = "original";
     //sprintf(msgName, "FRANCESCO-%d", numSent);
 	
 	 
     cPacket *payload = new cPacket(msgName);
     payload->setByteLength(par("messageLength").longValue());
+    
 	
 	//<F.R.>
 	//ApplicationPacket* payload = new ApplicationPacket();
@@ -130,6 +131,7 @@ void UDPBasicApp::sendPacket()
     IPvXAddress destAddr = chooseDestAddr();
 
     emit(sentPkSignal, payload);
+
     socket.sendTo(payload, destAddr, destPort);
     numSent++;
 }

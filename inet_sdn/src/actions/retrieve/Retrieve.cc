@@ -14,7 +14,16 @@ Retrieve::Retrieve(const string fields, const string variableName) : ActionBase(
 	vector<string> tokens;
 	tokenize(tokens, fields, '.');
 
-	involvedLayer = layertoi(tokens[0]);
+	// <A.S>
+	// involvedLayer = layertoi(tokens[0]);
+	if ((tokens[0] == "controlInfo") || (tokens[0]=="sending") || tokens[0]=="attackInfo") {
+		this->externalInfo.assign(tokens[0]);
+		involvedLayer = NONE_LAYER;
+	}
+	else {
+		this->externalInfo.assign("none");
+		involvedLayer = layertoi(tokens[0]);
+	}
 
 	this->fieldName = tokens[1];
 	this->variableName = variableName;	
@@ -38,8 +47,23 @@ string Retrieve::getVariableName() const
 }
 
 
-Variable* Retrieve::execute(cMessage* msg) const
+Variable* Retrieve::execute(cMessage* msg) 
 {
+	// A.S
+	// retrieve the value of the packet's field
+	Variable* variable = NULL;
+	if (externalInfo == "none") {
+		variable = executeOnField(msg);
+	}
+	else {
+		variable = executeOnExternalInfo(msg);
+
+	}	
+	return variable;
+}
+
+// <A.S>
+Variable* Retrieve::executeOnField(cMessage* msg) {
 	cClassDescriptor* descriptor; 
 	int fieldIndex;
 	string value;
@@ -81,4 +105,21 @@ Variable* Retrieve::execute(cMessage* msg) const
 	value = descriptor->getFieldAsString(encapsulatedMsg, fieldIndex, 0);
 
 	return new Variable(value, get_variable_format(value));
+}
+
+// <A.S>
+Variable* Retrieve::executeOnExternalInfo(cMessage* msg) {
+	string value;
+	if(externalInfo == "attackInfo") {
+		if (fieldName == "fromGlobalFilter") {
+			bool hasParameter = msg->hasPar("fromGlobalFilter");
+			if (hasParameter) {
+				value = std::to_string(msg->par("fromGlobalFilter").boolValue());
+				return new Variable(value, get_variable_format(value));
+			}
+		}
+		std::cout <<"ERROR gia msg: " << msg->getName() <<endl;
+		string errorMsg = "[Variable* Retrieve::executeOnExternalInfo(cMessage*)] Error, can't find the specified field in attackInfo";
+		opp_error(errorMsg.c_str());
+	}	
 }

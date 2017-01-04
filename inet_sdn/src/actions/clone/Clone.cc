@@ -32,4 +32,5 @@ string Clone::getClonePacketName() const
 void Clone::execute(cMessage** clonePacket, const cMessage* originalPacket) const
 {
 	*clonePacket = (cMessage*) hardCopy((cPacket*) originalPacket);	
+
 }

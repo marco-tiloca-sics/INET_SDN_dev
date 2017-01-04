@@ -9,14 +9,13 @@ Authors:
 
 
 # List of reserved names
-reserved_name = ["RANDOM"]
+reserved_name = ["RANDOM","RANDOM_IP", "RANDOM_MAC","RANDOM_INT", "RANDOM_SHORT"]
 
 # List of the layer names
 layer_names = ["APP", "TRA", "NET", "MAC"]
 
 # List of others control structures
-control_structures_names = ["controlInfo", "sending"]
-
+control_structures_names = ["controlInfo", "sending", "attackInfo"]
 
 # Dictionary of the global IDs and their types (i.e. VAR, PACKET, LIST)
 global_symbol_table = {}

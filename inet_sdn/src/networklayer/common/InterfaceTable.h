@@ -19,7 +19,7 @@
 #define __INET_INTERFACETABLE_H
 
 #include <vector>
-
+#include <map>
 #include "INETDefs.h"
 
 #include "IInterfaceTable.h"
@@ -27,7 +27,7 @@
 #include "NotificationBoard.h"
 #include "ILifecycle.h"
 #include "IPvXAddress.h"
-
+#include "IPv4Address.h"
 /**
  * Represents the interface table. This object has one instance per host
  * or router. It has methods to manage the interface table,
@@ -79,6 +79,11 @@ class INET_API InterfaceTable : public cSimpleModule, public IInterfaceTable, pr
     // fields to support getNumInterfaces() and getInterface(pos)
     int tmpNumInterfaces; // caches number of non-NULL elements of idToInterface; -1 if invalid
     InterfaceEntry **tmpInterfaceList; // caches non-NULL elements of idToInterface; NULL if invalid
+    
+    // <A.S>
+    //std::vector<InterfaceEntry *> secondaryInterfaceVector;
+    std::multimap <int, IPv4Address> secondaryInterfaceTable;
+	bool initializationCompleted;
 
   protected:
     // displays summary above the icon
@@ -113,6 +118,13 @@ class INET_API InterfaceTable : public cSimpleModule, public IInterfaceTable, pr
     virtual void handleMessage(cMessage *);
 
   public:
+	
+	// <A.S>
+    //int getNumSecondaryInterfaces();
+	//InterfaceEntry* getSecondaryInterface(int pos);
+    //void deleteSecondaryInterface(int pos);
+    bool findSecondaryInterface(int interfaceId, const IPv4Address& addr);
+    	
     /**
      * Called by the NotificationBoard whenever a change of a category
      * occurs to which this client has subscribed.

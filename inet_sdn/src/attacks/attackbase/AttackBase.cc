@@ -31,6 +31,22 @@ void AttackBase::addAction(ActionBase* action)
 
 
 
+attack_t AttackBase::getAttackType () {
+ 
+    return attackType;
+    
+}
+
+
+ActionBase* AttackBase::getAction (size_t index) const {
+    
+	if (index < actions.size()) {
+        return actions[index];
+    }
+
+    return nullptr;
+    
+}
 
 string to_string(const attack_t type)
 {
@@ -75,4 +91,8 @@ attack_t to_attack_type(const string type)
 
 }
 
-
+// <A.S>
+void AttackBase::setNetworkParameters(string networkAddress, string netmask) {  
+    networkParameters.setNetworkAddress(networkAddress);
+    networkParameters.setNetmask(netmask);
+}

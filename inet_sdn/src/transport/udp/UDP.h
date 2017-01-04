@@ -92,7 +92,9 @@ class INET_API UDP : public cSimpleModule, public ILifecycle
     static simsignal_t passedUpPkSignal;
     static simsignal_t droppedPkWrongPortSignal;
     static simsignal_t droppedPkBadChecksumSignal;
-
+    
+    // <A.S>
+    static simsignal_t msgDelaySignal;
   protected:
     // utility: show current statistics above the icon
     virtual void updateDisplayString();

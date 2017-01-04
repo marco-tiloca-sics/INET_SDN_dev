@@ -50,7 +50,8 @@ class Put : public ActionBase {
 		 * @brief execute the send action
 		 */
 		cMessage* execute(cMessage* packetToPut) const;
-		
+		// <A.S>
+		int getList() { return recipientNodes.size();}
 };
 
 #endif

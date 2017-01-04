@@ -126,6 +126,7 @@ void EtherMACFullDuplex::startFrameTransmission()
 
 void EtherMACFullDuplex::processFrameFromUpperLayer(EtherFrame *frame)
 {
+
     if (frame->getByteLength() < MIN_ETHERNET_FRAME_BYTES)
         frame->setByteLength(MIN_ETHERNET_FRAME_BYTES);  // "padding"
 

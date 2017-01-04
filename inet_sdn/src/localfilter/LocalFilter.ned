@@ -60,6 +60,9 @@ simple LocalFilter{
 		inout ppp_phy_sup[];
 		inout ppp_phy_inf[];
 
+		// local filter between eth and physical
+		inout eth_phy_sup[];
+		inout eth_phy_inf[];
 		
 		// gate from/to global filter
 		inout global_filter;

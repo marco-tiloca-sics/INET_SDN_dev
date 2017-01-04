@@ -2762,7 +2762,6 @@ const MACAddress & Ieee80211Mac::isInterfaceRegistered()
 {
     if (!par("multiMac").boolValue())
         return MACAddress::UNSPECIFIED_ADDRESS;
-
     IInterfaceTable *ift = InterfaceTableAccess().getIfExists();
     if (!ift)
         return MACAddress::UNSPECIFIED_ADDRESS;

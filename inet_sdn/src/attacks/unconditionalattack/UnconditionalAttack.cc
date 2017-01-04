@@ -15,6 +15,8 @@
 #include "SEAPPExpression.h"
 #include "Create.h"
 
+#include "IPv4Address.h"
+
 UnconditionalAttack::UnconditionalAttack() : AttackBase (attack_t::UNCONDITIONAL)
 {
 	//EV << "UnconditionalAttack::UnconditionalAttack invoked" << endl;
@@ -100,7 +102,7 @@ void UnconditionalAttack::execute(vector<cMessage*> &putMessages)
 
 				// add the cloned packet to the vector generatedMessages
 				generatedMessages.push_back(((cMessage*)generatedMessage));
-
+				                
 				// update the map packetTable
 				packetTable[clonePacketName] = generatedMessages.size() - 1;
 			
@@ -112,16 +114,19 @@ void UnconditionalAttack::execute(vector<cMessage*> &putMessages)
 			
 				Change* change = (Change*) actions[i];
 
-				bool isRandomValue;
+                // <A.S>
+				//bool isRandomValue;
 				string valueName;
 				string value;
 
 				// retrieve the valueName (i.e. the variable name)
 				valueName = change->getValue();
-				isRandomValue = (valueName == "RANDOM");
+				
+				// <A.S>
+				//isRandomValue = (valueName == "RANDOM");
 				
 				// compute a random value
-				if (isRandomValue) {
+				/*if (isRandomValue) {
 					double maxValue;
 					double minValue;
 					double randomValue;
@@ -129,36 +134,67 @@ void UnconditionalAttack::execute(vector<cMessage*> &putMessages)
 					minValue = double( *(variableTable["MIN"]) );
 					randomValue = minValue + (dblrand() * (maxValue - minValue));
 					value.assign(to_string(randomValue));
-				} 
-				else{
-					// retrieve the value from a stored variable
-					value = variableTable[valueName]->getValue();
-				}
+				} */
 				
+			    
 				packetName = change->getPacketName();
 				packetPosition = packetTable[packetName];
 				
 				// process an already existing packet
 				targetMessage = &generatedMessages[packetPosition];
+				
+			    // <A.S> 
+			    // check if its a name of a packet
+			    map<string, int>::iterator it = packetTable.find(valueName);
+			    
+				if (it != packetTable.end()) {
+				    //retrieve the packet
+				    int position = (*it).second;
+				    cMessage **payload = &generatedMessages[position];			    		    
+				    change->execute(targetMessage, payload);
+                    break;
+				    
+				}
+				else {
+				    if (isRandomValue(valueName)) {
+				        if (valueName == "RANDOM_IP") {
+				            //check if there is specific network/netmask
+				            if (networkParameters.getNetworkAddress().empty()) 
+				                value = valueName;
+				            else 
+				                value = (IPv4Address(stoul(generateRandomValue(networkParameters.getNetworkAddress(), networkParameters.getNetmask())))).str();				            
+				        }
+				        else
+				            value = valueName;
+				    }			
+				    else {
+				        value = variableTable[valueName]->getValue();
+				    }
+				    
+				    // <A.S>
+				    // packetName = change->getPacketName();
+				    // packetPosition = packetTable[packetName];
+				
+				    // process an already existing packet
+				    // targetMessage = &generatedMessages[packetPosition];
 
-				change->execute(targetMessage, value);
+				    change->execute(targetMessage, value);
 			
-				break;
+				    break;
+				}
 			}
 
 			// Put
-			case action_t::PUT: {
-			
+			case action_t::PUT: {			
 				Put* put = (Put*) actions[i];
-
+                
 				packetName = put->getPacketName();
 				packetPosition = packetTable[packetName];
 
 				// process an already existing packet
 				targetMessage = &generatedMessages[packetPosition];
-
 				generatedMessage = put->execute(*targetMessage);
-
+                
 				// add the PutMsg to put_messages
 				putMessages.push_back(generatedMessage);
 			
@@ -204,10 +240,11 @@ void UnconditionalAttack::execute(vector<cMessage*> &putMessages)
 				string generatedPacketName = create->getPacketName();
 
 				create->execute(&generatedPacket);
-
+                
 				// Add the new packet to the vector 'new_messages'
 				generatedMessages.push_back(generatedPacket);
-
+				
+				                
 				// Update the 'packetTable' map
 				packetTable[generatedPacketName] = generatedMessages.size() - 1;
 				
@@ -233,19 +270,12 @@ void UnconditionalAttack::execute(vector<cMessage*> &putMessages)
 				return; // never executed
 			}
 
-			// Fakeread not recognized by unconditional attacks			
-			case action_t::FAKEREAD: {
-				opp_error("[void UnconditionalAttack::execute(vector<cMessage*> &)] can't recognize the Fakeread action, which is not supported by seapp");
-				return; // never executed
-			}
 
 		}
  
 	}
 
 }
-
-
 
 
 

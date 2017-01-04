@@ -240,7 +240,7 @@ void TCPConnection::sendToIP(TCPSegment *tcpseg)
         controlInfo->setSrcAddr(localAddr.get4());
         controlInfo->setDestAddr(remoteAddr.get4());
         tcpseg->setControlInfo(controlInfo);
-
+        
         tcpMain->send(tcpseg, "ipOut");
     }
     else

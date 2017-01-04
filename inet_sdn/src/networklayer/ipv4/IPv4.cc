@@ -316,7 +316,7 @@ void IPv4::handlePacketFromHL(cPacket *packet)
 
     // extract requested interface and next hop
     const InterfaceEntry *destIE = controlInfo ? const_cast<const InterfaceEntry *>(ift->getInterfaceById(controlInfo->getInterfaceId())) : NULL;
-
+    
     if (controlInfo)
         datagram->setControlInfo(controlInfo);    //FIXME ne rakjuk bele a cntrInfot!!!!! de kell :( kulonben a hook queue-ban elveszik a multicastloop flag
 
@@ -630,7 +630,7 @@ void IPv4::reassembleAndDeliver(IPv4Datagram *datagram)
     }
 
     if (datagramLocalInHook(datagram, getSourceInterfaceFrom(datagram)) != INetfilter::IHook::ACCEPT)
-{
+    {
         return;
     }
 
@@ -641,7 +641,7 @@ void IPv4::reassembleAndDeliverFinish(IPv4Datagram *datagram)
 {
     // decapsulate and send on appropriate output gate
     int protocol = datagram->getTransportProtocol();
-
+  
     if (protocol==IP_PROT_ICMP)
     {
         // incoming ICMP packets are handled specially
@@ -801,7 +801,7 @@ IPv4Datagram *IPv4::encapsulate(cPacket *transportPacket, IPv4ControlInfo *contr
         // if interface parameter does not match existing interface, do not send datagram
         if (rt->getInterfaceByAddress(src)==NULL)
             throw cRuntimeError("Wrong source address %s in (%s)%s: no interface with such address",
-                      src.str().c_str(), transportPacket->getClassName(), transportPacket->getFullName());
+                src.str().c_str(), transportPacket->getClassName(), transportPacket->getFullName());
 
         datagram->setSrcAddress(src);
     }
@@ -855,7 +855,7 @@ void IPv4::sendDatagramToOutput(IPv4Datagram *datagram, const InterfaceEntry *ie
             }
 
             MACAddress nextHopMacAddr;  // unspecified
-                nextHopMacAddr = resolveNextHopMacAddress(datagram, nextHopAddr, ie);
+            nextHopMacAddr = resolveNextHopMacAddress(datagram, nextHopAddr, ie);
 
             if (nextHopMacAddr.isUnspecified())
             {
@@ -921,15 +921,16 @@ MACAddress IPv4::resolveNextHopMacAddress(cPacket *packet, IPv4Address nextHopAd
 }
 
 void IPv4::sendPacketToIeee802NIC(cPacket *packet, const InterfaceEntry *ie, const MACAddress& macAddress, int etherType)
-{
-    // remove old control info
+{	
+	// remove old control info
     delete packet->removeControlInfo();
-
+    
     // add control info with MAC address
     Ieee802Ctrl *controlInfo = new Ieee802Ctrl();
     controlInfo->setDest(macAddress);
     controlInfo->setEtherType(etherType);
     packet->setControlInfo(controlInfo);
+
 
     sendPacketToNIC(packet, ie);
 }

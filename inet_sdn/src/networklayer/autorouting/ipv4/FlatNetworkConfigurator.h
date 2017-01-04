@@ -25,6 +25,7 @@
 class IInterfaceTable;
 class IRoutingTable;
 
+using namespace std;
 
 /**
  * Configures IPv4 addresses and routing tables for a "flat" network,
@@ -58,6 +59,11 @@ class INET_API FlatNetworkConfigurator : public cSimpleModule
     virtual void fillRoutingTables(cTopology& topo, NodeInfoVector& nodeInfo);
 
     virtual void setDisplayString(cTopology& topo, NodeInfoVector& nodeInfo);
+    
+  public:
+    // <A.S>
+    string getNetworkAddress();
+    string getNetmask();
 };
 
 #endif

@@ -59,6 +59,8 @@ simsignal_t UDP::sentPkSignal = registerSignal("sentPk");
 simsignal_t UDP::passedUpPkSignal = registerSignal("passedUpPk");
 simsignal_t UDP::droppedPkWrongPortSignal = registerSignal("droppedPkWrongPort");
 simsignal_t UDP::droppedPkBadChecksumSignal = registerSignal("droppedPkBadChecksum");
+// <A.S>
+simsignal_t UDP::msgDelaySignal  = registerSignal("delay");
 
 static std::ostream & operator<<(std::ostream & os, const UDP::SockDesc& sd)
 {
@@ -292,6 +294,10 @@ void UDP::processUDPPacket(UDPPacket *udpPacket)
 
         return;
     }
+
+    // <A.S>
+    simtime_t duration = simTime() - udpPacket->getTimestamp();
+    emit(msgDelaySignal, duration);
 
     IPvXAddress srcAddr;
     IPvXAddress destAddr;
@@ -749,6 +755,9 @@ void UDP::sendDown(cPacket *appData, const IPvXAddress& srcAddr, ushort srcPort,
         ipControlInfo->setTypeOfService(tos);
         udpPacket->setControlInfo(ipControlInfo);
 
+        // <A.S>
+        udpPacket->setTimestamp(simTime());
+        
         emit(sentPkSignal, udpPacket);
         send(udpPacket, "ipOut");
     }

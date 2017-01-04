@@ -23,6 +23,7 @@
 #include <algorithm>
 #include <sstream>
 
+
 #include "InterfaceTable.h"
 #include "ModuleAccess.h"
 #include "NotifierConsts.h"
@@ -54,6 +55,8 @@ InterfaceTable::InterfaceTable()
     nb = NULL;
     tmpNumInterfaces = -1;
     tmpInterfaceList = NULL;
+	
+	initializationCompleted = false;
 }
 
 InterfaceTable::~InterfaceTable()
@@ -79,7 +82,9 @@ void InterfaceTable::initialize(int stage)
     else if (stage == 1)
     {
         updateDisplayString();
+		initializationCompleted = true;
     }
+    
 }
 
 void InterfaceTable::updateDisplayString()
@@ -209,6 +214,27 @@ int InterfaceTable::getNumInterfaces()
     return tmpNumInterfaces;
 }
 
+// <A.S>
+
+/*int InterfaceTable::getNumSecondaryInterfaces ()
+{
+  return secondaryInterfaceVector.size();
+}
+
+InterfaceEntry* InterfaceTable::getSecondaryInterface(int pos) {
+    int n = getNumSecondaryInterfaces();
+    if(pos < 0 || pos >= n)
+	   throw cRuntimeError("getSecondaryInterface(): interface index %d out of range 0 ..%d", pos, n-1);
+    return secondaryInterfaceVector[pos];
+}
+
+void InterfaceTable::deleteSecondaryInterface(int pos) {
+    if (secondaryInterfaceVector.empty())
+        cRuntimeError("deleteSecondaryInterface(int pos): no elemeents to be deleted");
+    secondaryInterfaceVector.erase(secondaryInterfaceVector.begin()+pos);
+}
+*/
+
 InterfaceEntry *InterfaceTable::getInterface(int pos)
 {
     int n = getNumInterfaces(); // also fills tmpInterfaceList
@@ -242,23 +268,48 @@ int InterfaceTable::getBiggestInterfaceId()
 
 void InterfaceTable::addInterface(InterfaceEntry *entry)
 {
-    if (!nb)
-        throw cRuntimeError("InterfaceTable must precede all network interface modules in the node's NED definition");
-    // check name is unique
-    if (getInterfaceByName(entry->getName())!=NULL)
-        throw cRuntimeError("addInterface(): interface '%s' already registered", entry->getName());
+	// <A.S>
+	if (!initializationCompleted) {
+        if (!nb)
+            throw cRuntimeError("InterfaceTable must precede all network interface modules in the node's NED definition");
+    	// check name is unique
+    	if (getInterfaceByName(entry->getName())!=NULL)
+    	   throw cRuntimeError("addInterface(): interface '%s' already registered", entry->getName());
+    	   
+	    // insert
+    	entry->setInterfaceId(INTERFACEIDS_START + idToInterface.size());
+        entry->setInterfaceTable(this);
+    	idToInterface.push_back(entry);
+    	invalidateTmpInterfaceList();
 
-    // insert
-    entry->setInterfaceId(INTERFACEIDS_START + idToInterface.size());
-    entry->setInterfaceTable(this);
-    idToInterface.push_back(entry);
-    invalidateTmpInterfaceList();
+        // fill in networkLayerGateIndex, nodeOutputGateId, nodeInputGateId
+        discoverConnectingGates(entry);
 
-    // fill in networkLayerGateIndex, nodeOutputGateId, nodeInputGateId
-    discoverConnectingGates(entry);
+        nb->fireChangeNotification(NF_INTERFACE_CREATED, entry);
+	}
+	else {
+		// <A.S> add the new entry in the secondary table
+        //secondaryInterfaceVector.push_back(entry);
+        int id = entry->getInterfaceId();
+        IPv4Address addr = entry->ipv4Data()->getIPAddress();
+        secondaryInterfaceTable.insert(std::pair<int, IPv4Address> (id,addr) );
+	}
 
-    nb->fireChangeNotification(NF_INTERFACE_CREATED, entry);
 }
+
+// <A.S>
+bool InterfaceTable::findSecondaryInterface(int interfaceId, const IPv4Address& addr) {
+   std::pair <std::multimap<int, IPv4Address>::iterator, std::multimap<int, IPv4Address>::iterator> range = secondaryInterfaceTable.equal_range(interfaceId);
+    for (std::multimap<int, IPv4Address>::iterator i = range.first; i!=range.second; i++) {
+        if (i->second == addr) {
+            secondaryInterfaceTable.erase(i);
+            return true;
+        }
+    }
+    return false;
+}
+
+
 
 void InterfaceTable::discoverConnectingGates(InterfaceEntry *entry)
 {

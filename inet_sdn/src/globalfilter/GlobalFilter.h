@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "AttackEntry.h"
+#include "PutMessages.h"
 
 using namespace std;
 
@@ -20,11 +21,15 @@ class GlobalFilter : public cSimpleModule {
 
 	private:
 		vector<AttackEntry*> unconditionalAttacks;
-		vector<cMessage*> putMessages;
-		vector<cMessage*> attackSelfMsgs;
+
+	    // <A.S>
+		string networkAddr;
+		string netmask;
 
 	private:	
 		void initializeAttacks();
+		// <A.S>
+        void getNetworkParameters();
 
 	protected:
 		virtual void initialize();

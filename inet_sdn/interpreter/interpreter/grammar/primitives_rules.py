@@ -146,15 +146,17 @@ def p_statement_change(p):
         elif re.match(pattern, p[7]):
             symbol_table[p[7]] = "VAR"
             variables[p[7]] = "<value>" + p[7] + "</value><type>NUMBER</type>"
-		
         # Return error if the ID is not declared
         else:
-            print_error("Error: '" + p[7] + "' undefined variable identifier", str(p.lineno(1)) )
+            print_error("Error: '" + p[7] + "' undefined variable identifier2", str(p.lineno(1)) )
 
     # Check if the variable is initialized
     if p[7] not in reserved_name:
-        
-        value = variables[p[7]][7]
+        #check if the argument is a declared packet
+        if symbol_table[p[7]] == 'PACKET':
+            value = p[7]
+        else:
+            value = variables[p[7]][7]
      
         # Variable not initialized if its first char is '<'
         if value == "<":
@@ -163,7 +165,7 @@ def p_statement_change(p):
     # Check layer name and control structure name
     if check_layer_name(p[5]) == False:
         if check_control_structure_name(p[5]) == False:
-            print_error("Error: layer name or control structure name unknown, you can use only: APP or TRA or NET or MAC or controlInfo or sending", str(p.lineno(1)))
+            print_error("Error: layer name or control structure name unknown, you can use only: APP or TRA or NET or MAC or controlInfo or attackInfo or sending", str(p.lineno(1)))
     
     # Check coerency of layer_field structure "layer.field1.field2.field3 ..."
     layer_field = str(p[5])
@@ -222,8 +224,8 @@ def p_statement_retrieve(p):
         print_error("Error: ID overloading is not allowed", str(p.lineno(1)) )
     
     # Check if the layer name is valid
-    if check_layer_name(p[5]) == False:
-        print_error("Error: layer name unknown, you can use only: APP or TRA or NET or MAC", str(p.lineno(1)))
+    if check_layer_name(p[5]) == False and check_control_structure_name(p[5]) == False:
+        print_error("Error: layer name unknown, you can use only: APP or TRA or NET or MAC or controlInfo", str(p.lineno(1)))
     
     # Check coerency of layer_field structure "layer.field1.field2.field3 ..."
     layer_field = str(p[5])

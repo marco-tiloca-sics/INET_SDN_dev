@@ -112,6 +112,16 @@ void FlatNetworkConfigurator::assignAddresses(cTopology& topo, NodeInfoVector& n
     }
 }
 
+// <A.S>
+ string FlatNetworkConfigurator::getNetworkAddress() {
+    return par("networkAddress").stdstringValue();
+}
+
+string FlatNetworkConfigurator::getNetmask() {
+    return par("netmask").stdstringValue();
+}
+
+
 void FlatNetworkConfigurator::addDefaultRoutes(cTopology& topo, NodeInfoVector& nodeInfo)
 {
     // add default route to nodes with exactly one (non-loopback) interface

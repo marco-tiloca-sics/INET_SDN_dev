@@ -16,6 +16,8 @@
 #include "SEAPPExpression.h"
 #include "Create.h"
 
+#include "IPv4Address.h"
+
 
 ConditionalAttack::ConditionalAttack() : AttackBase(attack_t::CONDITIONAL)
 {
@@ -32,13 +34,13 @@ ConditionalAttack::~ConditionalAttack()
     delete packetFilter;
 }
 
-
 void ConditionalAttack::addAction(ActionBase* action)
 {
     // append the action to the set of actions composing the attack
 	actions.push_back(action);
     // update the minimum involved layer if necessary
 	int actionLayer = action->getInvolvedLayer();
+
 	if (minimumInvolvedLayer > actionLayer) {
 		minimumInvolvedLayer = actionLayer;
 	}
@@ -59,7 +61,8 @@ bool ConditionalAttack::matchPacketFilter(cMessage* packet) const
 {
     // check if the current layer contains all the informations
 	int packetLayer = getPacketLayer((cPacket*)packet);
-    if (packetLayer > minimumInvolvedLayer) {
+		
+	if (packetLayer > minimumInvolvedLayer) {
         return false;
     }
 
@@ -81,7 +84,8 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 	string packetName;
 	int packetPosition;
 	
-	// set isFiltered parameter (it exists and its value is false) to avoid multiple execution of the attack by the same node on different layer 
+	// set isFiltered parameter (it exists and its value is false) to avoid multiple execution 
+	// of the attack by the same node on different layer 
 	setParameterRecursively(*packet, "isFiltered", true);
 	
 	// execute all actions composing the attack
@@ -146,12 +150,14 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 				packetName = change->getPacketName();
 				packetPosition = packetTable[packetName];
 				
-				bool isRandomValue;
+				// <A.S>
+				//bool isRandomValue;
 				string valueName;
 				string value;
 
 				valueName = change->getValue();
-				isRandomValue = (valueName == "RANDOM");		
+				// <A.S>
+				//isRandomValue = (valueName == "RANDOM");		
 				
 				// process the original intercepted packet
 				if (packetPosition == -1) {
@@ -162,7 +168,8 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 					targetPacket = &generatedPackets[packetPosition];
 				}
 				
-				if (isRandomValue) {
+				// <A.S>
+				/*if (isRandomValue) {
 					double randomValue;
 					double maxValue;
 					double minValue;
@@ -173,13 +180,38 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 					randomValue = minValue + ( dblrand() * (maxValue - minValue) );
 					
 					value = to_string(randomValue); 
+				}*/
+				
+				// <A.S>
+				// check if its a name of a packet
+			    map<string, int>::iterator it = packetTable.find(valueName);
+			    
+				if (it != packetTable.end()) {
+				    //retrieve the packet
+				    int position = (*it).second;
+				    cMessage **payload = &generatedPackets[position];			    		    
+				    change->execute(targetPacket, payload);
+                    break;
+				    
 				}
 				else {
-					value = variableTable[valueName]->getValue();
-				}
-				
-				change->execute(targetPacket, value);
-				break;
+				    if (isRandomValue(valueName)) {
+				        if (valueName == "RANDOM_IP") {
+				            //check if there is specific network/netmask
+				            if (networkParameters.getNetworkAddress().empty()) 
+				                value = valueName;
+				            else 
+				                value = (IPv4Address(stoul(generateRandomValue(networkParameters.getNetworkAddress(), networkParameters.getNetmask())))).str();				            
+				        }
+				        else
+				            value = valueName;
+				    }
+				    else
+					    value = variableTable[valueName]->getValue();
+
+				    change->execute(targetPacket, value);
+				    break;
+			    }
 			}
 			
 			case action_t::SEND: {
@@ -224,6 +256,7 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 			}
 	
 			case action_t::RETRIEVE: {
+
 				Variable* variable;
 				string variableName;
 				Retrieve* retrieve = (Retrieve*) actions[i];
@@ -244,7 +277,10 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 				
 				// delete the old value and update the variable table
 				variableName.assign(retrieve->getVariableName());
-				delete variableTable[variableName];
+
+				// A.S:dont delete the variable just update the value
+				//delete variableTable[variableName];
+				
 				variableTable[variableName] = variable;
 				
 				break;
@@ -277,3 +313,7 @@ void ConditionalAttack::execute(cMessage** packet, vector<cMessage*> &generatedP
 	}
 
 }
+
+
+
+

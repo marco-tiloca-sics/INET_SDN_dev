@@ -173,10 +173,5 @@ module StandardHost extends NodeBase
         for i=0..numPingApps-1 {
             networkLayer.pingOut++ --> pingApp[i].pingIn;
             networkLayer.pingIn++ <-- pingApp[i].pingOut;
-        }
-        
-        
-        
-        
-        
+        }    
 }
