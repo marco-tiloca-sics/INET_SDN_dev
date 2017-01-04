@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<configuration>
+<Conditional>
+
+<Attack>
+	<start_time>30</start_time>
+	<node>6</node>
+	<var><name>2</name><value>2</value><type>NUMBER</type></var>
+	<filter>APP.sequenceNumber:==:13:APP.sequenceNumber:==:15:APP.sequenceNumber:==:17:APP.sequenceNumber:==:19:APP.sequenceNumber:==:21:APP.sequenceNumber:==:23:APP.sequenceNumber:==:25:APP.sequenceNumber:==:27:APP.sequenceNumber:==:29:APP.sequenceNumber:==:31:APP.sequenceNumber:==:33:APP.sequenceNumber:==:35:APP.sequenceNumber:==:37:APP.sequenceNumber:==:39:OR:OR:OR:OR:OR:OR:OR:OR:OR:OR:OR:OR:OR</filter>
+
+	<action>
+		<name>Change</name>
+		<parameters>packetName:original:field_name:APP.periodGreen:value:2</parameters>
+	</action>
+	<action>
+		<name>Change</name>
+		<parameters>packetName:original:field_name:APP.periodYellow:value:2</parameters>
+	</action>
+	<action>
+		<name>Change</name>
+		<parameters>packetName:original:field_name:APP.periodRed:value:2</parameters>
+	</action>
+</Attack>
+
+</Conditional>
+
+</configuration>

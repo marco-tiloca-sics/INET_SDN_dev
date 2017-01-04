@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/README
+END
+SimpleTest.ned
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/SimpleTest.ned
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/omnetpp.ini
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/run
+END
+ASConfig.xml.old
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/ASConfig.xml.old
+END
+run.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/run.cmd
+END
+ASConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/ASConfig.xml
+END
+.tkenvrc
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ospfv2/simpletest/.tkenvrc
+END

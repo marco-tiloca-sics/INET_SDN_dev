@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ethernet/arptest2
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ethernet/arptest2/omnetpp.ini
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ethernet/arptest2/run
+END
+run.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ethernet/arptest2/run.cmd
+END
+ARPTest.ned
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ethernet/arptest2/ARPTest.ned
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ethernet/arptest2/README
+END

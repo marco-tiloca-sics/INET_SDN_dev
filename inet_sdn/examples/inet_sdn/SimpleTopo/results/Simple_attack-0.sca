@@ -1,0 +1,807 @@
+version 2
+run Simple_attack-0-20170104-11:08:54-3142
+attr configname Simple_attack
+attr datetime 20170104-11:08:54
+attr experiment Simple_attack
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Scenario
+attr processid 3142
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Scenario.client.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Scenario.client.networkLayer.arp 	completedARPResolution:count 	1
+attr title  "ARP completed resolutions, count"
+scalar Scenario.client.networkLayer.arp 	initiatedARPResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar Scenario.client.networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Scenario.client.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar Scenario.client.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.client.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.client.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Scenario.client.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Scenario.client.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.client.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	"simulated time" 	114.86
+scalar Scenario.client.eth[0].mac 	full-duplex 	1
+scalar Scenario.client.eth[0].mac 	"frames/sec sent" 	26.649834581229
+scalar Scenario.client.eth[0].mac 	"frames/sec rcvd" 	0.0087062510882814
+scalar Scenario.client.eth[0].mac 	"bits/sec sent" 	276219.67612746
+scalar Scenario.client.eth[0].mac 	"bits/sec rcvd" 	4.4576005572001
+scalar Scenario.client.eth[0].mac 	"rx channel idle (%)" 	99.999994985199
+scalar Scenario.client.eth[0].mac 	"rx channel utilization (%)" 	5.0148006268501e-06
+scalar Scenario.client.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Scenario.client.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Scenario.client.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.client.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	rxPkFromHL:count 	3061
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Scenario.client.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Scenario.client.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Scenario.client.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Scenario.client.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Scenario.client.eth[0].mac 	rxPkOk:count 	1
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Scenario.client.eth[0].mac 	rxPkOk:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	txPk:count 	3061
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Scenario.client.eth[0].mac 	txPk:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Scenario.client.eth[0].mac 	passedUpPk:count 	1
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.client.eth[0].mac 	passedUpPk:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.client.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Scenario.client.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Scenario.client.eth[0].encap 	decapPk:count 	1
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Scenario.client.eth[0].encap 	decapPk:sum(packetBytes) 	28
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Scenario.client.eth[0].encap 	encapPk:count 	3061
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Scenario.client.eth[0].encap 	encapPk:sum(packetBytes) 	3910708
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Scenario.client.udpApp[0] 	"packets sent" 	574
+scalar Scenario.client.udpApp[0] 	"packets received" 	0
+scalar Scenario.client.udpApp[0] 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Scenario.client.udpApp[0] 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Scenario.client.udpApp[0] 	rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, stats"
+attr unit  s
+scalar Scenario.client.udpApp[0] 	sentPk:count 	574
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Scenario.client.udpApp[0] 	sentPk:sum(packetBytes) 	717500
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Scenario.client.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Scenario.client.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Scenario.client.udp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Scenario.client.udp 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Scenario.client.udp 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Scenario.client.udp 	rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, stats"
+attr unit  s
+scalar Scenario.client.udp 	sentPk:count 	3061
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Scenario.client.udp 	sentPk:sum(packetBytes) 	3850738
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Scenario.server.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Scenario.server.networkLayer.arp 	completedARPResolution:count 	1
+attr title  "ARP completed resolutions, count"
+scalar Scenario.server.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Scenario.server.networkLayer.arp 	sentReply:count 	1
+attr title  "ARP replies sent, count"
+scalar Scenario.server.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Scenario.server.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.server.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.server.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Scenario.server.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Scenario.server.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.server.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	"simulated time" 	114.86
+scalar Scenario.server.eth[0].mac 	full-duplex 	1
+scalar Scenario.server.eth[0].mac 	"frames/sec sent" 	0.0087062510882814
+scalar Scenario.server.eth[0].mac 	"frames/sec rcvd" 	26.649834581229
+scalar Scenario.server.eth[0].mac 	"bits/sec sent" 	4.4576005572001
+scalar Scenario.server.eth[0].mac 	"bits/sec rcvd" 	276219.67612746
+scalar Scenario.server.eth[0].mac 	"rx channel idle (%)" 	99.722074734459
+scalar Scenario.server.eth[0].mac 	"rx channel utilization (%)" 	0.27792526554066
+scalar Scenario.server.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Scenario.server.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Scenario.server.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.server.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	rxPkFromHL:count 	1
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Scenario.server.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Scenario.server.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Scenario.server.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Scenario.server.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Scenario.server.eth[0].mac 	rxPkOk:count 	3061
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Scenario.server.eth[0].mac 	rxPkOk:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	txPk:count 	1
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Scenario.server.eth[0].mac 	txPk:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Scenario.server.eth[0].mac 	passedUpPk:count 	3061
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.server.eth[0].mac 	passedUpPk:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.server.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Scenario.server.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Scenario.server.eth[0].encap 	decapPk:count 	3061
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Scenario.server.eth[0].encap 	decapPk:sum(packetBytes) 	3910708
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Scenario.server.eth[0].encap 	encapPk:count 	1
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Scenario.server.eth[0].encap 	encapPk:sum(packetBytes) 	28
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Scenario.server.udpApp[0] 	rcvdPk:count 	3060
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Scenario.server.udpApp[0] 	rcvdPk:sum(packetBytes) 	3825000
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Scenario.server.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Scenario.server.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Scenario.server.udp 	passedUpPk:count 	3060
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Scenario.server.udp 	rcvdPk:count 	3060
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Scenario.server.udp 	rcvdPk:sum(packetBytes) 	3849480
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Scenario.server.udp 	rcvdPkLifetime:stats
+field count 3060
+field mean 0.00021505777773432
+field stddev 2.1803410348975e-05
+field sum 0.65807679986702
+field sqrsum 0.00014297874819992
+field min 0.00021064
+field max 0.000569039992
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, stats"
+attr unit  s
+scalar Scenario.server.udp 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Scenario.server.udp 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Scenario.switch.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Scenario.switch.networkLayer.arp 	completedARPResolution:count 	1
+attr title  "ARP completed resolutions, count"
+scalar Scenario.switch.networkLayer.arp 	initiatedARPResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar Scenario.switch.networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Scenario.switch.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar Scenario.switch.eth[0].mac 	"simulated time" 	114.86
+scalar Scenario.switch.eth[0].mac 	full-duplex 	1
+scalar Scenario.switch.eth[0].mac 	"frames/sec sent" 	0.21765627720703
+scalar Scenario.switch.eth[0].mac 	"frames/sec rcvd" 	0.20895002611875
+scalar Scenario.switch.eth[0].mac 	"bits/sec sent" 	208.74107609263
+scalar Scenario.switch.eth[0].mac 	"bits/sec rcvd" 	204.28347553543
+scalar Scenario.switch.eth[0].mac 	"rx channel idle (%)" 	99.999782343723
+scalar Scenario.switch.eth[0].mac 	"rx channel utilization (%)" 	0.00021765627720703
+scalar Scenario.switch.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Scenario.switch.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Scenario.switch.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Scenario.switch.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Scenario.switch.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.switch.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.switch.eth[0].mac 	rxPkFromHL:count 	25
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Scenario.switch.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	2997
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Scenario.switch.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Scenario.switch.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Scenario.switch.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Scenario.switch.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Scenario.switch.eth[0].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Scenario.switch.eth[0].mac 	rxPkOk:sum(packetBytes) 	2933
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Scenario.switch.eth[0].mac 	txPk:count 	25
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Scenario.switch.eth[0].mac 	txPk:sum(packetBytes) 	2997
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Scenario.switch.eth[0].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.switch.eth[0].mac 	passedUpPk:sum(packetBytes) 	2933
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.switch.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Scenario.switch.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Scenario.switch.eth[0].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Scenario.switch.eth[0].encap 	decapPk:sum(packetBytes) 	2385
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Scenario.switch.eth[0].encap 	encapPk:count 	25
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Scenario.switch.eth[0].encap 	encapPk:sum(packetBytes) 	2425
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	"simulated time" 	114.86
+scalar Scenario.switch.etherMAC[0] 	full-duplex 	1
+scalar Scenario.switch.etherMAC[0] 	"frames/sec sent" 	0.0087062510882814
+scalar Scenario.switch.etherMAC[0] 	"frames/sec rcvd" 	26.649834581229
+scalar Scenario.switch.etherMAC[0] 	"bits/sec sent" 	4.4576005572001
+scalar Scenario.switch.etherMAC[0] 	"bits/sec rcvd" 	276219.67612746
+scalar Scenario.switch.etherMAC[0] 	"rx channel idle (%)" 	99.722074734459
+scalar Scenario.switch.etherMAC[0] 	"rx channel utilization (%)" 	0.27792526554066
+scalar Scenario.switch.etherMAC[0] 	"rx channel collision (%)" 	0
+scalar Scenario.switch.etherMAC[0] 	collisions 	0
+scalar Scenario.switch.etherMAC[0] 	backoffs 	0
+scalar Scenario.switch.etherMAC[0] 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Scenario.switch.etherMAC[0] 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Scenario.switch.etherMAC[0] 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.switch.etherMAC[0] 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	rxPkFromHL:count 	1
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Scenario.switch.etherMAC[0] 	rxPkFromHL:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Scenario.switch.etherMAC[0] 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Scenario.switch.etherMAC[0] 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Scenario.switch.etherMAC[0] 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Scenario.switch.etherMAC[0] 	rxPkOk:count 	3061
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Scenario.switch.etherMAC[0] 	rxPkOk:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	txPk:count 	1
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Scenario.switch.etherMAC[0] 	txPk:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[0] 	backoff:count 	0
+attr interpolationmode  none
+attr title  "backoff, count"
+scalar Scenario.switch.etherMAC[0] 	collision:count 	0
+attr interpolationmode  none
+attr title  "collision, count"
+scalar Scenario.switch.etherMAC[0] 	passedUpPk:count 	3061
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.switch.etherMAC[0] 	passedUpPk:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	"simulated time" 	114.86
+scalar Scenario.switch.etherMAC[1] 	full-duplex 	1
+scalar Scenario.switch.etherMAC[1] 	"frames/sec sent" 	26.649834581229
+scalar Scenario.switch.etherMAC[1] 	"frames/sec rcvd" 	0.0087062510882814
+scalar Scenario.switch.etherMAC[1] 	"bits/sec sent" 	276219.67612746
+scalar Scenario.switch.etherMAC[1] 	"bits/sec rcvd" 	4.4576005572001
+scalar Scenario.switch.etherMAC[1] 	"rx channel idle (%)" 	99.999994985199
+scalar Scenario.switch.etherMAC[1] 	"rx channel utilization (%)" 	5.0148006268501e-06
+scalar Scenario.switch.etherMAC[1] 	"rx channel collision (%)" 	0
+scalar Scenario.switch.etherMAC[1] 	collisions 	0
+scalar Scenario.switch.etherMAC[1] 	backoffs 	0
+scalar Scenario.switch.etherMAC[1] 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Scenario.switch.etherMAC[1] 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Scenario.switch.etherMAC[1] 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.switch.etherMAC[1] 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	rxPkFromHL:count 	3061
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Scenario.switch.etherMAC[1] 	rxPkFromHL:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Scenario.switch.etherMAC[1] 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Scenario.switch.etherMAC[1] 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Scenario.switch.etherMAC[1] 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Scenario.switch.etherMAC[1] 	rxPkOk:count 	1
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Scenario.switch.etherMAC[1] 	rxPkOk:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	txPk:count 	3061
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Scenario.switch.etherMAC[1] 	txPk:sum(packetBytes) 	3965824
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Scenario.switch.etherMAC[1] 	backoff:count 	0
+attr interpolationmode  none
+attr title  "backoff, count"
+scalar Scenario.switch.etherMAC[1] 	collision:count 	0
+attr interpolationmode  none
+attr title  "collision, count"
+scalar Scenario.switch.etherMAC[1] 	passedUpPk:count 	1
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.switch.etherMAC[1] 	passedUpPk:sum(packetBytes) 	64
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.switch.open_Flow_Processing 	droppedPkt:last 	-nan
+attr source  droppedPkt
+scalar Scenario.controller.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Scenario.controller.networkLayer.arp 	completedARPResolution:count 	1
+attr title  "ARP completed resolutions, count"
+scalar Scenario.controller.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Scenario.controller.networkLayer.arp 	sentReply:count 	1
+attr title  "ARP replies sent, count"
+scalar Scenario.controller.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Scenario.controller.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.controller.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.controller.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Scenario.controller.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Scenario.controller.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.controller.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	"simulated time" 	114.86
+scalar Scenario.controller.eth[0].mac 	full-duplex 	1
+scalar Scenario.controller.eth[0].mac 	"frames/sec sent" 	0.20895002611875
+scalar Scenario.controller.eth[0].mac 	"frames/sec rcvd" 	0.21765627720703
+scalar Scenario.controller.eth[0].mac 	"bits/sec sent" 	204.28347553543
+scalar Scenario.controller.eth[0].mac 	"bits/sec rcvd" 	208.74107609263
+scalar Scenario.controller.eth[0].mac 	"rx channel idle (%)" 	99.999777328922
+scalar Scenario.controller.eth[0].mac 	"rx channel utilization (%)" 	0.00022267107783388
+scalar Scenario.controller.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Scenario.controller.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Scenario.controller.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Scenario.controller.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Scenario.controller.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	2933
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Scenario.controller.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Scenario.controller.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Scenario.controller.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Scenario.controller.eth[0].mac 	rxPkOk:count 	25
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Scenario.controller.eth[0].mac 	rxPkOk:sum(packetBytes) 	2997
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Scenario.controller.eth[0].mac 	txPk:sum(packetBytes) 	2933
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Scenario.controller.eth[0].mac 	passedUpPk:count 	25
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Scenario.controller.eth[0].mac 	passedUpPk:sum(packetBytes) 	2997
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.controller.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Scenario.controller.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Scenario.controller.eth[0].encap 	decapPk:count 	25
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Scenario.controller.eth[0].encap 	decapPk:sum(packetBytes) 	2425
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Scenario.controller.eth[0].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Scenario.controller.eth[0].encap 	encapPk:sum(packetBytes) 	2385
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+statistic Scenario.controller.entropy 	entropy:stats
+field count 2
+field mean -17.782352173489
+field stddev 9.8837411260295
+field sum -35.564704346978
+field sqrsum 730.11243629033
+field min -24.771212547197
+field max -10.793491799781
+attr source  entropy
+attr title  "Entropy Value, stats"

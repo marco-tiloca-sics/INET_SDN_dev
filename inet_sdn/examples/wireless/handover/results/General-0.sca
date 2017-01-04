@@ -1,0 +1,341 @@
+version 2
+run General-0-20150609-01:46:09-5334
+attr configname General
+attr datetime 20150609-01:46:09
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network HandoverNetwork
+attr processid 5334
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar HandoverNetwork.host.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar HandoverNetwork.host.networkLayer.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar HandoverNetwork.host.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar HandoverNetwork.host.networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar HandoverNetwork.host.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar HandoverNetwork.host.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar HandoverNetwork.host.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar HandoverNetwork.host.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar HandoverNetwork.host.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar HandoverNetwork.host.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar HandoverNetwork.host.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar HandoverNetwork.host.wlan[0].agent 	dropConfirm:count 	0
+attr title  "dropped confirms, count"
+scalar HandoverNetwork.host.wlan[0].agent 	acceptConfirm:count 	0
+attr title  "accepted confirms, count"
+scalar HandoverNetwork.host.wlan[0].agent 	sentRequest:count 	1
+attr title  "sent requests, count"
+scalar HandoverNetwork.host.wlan[0].mgmt 	dataQueueLen:max 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar HandoverNetwork.host.wlan[0].mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar HandoverNetwork.host.wlan[0].mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar HandoverNetwork.host.wlan[0].mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar HandoverNetwork.host.wlan[0].mac 	"number of received packets" 	1
+scalar HandoverNetwork.host.wlan[0].mac 	"number of collisions" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"number of internal collisions" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"number of retry for AC 0" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"sent and received bits" 	960
+scalar HandoverNetwork.host.wlan[0].mac 	"sent packet within AC 0" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"sent in TXOP " 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"sentWithoutRetry AC 0" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"numGivenUp AC 0" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	"numDropped AC 0" 	0
+scalar HandoverNetwork.host.wlan[0].mac 	rcvdPkFromHL:count 	3
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar HandoverNetwork.host.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	120
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar HandoverNetwork.host.wlan[0].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar HandoverNetwork.host.wlan[0].mac 	passedUpPk:sum(packetBytes) 	156
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar HandoverNetwork.host.wlan[0].mac 	rcvdPkFromLL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar HandoverNetwork.host.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	156
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar HandoverNetwork.host.wlan[0].mac 	sentDownPk:count 	4
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar HandoverNetwork.host.wlan[0].mac 	sentDownPk:sum(packetBytes) 	134
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar HandoverNetwork.host.wlan[0].radio 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar HandoverNetwork.host.wlan[0].radio 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar HandoverNetwork.host.wlan[0].radio 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+statistic HandoverNetwork.host.wlan[0].radio 	channelNo:histogram
+field count 3
+field mean 1
+field stddev 1
+field sum 3
+field sqrsum 5
+field min 0
+field max 2
+attr interpolationmode  sample-hold
+attr title  "channel no, histogram"
+bin	-INF	0
+bin	-1	0
+bin	0	1
+bin	1	1
+bin	2	1
+bin	3	0
+scalar HandoverNetwork.host.wlan[0].radio 	bitrate:min 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar HandoverNetwork.host.wlan[0].radio 	bitrate:max 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar HandoverNetwork.host.wlan[0].radio 	bitrate:timeavg 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar HandoverNetwork.host.wlan[0].radio 	radioState:count 	13
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"
+scalar HandoverNetwork.ap1.wlan[0].mgmt 	dataQueueLen:max 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar HandoverNetwork.ap1.wlan[0].mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar HandoverNetwork.ap1.wlan[0].mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar HandoverNetwork.ap1.wlan[0].mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar HandoverNetwork.ap1.wlan[0].mac 	"number of received packets" 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	"number of collisions" 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	"number of internal collisions" 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	"number of retry for AC 0" 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	"sent and received bits" 	5616
+scalar HandoverNetwork.ap1.wlan[0].mac 	"sent packet within AC 0" 	1
+scalar HandoverNetwork.ap1.wlan[0].mac 	"sent in TXOP " 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	"sentWithoutRetry AC 0" 	1
+scalar HandoverNetwork.ap1.wlan[0].mac 	"numGivenUp AC 0" 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	"numDropped AC 0" 	0
+scalar HandoverNetwork.ap1.wlan[0].mac 	rcvdPkFromHL:count 	10
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar HandoverNetwork.ap1.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	780
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar HandoverNetwork.ap1.wlan[0].mac 	passedUpPk:count 	1
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar HandoverNetwork.ap1.wlan[0].mac 	passedUpPk:sum(packetBytes) 	40
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar HandoverNetwork.ap1.wlan[0].mac 	rcvdPkFromLL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar HandoverNetwork.ap1.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	54
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar HandoverNetwork.ap1.wlan[0].mac 	sentDownPk:count 	10
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar HandoverNetwork.ap1.wlan[0].mac 	sentDownPk:sum(packetBytes) 	780
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar HandoverNetwork.ap1.wlan[0].radio 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar HandoverNetwork.ap1.wlan[0].radio 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar HandoverNetwork.ap1.wlan[0].radio 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+statistic HandoverNetwork.ap1.wlan[0].radio 	channelNo:histogram
+field count 1
+field mean 2
+field stddev -nan
+field sum 2
+field sqrsum 4
+field min 2
+field max 2
+attr interpolationmode  sample-hold
+attr title  "channel no, histogram"
+bin	-INF	0
+bin	1	0
+bin	2	1
+bin	3	0
+scalar HandoverNetwork.ap1.wlan[0].radio 	bitrate:min 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar HandoverNetwork.ap1.wlan[0].radio 	bitrate:max 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar HandoverNetwork.ap1.wlan[0].radio 	bitrate:timeavg 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar HandoverNetwork.ap1.wlan[0].radio 	radioState:count 	24
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"
+scalar HandoverNetwork.ap2.wlan[0].mgmt 	dataQueueLen:max 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar HandoverNetwork.ap2.wlan[0].mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar HandoverNetwork.ap2.wlan[0].mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar HandoverNetwork.ap2.wlan[0].mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar HandoverNetwork.ap2.wlan[0].mac 	"number of received packets" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"number of collisions" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"number of internal collisions" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"number of retry for AC 0" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"sent and received bits" 	5616
+scalar HandoverNetwork.ap2.wlan[0].mac 	"sent packet within AC 0" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"sent in TXOP " 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"sentWithoutRetry AC 0" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"numGivenUp AC 0" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	"numDropped AC 0" 	0
+scalar HandoverNetwork.ap2.wlan[0].mac 	rcvdPkFromHL:count 	9
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar HandoverNetwork.ap2.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	702
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar HandoverNetwork.ap2.wlan[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar HandoverNetwork.ap2.wlan[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar HandoverNetwork.ap2.wlan[0].mac 	rcvdPkFromLL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar HandoverNetwork.ap2.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar HandoverNetwork.ap2.wlan[0].mac 	sentDownPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar HandoverNetwork.ap2.wlan[0].mac 	sentDownPk:sum(packetBytes) 	702
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar HandoverNetwork.ap2.wlan[0].radio 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar HandoverNetwork.ap2.wlan[0].radio 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar HandoverNetwork.ap2.wlan[0].radio 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+statistic HandoverNetwork.ap2.wlan[0].radio 	channelNo:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr title  "channel no, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar HandoverNetwork.ap2.wlan[0].radio 	bitrate:min 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar HandoverNetwork.ap2.wlan[0].radio 	bitrate:max 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar HandoverNetwork.ap2.wlan[0].radio 	bitrate:timeavg 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar HandoverNetwork.ap2.wlan[0].radio 	radioState:count 	19
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"

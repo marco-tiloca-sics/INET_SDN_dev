@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Physical>
+
+		<Attack>
+			<start_time>300</start_time>
+			<node>5</node>
+
+			<action>
+				<name>Destroy</name>
+			</action>
+		</Attack>
+
+		<Attack>
+			<start_time>200</start_time>
+			<node>4</node>
+
+			<action>
+				<name>Destroy</name>
+			</action>
+		</Attack>
+
+		<Attack>
+			<start_time>50</start_time>
+			<node>1:2:3</node>
+
+			<action>
+				<name>Destroy</name>
+			</action>
+		</Attack>
+
+		<Attack>
+			<start_time>400</start_time>
+			<node>6</node>
+
+			<action>
+				<name>Destroy</name>
+			</action>
+		</Attack>
+
+	</Physical>
+
+</configuration>

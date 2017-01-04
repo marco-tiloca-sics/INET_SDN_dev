@@ -1,0 +1,580 @@
+version 2
+run General-0-20150605-12:24:11-3127
+attr configname General
+attr datetime 20150605-12:24:11
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network inet.examples.inet.broadcast.UDPBroadcastNetwork
+attr processid 3127
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 91  UDPBroadcastNetwork.client.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 92  UDPBroadcastNetwork.client.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 107  UDPBroadcastNetwork.R1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 108  UDPBroadcastNetwork.R1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 118  UDPBroadcastNetwork.R1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 119  UDPBroadcastNetwork.R1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 146  UDPBroadcastNetwork.R2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 147  UDPBroadcastNetwork.R2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 157  UDPBroadcastNetwork.R2.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 158  UDPBroadcastNetwork.R2.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 224  UDPBroadcastNetwork.nonTarget.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 225  UDPBroadcastNetwork.nonTarget.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 1  UDPBroadcastNetwork.target[0].udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 26  UDPBroadcastNetwork.target[1].udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 51  UDPBroadcastNetwork.target[2].udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 3  UDPBroadcastNetwork.target[0].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 28  UDPBroadcastNetwork.target[1].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 53  UDPBroadcastNetwork.target[2].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 8  UDPBroadcastNetwork.target[0].networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 33  UDPBroadcastNetwork.target[1].networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 58  UDPBroadcastNetwork.target[2].networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 22  UDPBroadcastNetwork.target[0].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 47  UDPBroadcastNetwork.target[1].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 72  UDPBroadcastNetwork.target[2].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 18  UDPBroadcastNetwork.target[0].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 43  UDPBroadcastNetwork.target[1].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 68  UDPBroadcastNetwork.target[2].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 13  UDPBroadcastNetwork.target[0].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 38  UDPBroadcastNetwork.target[1].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 63  UDPBroadcastNetwork.target[2].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 177  UDPBroadcastNetwork.switch.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 178  UDPBroadcastNetwork.switch.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 188  UDPBroadcastNetwork.switch.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 189  UDPBroadcastNetwork.switch.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 199  UDPBroadcastNetwork.switch.eth[3].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 200  UDPBroadcastNetwork.switch.eth[3].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 170  UDPBroadcastNetwork.switch.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 192  UDPBroadcastNetwork.switch.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 203  UDPBroadcastNetwork.switch.eth[3].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 181  UDPBroadcastNetwork.switch.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 165  UDPBroadcastNetwork.switch.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 132  UDPBroadcastNetwork.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 133  UDPBroadcastNetwork.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 141  UDPBroadcastNetwork.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 127  UDPBroadcastNetwork.R2.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 140  UDPBroadcastNetwork.R2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 136  UDPBroadcastNetwork.R2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 176  UDPBroadcastNetwork.switch.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 187  UDPBroadcastNetwork.switch.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 198  UDPBroadcastNetwork.switch.eth[3].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 14  UDPBroadcastNetwork.target[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 15  UDPBroadcastNetwork.target[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 39  UDPBroadcastNetwork.target[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 40  UDPBroadcastNetwork.target[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 64  UDPBroadcastNetwork.target[2].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 65  UDPBroadcastNetwork.target[2].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 23  UDPBroadcastNetwork.target[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 48  UDPBroadcastNetwork.target[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 73  UDPBroadcastNetwork.target[2].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 131  UDPBroadcastNetwork.R2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 166  UDPBroadcastNetwork.switch.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 167  UDPBroadcastNetwork.switch.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 143  UDPBroadcastNetwork.R2.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 145  UDPBroadcastNetwork.R2.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 152  UDPBroadcastNetwork.R2.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 148  UDPBroadcastNetwork.R2.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 121  UDPBroadcastNetwork.R1.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 125  UDPBroadcastNetwork.R1.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 104  UDPBroadcastNetwork.R1.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 106  UDPBroadcastNetwork.R1.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 113  UDPBroadcastNetwork.R1.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 109  UDPBroadcastNetwork.R1.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 94  UDPBroadcastNetwork.client.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 98  UDPBroadcastNetwork.client.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 79  UDPBroadcastNetwork.client.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 81  UDPBroadcastNetwork.client.udp  droppedPkWrongPort:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), vector(count)"
+vector 88  UDPBroadcastNetwork.client.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 90  UDPBroadcastNetwork.client.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 97  UDPBroadcastNetwork.client.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 93  UDPBroadcastNetwork.client.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 110  UDPBroadcastNetwork.R1.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 114  UDPBroadcastNetwork.R1.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 115  UDPBroadcastNetwork.R1.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 117  UDPBroadcastNetwork.R1.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 124  UDPBroadcastNetwork.R1.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 120  UDPBroadcastNetwork.R1.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 149  UDPBroadcastNetwork.R2.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 153  UDPBroadcastNetwork.R2.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+1	29	1	100
+3	39	1	108
+8	47	1	1
+13	65	1.0000576	64
+13	216	1.0003826	146
+14	104	1.000125	64
+14	142	1.0001922	64
+14	178	1.0002594	64
+14	331	1.000954599998	74
+15	104	1.000125	64
+15	142	1.0001922	64
+15	178	1.0002594	64
+15	331	1.000954599998	74
+18	59	1	64
+18	185	1.0002594	146
+22	56	1	28
+22	184	1.0002594	128
+23	107	1.000125	28
+23	145	1.0001922	28
+23	179	1.0002594	28
+23	332	1.000954599998	56
+26	30	1	100
+28	41	1	108
+33	48	1	1
+38	66	1.0000576	64
+38	222	1.0004212	146
+39	105	1.000125	64
+39	143	1.0001922	64
+39	189	1.000298	64
+40	105	1.000125	64
+40	143	1.0001922	64
+40	189	1.000298	64
+43	60	1	64
+43	196	1.000298	146
+47	57	1	28
+47	195	1.000298	128
+48	108	1.000125	28
+48	146	1.0001922	28
+48	190	1.000298	28
+51	31	1	100
+53	43	1	108
+58	49	1	1
+63	67	1.0000576	64
+63	228	1.0004884	146
+64	106	1.000125	64
+64	144	1.0001922	64
+64	206	1.0003652	64
+65	106	1.000125	64
+65	144	1.0001922	64
+65	206	1.0003652	64
+68	61	1	64
+68	213	1.0003652	146
+72	58	1	28
+72	212	1.0003652	128
+73	109	1.000125	28
+73	147	1.0001922	28
+73	207	1.0003652	28
+79	264	1.0007222	108
+79	305	1.000855	108
+81	264	1.0007222	1
+81	305	1.000855	2
+88	267	1.0007222	56
+88	308	1.000855	56
+90	267	1.0007222	0
+90	308	1.000855	0
+91	0	0	0
+92	0	0	0
+92	268	1.0007222	1
+92	284	1.0007726	0
+92	309	1.000855	1
+92	323	1.0009054	0
+93	268	1.0007222	63
+93	309	1.000855	63
+94	260	1.0007222	135
+94	301	1.000855	135
+94	349	1.0009878	135
+97	268	1.0007222	56
+97	309	1.000855	56
+98	260	1.0007222	128
+98	301	1.000855	128
+98	349	1.0009878	128
+104	248	1.0006141	128
+104	274	1.0007469	128
+104	315	1.0008797	128
+106	248	1.0006141	0
+106	274	1.0007469	0
+106	315	1.0008797	0
+107	0	0	0
+108	0	0	0
+108	249	1.0006141	1
+108	259	1.0007221	0
+108	275	1.0007469	1
+108	300	1.0008549	0
+108	316	1.0008797	1
+108	348	1.0009877	0
+109	249	1.0006141	135
+109	275	1.0007469	135
+109	316	1.0008797	135
+110	285	1.0007727	63
+110	324	1.0009055	63
+113	249	1.0006141	128
+113	275	1.0007469	128
+113	316	1.0008797	128
+114	285	1.0007727	56
+114	324	1.0009055	56
+115	289	1.0007727	56
+115	328	1.0009055	56
+117	289	1.0007727	0
+117	328	1.0009055	0
+118	0	0	0
+119	0	0	0
+119	290	1.0007727	1
+119	292	1.0008231	0
+119	329	1.0009055	1
+119	339	1.0009559	0
+120	290	1.0007727	63
+120	329	1.0009055	63
+121	244	1.0006141	135
+121	270	1.0007469	135
+121	311	1.0008797	135
+124	290	1.0007727	56
+124	329	1.0009055	56
+125	244	1.0006141	128
+125	270	1.0007469	128
+125	311	1.0008797	128
+127	94	1.0001154	1
+127	132	1.0001826	1
+127	170	1.0002498	1
+131	122	1.000173	64
+131	160	1.0002402	64
+131	198	1.0003074	64
+131	317	1.000888799999	74
+132	90	1.0001154	64
+132	127	1.0001826	64
+132	165	1.0002498	64
+132	235	1.000506	146
+132	251	1.0006388	146
+132	277	1.0007716	146
+133	90	1.0001154	64
+133	127	1.0001826	64
+133	165	1.0002498	64
+133	235	1.000506	146
+133	251	1.0006388	146
+133	277	1.0007716	146
+136	98	1.0001154	64
+136	136	1.0001826	64
+136	174	1.0002498	64
+136	298	1.0008232	74
+136	345	1.000956	74
+140	97	1.0001154	28
+140	135	1.0001826	28
+140	173	1.0002498	28
+140	297	1.0008232	56
+140	344	1.000956	56
+141	91	1.0001154	28
+141	129	1.0001826	28
+141	167	1.0002498	28
+141	236	1.000506	128
+141	252	1.0006388	128
+141	278	1.0007716	128
+143	240	1.000506	128
+143	256	1.0006388	128
+143	282	1.0007716	128
+145	240	1.000506	0
+145	256	1.0006388	0
+145	282	1.0007716	0
+146	0	0	0
+147	0	0	0
+147	241	1.000506	1
+147	243	1.000614	0
+147	257	1.0006388	1
+147	269	1.0007468	0
+147	283	1.0007716	1
+147	310	1.0008796	0
+148	241	1.000506	135
+148	257	1.0006388	135
+148	283	1.0007716	135
+149	293	1.0008232	63
+149	340	1.000956	63
+152	241	1.000506	128
+152	257	1.0006388	128
+152	283	1.0007716	128
+153	293	1.0008232	56
+153	340	1.000956	56
+157	0	0	0
+158	0	0	0
+165	89	1.0001153	64
+165	126	1.0001825	64
+165	164	1.0002497	64
+165	234	1.0005059	146
+165	250	1.0006387	146
+165	276	1.0007715	146
+166	123	1.0001731	64
+166	161	1.0002403	64
+166	199	1.0003075	64
+166	318	1.000888899999	74
+167	123	1.0001731	64
+167	161	1.0002403	64
+167	199	1.0003075	64
+167	318	1.000888899999	74
+170	74	1.0000577	64
+170	77	1.0000577	64
+170	80	1.0000577	64
+170	219	1.0003827	146
+170	225	1.0004213	146
+170	231	1.0004885	146
+176	100	1.0001249	64
+176	138	1.0001921	64
+176	176	1.0002593	64
+176	330	1.000954499998	74
+177	68	1.0000577	64
+177	217	1.0003827	146
+178	68	1.0000577	64
+178	217	1.0003827	146
+181	78	1.0000577	64
+181	81	1.0000577	64
+181	125	1.0001731	64
+181	320	1.000888899999	74
+187	101	1.0001249	64
+187	139	1.0001921	64
+187	188	1.0002979	64
+188	69	1.0000577	64
+188	223	1.0004213	146
+189	69	1.0000577	64
+189	223	1.0004213	146
+192	75	1.0000577	64
+192	82	1.0000577	64
+192	163	1.0002403	64
+198	102	1.0001249	64
+198	140	1.0001921	64
+198	205	1.0003651	64
+199	70	1.0000577	64
+199	229	1.0004885	146
+200	70	1.0000577	64
+200	229	1.0004885	146
+203	76	1.0000577	64
+203	79	1.0000577	64
+203	202	1.0003075	64
+224	0	0	0
+225	0	0	0

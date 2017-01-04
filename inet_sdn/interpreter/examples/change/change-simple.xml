@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+	<Conditional>
+
+		<Attack>
+			<start_time>100</start_time>
+			<node>1</node>
+			<var><name>value</name><value>-1234</value><type>NUMBER</type></var>
+			<var><name>"myapp"</name><value>myapp</value><type>STRING</type></var>
+			<var><name>5000.1</name><value>5000.1</value><type>NUMBER</type></var>
+			<filter>[:APP.source:==:2:]:[:NET.may:==:3:]:OR:[:APP.sousou:==:2:]:AND</filter>
+
+			<action>
+				<name>Clone</name>
+				<parameters>packetName:original:newPacketName:dolly</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:original:field_name:APP.appName:value:"myapp"</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:original:field_name:NET.destPort:value:5000.1</parameters>
+			</action>
+
+			<action>
+				<name>Change</name>
+				<parameters>packetName:dolly:field_name:NET.destPort:value:value</parameters>
+			</action>
+		</Attack>
+
+	</Conditional>
+
+</configuration>

@@ -1,0 +1,25 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1030 rid General-0-20161115-16:03:57-7977 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t inet.examples.inet.tcpclientserver.ClientServer n ClientServer cm 1
+MS id 1 d bgb=232,193
+MC id 2 c cModule t inet.nodes.inet.StandardHost pid 1 n client1 cm 1
+GC m 2 g 6 n global_filter$i o 0
+GC m 2 g 7 n global_filter$o o 1
+MS id 2 d p=53,67;i=device/pc3;bgb=,448
+MC id 3 c cModule t inet.nodes.inet.StandardHost pid 1 n server cm 1
+GC m 3 g 6 n global_filter$i o 0
+GC m 3 g 7 n global_filter$o o 1
+MS id 3 d p=181,67;i=device/pc2;bgb=,448
+MC id 4 c IPv4NetworkConfigurator t inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator pid 1 n configurator
+MS id 4 d p=53,134;i=block/cogwheel_s
+MC id 5 c NetAnimTrace t inet.util.NetAnimTrace pid 1 n netAnimTrace
+MS id 5 d p=184,142;i=block/control_s
+GC m 2 g 2097152 n pppg$i i 0 o 0
+GC m 2 g 2621440 n pppg$o i 0 o 1
+GC m 3 g 2097152 n pppg$i i 0 o 0
+GC m 3 g 2621440 n pppg$o i 0 o 1
+CC sm 2 sg 2621440 dm 3 dg 2097152
+CS sm 2 sg 2621440 d ""
+CC sm 3 sg 2621440 dm 2 dg 2097152
+CS sm 3 sg 2621440 d ""

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients
+END
+run.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients/run.cmd
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients/README
+END
+omnetpp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients/omnetpp.ini
+END
+NClientsPPP.ned
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients/NClientsPPP.ned
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients/run
+END
+NClientsEth.ned
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/ipv6/nclients/NClientsEth.ned
+END

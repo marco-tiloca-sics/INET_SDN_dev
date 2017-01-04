@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/sites/www_single_org
+END
+www_single_org_bad.pagedef
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/sites/www_single_org/www_single_org_bad.pagedef
+END
+www_single_org.sitedef
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/sites/www_single_org/www_single_org.sitedef
+END
+www_single_org_cross.pagedef
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/sites/www_single_org/www_single_org_cross.pagedef
+END
+www_single_org_photos.pagedef
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/sites/www_single_org/www_single_org_photos.pagedef
+END
+www_single_org.pagedef
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/seapp/seapp_stable/!svn/ver/1/trunk/examples/httptools/sites/www_single_org/www_single_org.pagedef
+END

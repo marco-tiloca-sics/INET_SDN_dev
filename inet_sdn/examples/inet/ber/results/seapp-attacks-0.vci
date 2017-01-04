@@ -1,0 +1,159 @@
+file 238952 1452941251                                          
+version 2
+run seapp-attacks-0-20160116-11:47:21-8023
+attr ber 0
+attr configname seapp-attacks
+attr datetime 20160116-11:47:21
+attr experiment seapp-attacks
+attr inifile omnetpp.ini
+attr iterationvars $ber=0
+attr iterationvars2 "$ber=0, $repetition=0"
+attr measurement $ber=0
+attr network ber
+attr processid 8023
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 11  ber.client.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 12  ber.client.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 29  ber.server.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 30  ber.server.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 78  ber.client.tcp  tcpRcvQueueBytes  ETV
+vector 65  ber.client.tcp  "advertised window"  ETV
+vector 64  ber.client.tcp  "receive window"  ETV
+vector 67  ber.client.tcp  "sent ack"  ETV
+vector 8  ber.client.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 10  ber.client.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 17  ber.client.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 13  ber.client.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 32  ber.server.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 36  ber.server.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 44  ber.server.tcp  "rcvd seq"  ETV
+vector 45  ber.server.tcp  "rcvd ack"  ETV
+vector 41  ber.server.tcp  "advertised window"  ETV
+vector 39  ber.server.tcp  "send window"  ETV
+vector 54  ber.server.tcp  tcpRcvQueueBytes  ETV
+vector 40  ber.server.tcp  "receive window"  ETV
+vector 43  ber.server.tcp  "sent ack"  ETV
+vector 26  ber.server.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 28  ber.server.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 35  ber.server.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 31  ber.server.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 14  ber.client.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 18  ber.client.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 68  ber.client.tcp  "rcvd seq"  ETV
+vector 69  ber.client.tcp  "rcvd ack"  ETV
+vector 63  ber.client.tcp  "send window"  ETV
+vector 1  ber.client.tcpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 66  ber.client.tcp  "sent seq"  ETV
+vector 70  ber.client.tcp  "unacked bytes"  ETV
+vector 46  ber.server.tcp  "unacked bytes"  ETV
+vector 47  ber.server.tcp  "rcvd dupAcks"  ETV
+vector 19  ber.server.tcpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 20  ber.server.tcpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 82  ber.client.tcp  "measured RTT"  ETV
+vector 83  ber.client.tcp  "smoothed RTT"  ETV
+vector 84  ber.client.tcp  RTTVAR  ETV
+vector 85  ber.client.tcp  RTO  ETV
+vector 80  ber.client.tcp  cwnd  ETV
+vector 71  ber.client.tcp  "rcvd dupAcks"  ETV
+vector 37  ber.server.ppp[0].outputHook[0]  "thruput (bit/sec)"  ETV
+vector 38  ber.server.ppp[0].outputHook[0]  packet/sec  ETV
+1	4682 30 42 42 0.000082729998 0.000082729998 1 104857600 104857600 104857600 1.099511627776e+16
+8	4712 6715 17 5363 0 0.246033789994 252 40 1492 373084 556519536
+10	11427 7838 17 5364 0 0.247194259996 209 0 0.052726070002 8.540034280408 0.40955365891376
+11	19265 11708 0 5364 0 0.247194259996 456 0 44 16890 693624
+12	30973 10336 0 5365 0 0.247194259996 418 0 1 209 209
+13	41309 5794 18 5365 0 0.247194259996 209 47 1499 310391 465134017
+14	47103 5321 32 5355 0.000082729998 0.246033789994 206 47 51 9686 455446
+17	52424 5794 18 5365 0 0.247194259996 209 40 1492 308928 460798784
+18	58218 5321 32 5355 0.000082729998 0.246033789994 206 40 44 8244 329936
+19	63539 5735 71 5373 0.001320094997 0.247194824995 206 1452 1452 299112 434310624
+20	69274 5117 71 5373 0.001320094997 0.247194824995 206 0 0 0 0
+26	74391 5321 29 5352 0.000041364999 0.245995624995 206 40 44 8244 329936
+28	79712 5115 29 5352 0.000041364999 0.245995624995 206 0 0 0 0
+29	84827 9 0 0 0 0 1 0 0 0 0
+30	84836 10239 0 5354 0 0.246033224995 413 0 1 206 206
+31	95075 5321 30 5353 0.000041364999 0.245995624995 206 47 51 9686 455446
+32	100396 5781 20 5366 0.000041364999 0.247194824995 208 47 1499 308892 462887016
+35	106177 5321 30 5353 0.000041364999 0.245995624995 206 40 44 8244 329936
+36	111498 5781 20 5366 0.000041364999 0.247194824995 208 40 1492 307436 458572720
+37	117279 143 1476 5226 0 0.180039624995 4 266668.33003921 266844.56304203 1067202.0191653 284730060721.17
+38	117422 142 1476 5226 0 0.180039624995 4 831.6751810105 833.88925950634 3333.3429595295 2777797.4980689
+39	117564 54 24 60 0.000041364999 0.000120894997 2 65535 65535 131070 8589672450
+40	117618 5966 24 5370 0.000041364999 0.247194824995 207 65535 65535 13565745 889031098575
+41	123584 6176 24 5370 0.000041364999 0.247194824995 208 65536 364648 44589580 11139367158256
+43	129760 6094 24 5370 0.000041364999 0.247194824995 207 1 299113 30958299 6188336842455
+44	135854 6112 24 5370 0.000041364999 0.247194824995 208 0 297661 30659187 6098868255687
+45	141966 5368 24 5370 0.000041364999 0.247194824995 208 0 11 2277 25047
+46	147334 23 60 60 0.000120894997 0.000120894997 1 0 0 0 0
+47	147357 5115 68 5370 0.001320094997 0.247194824995 206 0 0 0 0
+54	152472 10253 24 5370 0.000041364999 0.247194824995 413 0 0 0 0
+63	162725 5939 36 5359 0.000082729998 0.246033789994 206 65535 65535 13500210 884736262350
+64	168664 7223 13 5359 0 0.246033789994 252 65535 65535 16514820 1082298728700
+65	175887 7250 13 5359 0 0.246033789994 253 65535 65546 16583127 1086956921457
+66	183137 7353 47 5359 0.000082729998 0.246033789994 250 1 361549 45193750 10915043733250
+67	190490 6466 13 5359 0 0.246033789994 252 0 11 2761 30371
+68	196956 5321 36 5359 0.000082729998 0.246033789994 206 10 11 2265 24905
+69	202277 6066 36 5359 0.000082729998 0.246033789994 206 1 297661 30659186 6098868255686
+70	208343 11835 47 5359 0.000082729998 0.246033789994 411 0 65340 23682120 1468539151200
+71	220178 5092 82 5359 0.001358259996 0.246033789994 205 0 0 0 0
+78	225270 6215 13 5359 0 0.246033789994 252 0 0 0 0
+80	231485 6045 82 5359 0.001358259996 0.246033789994 205 2904 299112 30956640 6188272817760
+82	237530 330 82 5209 0.001358259996 0.238838589994 10 0.001237929998 0.053964 0.238755859996 0.010701041328416
+83	237860 373 82 5209 0.001358259996 0.238838589994 10 0.000159441249 0.023534731262 0.074012741138 0.0012217618518632
+84	238233 372 82 5209 0.001358259996 0.238838589994 10 0.215431942814 0.65640944125 3.930254250465 1.7421213380634
+85	238605 347 82 5209 0.001358259996 0.238838589994 10 1 2.625797206249 15.925619984537 28.278452108181
